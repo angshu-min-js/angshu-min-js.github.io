@@ -6,6 +6,7 @@
 	<meta name='description' content="I'm a Full Stack Engineer and Entrepreneur">
 	<meta name='subject' content='Personal Website: Angshuman Gupta'>
 	<meta name='copyright' content='Angshuman Gupta'>
+	<meta name='author' content='angshuman, angshu.gupta789@gmail.com'>
     <title>Angshuman Gupta</title>
   <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -19,7 +20,7 @@
 <!-- PAGE -->
 <div class="rela-block page">
     <div class="rela-block top-bar">
-        <div class="caps name"><div class="abs-center">Angshuman Gupta</div></div>
+        <div class="caps name"><div class="abs-center" itemtype="http://schema.org/Person">Angshuman Gupta</div></div>
     </div>
     <div class="side-bar">
         <div class="mugshot">
@@ -72,7 +73,19 @@
 
     </div>
 </div>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "Person",
+	  "name": "Angshuman Gupta",
+	  "disambiguatingDescription": "Full Stack Entrepreneur/Engineer",
+	  "children": {
+		"@type": "Person",
+		"name": "Angshuman Gupta",
+		"disambiguatingDescription": "Full Stack Entrepreneur/Engineer"
+	  }
+	}
+	</script>
 
         <script src="js/index.js"></script>
 
