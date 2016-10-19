@@ -199,10 +199,10 @@ h3 {
   width: 35px;
   background-size: cover !important;
 }
-.social.twitter:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+.social.codepen:before {
+  background: url("https://cdn0.iconfinder.com/data/icons/social-glyph/30/codepen-120.png") center no-repeat;
 }
-.social.pinterest:before {
+.social.github:before {
   background: url("https://cdn1.iconfinder.com/data/icons/social-media-free-8/32/github_social_media_online-128.png") center no-repeat;
 }
 .social.linked-in:before {
