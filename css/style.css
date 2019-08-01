@@ -213,6 +213,10 @@ h3 {
   background: url("https://cdn4.iconfinder.com/data/icons/picons-social/57/53-medium-3-128.png") center no-repeat;
 }
 
+.social.behance:before {
+  background: url("https://cdn3.iconfinder.com/data/icons/picons-social/57/77-behance-128.png") center no-repeat;
+}
+
 .side-header {
   font-family: 'Open Sans';
   font-size: 18px;
