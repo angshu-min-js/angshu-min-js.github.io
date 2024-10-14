@@ -292,14 +292,17 @@ a{
 }
 
 .audio-player {
-  margin-top: 20px;
   background-color: #f7e0c1;
-  padding: 20px;
+  padding: 15px 20px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .audio-player h3 {
-  margin-bottom: 15px;
+  margin: 0;
+  font-size: 18px;
   color: #333;
 }
 
@@ -307,14 +310,14 @@ a{
   background-color: #848484;
   border: none;
   color: white;
-  padding: 12px 24px;
+  padding: 8px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 14px;
+  margin-left: 10px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: background-color 0.3s ease;
 }
 
@@ -322,8 +325,7 @@ a{
   background-color: #6a6a6a;
 }
 
-/* Ensure the audio element fits within the container */
-audio {
-  width: 100%;
-  margin-top: 10px;
+/* Hide the audio element */
+#careerPodcast {
+  display: none;
 }
