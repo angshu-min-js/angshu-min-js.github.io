@@ -290,3 +290,21 @@ a{
 	text-indent:-9999px;
 	background: url("https://cdn0.iconfinder.com/data/icons/entypo/92/button2-64.png")  no-repeat;
 }
+
+.audio-player {
+        margin-top: 20px;
+      }
+
+      .play-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
