@@ -8,7 +8,6 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/angshu-min-js.github.io/",
   plugins: [
     react(),
   ],
