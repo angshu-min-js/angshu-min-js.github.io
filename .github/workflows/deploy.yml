@@ -4,7 +4,7 @@ on:
   push:
     branches:
       # IMPORTANT: Change this if your source code branch is different!
-      - source 
+      - main  # Changed from 'source' to 'main' as that's likely your main branch
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,11 +36,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build # Assumes CNAME is in public/
-      # Upload artifact is often good practice, but for simplicity here we rebuild in deploy job
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: './dist'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
 
   deploy:
     needs: build # Run after build job is complete
@@ -49,19 +48,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }} # Placeholder, URL will be set by action
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout # Need checkout again to get artifact if build was separate, or just to have files
-        uses: actions/checkout@v4
-      - name: Set up Node.js # Need setup again
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Build # Re-run build in the same job for simplicity
-        run: npm run build
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        id: deployment
+        uses: actions/deploy-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Deploy the dist folder to the main branch of the *same* repo
