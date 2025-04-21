@@ -8,10 +8,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  base: "/angshu-min-js.github.io/",
   plugins: [
     react(),
   ],
-  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
