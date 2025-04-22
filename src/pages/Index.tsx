@@ -207,7 +207,7 @@ const Index = () => {
       </header>
       
       {/* Main content */}
-      <main className="max-w-3xl mx-auto w-full px-4 mt-6">
+      <main className="max-w-3xl mx-auto w-full px-4 mt-0">
         <About />
       </main>
       
