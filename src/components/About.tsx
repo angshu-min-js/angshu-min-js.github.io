@@ -17,7 +17,7 @@ const experience = [
       "Managing the platform's Onboarding & Connector Self-Service, API Services, Dev Documentation, and Back-Offices.",
       "Coaching product teams on using Gen AI for productivity and innovation."
     ],
-    skills: ["B2B Product Strategy", "Platform Strategy", "Partner Onboarding", "API Ecosystems", "E-commerce Integrations", "Cross-functional Leadership", "Roadmapping", "Gen AI Application", "Self-Service Platforms"]
+    skills: ["B2B Product Strategy", "Platform Strategy", "Partner Experience", "API Ecosystems", "E-commerce Integrations", "Cross-functional Leadership", "Roadmapping", "Gen AI Application", "Self-Service Platforms"]
   },
   {
     role: "Gen AI Side Projects",
@@ -45,7 +45,7 @@ const experience = [
       "Zeta, is a Banking-as-a-Service (BaaS) unicorn where I led two charters - Identity and Access Management (took from introduction to matured steady-state ~ on track to serve 30 mn+ identities) & Operation Management (operationalised Zeta's multi-stack banking offerings ~ on track for 10X revenue growth).",
       "Defined and owned the product strategy, long-term roadmap, and quarter-wise OKRs for both and directly managed a team of 3 PMs, each owning a specific product objective (pillar). I moved out as I wanted to explore the culture outside India, especially in Germany."
     ],
-    skills: ["Identity & Access Management (IAM)", "Workflow Automation", "Banking-as-a-Service (BaaS)", "API Platforms", "Mobile SDKs", "People Management", "Team Leadership", "Fintech", "Global Product Scaling"]
+    skills: ["Identity & Access Management (IAM)", "Workflow Automation", "Banking-as-a-Service (BaaS)", "API Platforms", "Mobile SDKs", "People Management", "Team Leadership", "Fintech", "Global Product Scaling", "Developer Experience"]
   },
   {
     role: "Senior Product Manager (Driver Onboarding)",
@@ -88,7 +88,7 @@ const experience = [
       "This last role was similar to that of a product manager for an infrastructure tool. I worked closely with L0 agents to monitor and assess the performance of the infrastructure, gathering their feedback and translating it into actionable improvements for the tool.",
       "Through my diverse experience and expertise in the infrastructure tool, I was able to contribute to the success of the team and help drive meaningful improvements to the tools we were using."
     ],
-    skills: ["Infrastructure Product Management", "Software Development (Java)", "QA Testing", "Subject Matter Expertise", "Feedback Synthesis", "IT Services"]
+    skills: ["Infrastructure Product Management", "Software Development (Java)", "QA Testing", "Subject Matter Expertise", "Unix Based Systems", "Ubuntu"]
   },
 ];
 
@@ -108,6 +108,60 @@ export const About = () => {
 
   const renderSection = () => {
     switch (activeSection) {
+      case "about":
+        return (
+          <div className="space-y-8">
+            <div className="prose prose-lg max-w-none">
+              <h3 className="font-playfair text-2xl font-bold mb-4 text-primary">👋 Hello World!</h3>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                I'm Angshuman Gupta — a product leader with a passion for building and scaling global products. My journey began not in a boardroom or a business school, but in a small room with a desktop PC and a deep curiosity for how things worked.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🚀 The Early Days</h4>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    I wrote my first lines of code at the age of 10, built computer games, and customized game installations for my friends. That early fascination with technology has never left me. Even as I pursued Mechanical and Aerospace Engineering — and founded the Aeronautical Society in college — I always found myself drawn to solving problems through code and design.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">💡 Entrepreneurial Journey</h4>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    My product journey started when I founded my first company, Craftloom — an eCommerce platform for handmade goods. It was my crash course in entrepreneurship, product-market fit, and resilience. After that, I joined a gaming startup and helped scale it to a million users. That gave me the 0-to-1-to-10 experience — building from scratch, iterating fast, and scaling with impact.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🌍 Scaling Products</h4>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Later, I brought that entrepreneurial mindset into scaled environments. At Ola, I worked on driver onboarding and built AI-powered platforms that reduced costs and improved activation speed. At Zeta, I led Identity and Access Management and built internal platforms that powered fintech at scale. Today, at Zalando, I lead B2B product initiatives, helping build Zeos — a logistics-as-a-service platform—from the ground up. It's a rare privilege to do 0-to-1 work inside a listed company.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🤖 Beyond Work</h4>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Outside of work, I'm deeply bullish on Generative AI. I spend my free time tinkering, building small apps, and writing about the future of product building on productbuilders.xyz. It's where I share what I learn, open-source ideas, and connect with others who love building as much as I do.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">👨‍👩‍👧 Personal Growth</h4>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    Most recently, I've stepped into a new role — that of a parent. Welcoming our daughter has been the most beautiful and grounding experience of my life. It's given everything — even product work — a deeper sense of meaning.
+                  </p>
+                </div>
+
+                <div className="text-center mt-8">
+                  <p className="text-gray-700 text-lg leading-relaxed font-semibold">
+                    I'm here to build, to learn, and to leave things better than I found them.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
       case "interests":
         return (
           <>
@@ -143,13 +197,17 @@ export const About = () => {
                   <li>People Management</li>
                   <li>Team Building</li>
                   <li>New Product Development</li>
-                  <li>Developer Relations</li>
+                  <li>Developer Experience</li>
+                  <li>Consumer Experience</li>
+                  <li>Partner/Merchant/Retailer Experience</li>
+                  <li>Driver/Rider Experience</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Platforms & Technical:</h4>
                 <ul className="list-disc list-inside ml-4">
                   <li>Mobile (incl. SDK)</li>
+                  <li>Web (incl. Libraries)</li>
                   <li>Cloud</li>
                   <li>APIs</li>
                   <li>Platforms & Ecosystems</li>
@@ -160,18 +218,20 @@ export const About = () => {
                 <h4 className="font-semibold mb-1">AI/ML & Gen AI:</h4>
                 <ul className="list-disc list-inside ml-4">
                   <li>Machine/Deep Learning</li>
-                  <li>Gen AI</li>
-                  <li>TensorFlow, ScikitLearn</li>
+                  <li>Gen AI, LLMs, Multi-Modal Agents</li>
+                  <li>TensorFlow, ScikitLearn, LangChain</li>
+                  <li>Chat GPT, Claude, Gemini, Ollama</li>
+                  <li>Replicate, Hugging Face, Vercel</li>
+                  <li>Bolt, Lovable, Cursor</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Tools & Languages:</h4>
                 <ul className="list-disc list-inside ml-4">
-                  <li>PM: Jira, Assembla, Aha</li>
-                  <li>Prog: Python, Java, JS</li>
+                  <li>PM: Jira, Assembla, Aha, Miro</li>
+                  <li>Prog: Python, Java, JS, etc</li>
                   <li>DB: MySQL, Mongo</li>
-                  <li>Design: Balsamiq</li>
-                  <li>Other: HTML5, CSS3</li>
+                  <li>Design: Balsamiq, Figma</li>
                   <li>Game Engine: Unity</li>
                 </ul>
               </div>
@@ -290,55 +350,50 @@ export const About = () => {
   };
 
   return (
-    <section className="max-w-2xl mx-auto mt-6 mb-20 px-3">
-      <div className="flex justify-center mb-6">
-        <nav className="flex flex-wrap space-x-1 bg-gray-100 p-1 rounded-lg">
-          <button
-            onClick={() => setActiveSection("about")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-              activeSection === "about"
-                ? "bg-white shadow text-primary"
-                : "text-gray-500 hover:text-primary"
-            }`}
-          >
-            About Me
-          </button>
-          <button
-            onClick={() => setActiveSection("experiences")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-              activeSection === "experiences"
-                ? "bg-white shadow text-primary"
-                : "text-gray-500 hover:text-primary"
-            }`}
-          >
-            Experiences
-          </button>
-          <button
-            onClick={() => setActiveSection("expertise")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-              activeSection === "expertise"
-                ? "bg-white shadow text-primary"
-                : "text-gray-500 hover:text-primary"
-            }`}
-          >
-            Expertise
-          </button>
-          <button
-            onClick={() => setActiveSection("education")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-              activeSection === "education"
-                ? "bg-white shadow text-primary"
-                : "text-gray-500 hover:text-primary"
-            }`}
-          >
-            Education
-          </button>
-        </nav>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="flex space-x-4 mb-8">
+        <button
+          onClick={() => setActiveSection("about")}
+          className={`px-4 py-2 rounded-lg ${
+            activeSection === "about"
+              ? "bg-primary text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          About Me
+        </button>
+        <button
+          onClick={() => setActiveSection("experiences")}
+          className={`px-4 py-2 rounded-lg ${
+            activeSection === "experiences"
+              ? "bg-primary text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Experience
+        </button>
+        <button
+          onClick={() => setActiveSection("expertise")}
+          className={`px-4 py-2 rounded-lg ${
+            activeSection === "expertise"
+              ? "bg-primary text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Expertise
+        </button>
+        <button
+          onClick={() => setActiveSection("education")}
+          className={`px-4 py-2 rounded-lg ${
+            activeSection === "education"
+              ? "bg-primary text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Education
+        </button>
       </div>
-
-      <div className="transition-all duration-300 ease-in-out">
-        {renderSection()}
-      </div>
-    </section>
+      {renderSection()}
+    </div>
   );
 };
