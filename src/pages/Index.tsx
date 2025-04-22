@@ -5,6 +5,7 @@ import { ResumeLinks } from "@/components/ResumeLinks";
 import { QuickPrioritizationGame } from "@/components/QuickPrioritizationGame";
 import { FeatureMetricMatcher } from "@/components/FeatureMetricMatcher";
 import { StackChallenge } from "@/components/StackChallenge";
+import { BurnoutMeter } from "@/components/BurnoutMeter";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import React, { useEffect } from "react";
@@ -14,11 +15,17 @@ const Index = () => {
   const [prioritizationOpen, setPrioritizationOpen] = React.useState(false);
   const [featureMetricOpen, setFeatureMetricOpen] = React.useState(false);
   const [stackChallengeOpen, setStackChallengeOpen] = React.useState(false);
+  const [burnoutMeterOpen, setBurnoutMeterOpen] = React.useState(false);
 
   // Debug dialog status
   useEffect(() => {
-    console.log("Dialog states:", { prioritizationOpen, featureMetricOpen, stackChallengeOpen });
-  }, [prioritizationOpen, featureMetricOpen, stackChallengeOpen]);
+    console.log("Dialog states:", { 
+      prioritizationOpen, 
+      featureMetricOpen, 
+      stackChallengeOpen,
+      burnoutMeterOpen 
+    });
+  }, [prioritizationOpen, featureMetricOpen, stackChallengeOpen, burnoutMeterOpen]);
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -51,13 +58,13 @@ const Index = () => {
             <h3 className="text-sm font-medium text-gray-500 mb-3">Resources</h3>
             <ResumeLinks vertical={true} />
             
-            <h3 className="text-sm font-medium text-gray-500 mt-6 mb-3">Interactive</h3>
+            <h3 className="text-sm font-medium text-gray-500 mt-6 mb-3">Interactive PM Games</h3>
             <div className="flex flex-col w-full space-y-2">
               {/* Desktop Prioritization Game Dialog */}
               <Dialog open={prioritizationOpen} onOpenChange={setPrioritizationOpen}>
                 <DialogTrigger asChild>
                   <Button
-                    variant="default"
+                    variant="outline"
                     className="font-semibold text-sm w-full"
                     aria-label="Open prioritization game"
                     onClick={() => console.log("Prioritization button clicked (desktop)")}
@@ -91,7 +98,7 @@ const Index = () => {
               <Dialog open={stackChallengeOpen} onOpenChange={setStackChallengeOpen}>
                 <DialogTrigger asChild>
                   <Button
-                    variant="secondary"
+                    variant="outline"
                     className="font-semibold text-sm w-full"
                     aria-label="Open stack challenge game"
                     onClick={() => console.log("Stack Challenge button clicked (desktop)")}
@@ -101,6 +108,23 @@ const Index = () => {
                 </DialogTrigger>
                 <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
                   <StackChallenge onClose={() => setStackChallengeOpen(false)} />
+                </DialogContent>
+              </Dialog>
+
+              {/* Desktop Burnout Meter Dialog */}
+              <Dialog open={burnoutMeterOpen} onOpenChange={setBurnoutMeterOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="font-semibold text-sm w-full"
+                    aria-label="Open burnout meter game"
+                    onClick={() => console.log("Burnout Meter button clicked (desktop)")}
+                  >
+                    Burnout Meter
+                  </Button>
+                </DialogTrigger>
+                <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
+                  <BurnoutMeter onClose={() => setBurnoutMeterOpen(false)} />
                 </DialogContent>
               </Dialog>
             </div>
@@ -115,7 +139,7 @@ const Index = () => {
             <Dialog open={prioritizationOpen} onOpenChange={setPrioritizationOpen}>
               <DialogTrigger asChild>
                 <Button
-                  variant="default"
+                  variant="outline"
                   className="font-semibold text-sm w-full"
                   aria-label="Open prioritization game"
                   onClick={() => console.log("Prioritization button clicked (mobile)")}
@@ -149,7 +173,7 @@ const Index = () => {
             <Dialog open={stackChallengeOpen} onOpenChange={setStackChallengeOpen}>
               <DialogTrigger asChild>
                 <Button
-                  variant="secondary"
+                  variant="outline"
                   className="font-semibold text-sm w-full"
                   aria-label="Open stack challenge game"
                   onClick={() => console.log("Stack Challenge button clicked (mobile)")}
@@ -159,6 +183,23 @@ const Index = () => {
               </DialogTrigger>
               <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
                 <StackChallenge onClose={() => setStackChallengeOpen(false)} />
+              </DialogContent>
+            </Dialog>
+
+            {/* Mobile Burnout Meter Dialog */}
+            <Dialog open={burnoutMeterOpen} onOpenChange={setBurnoutMeterOpen}>
+              <DialogTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="font-semibold text-sm w-full"
+                  aria-label="Open burnout meter game"
+                  onClick={() => console.log("Burnout Meter button clicked (mobile)")}
+                >
+                  Burnout Meter
+                </Button>
+              </DialogTrigger>
+              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
+                <BurnoutMeter onClose={() => setBurnoutMeterOpen(false)} />
               </DialogContent>
             </Dialog>
           </div>
