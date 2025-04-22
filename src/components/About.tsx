@@ -24,7 +24,7 @@ const experience = [
     company: "Personal Projects", // Changed company name for clarity
     website: "https://qloudai.app", 
     logoUrl: "https://qloudai.app/assets/avatar.png", // Keeping Qloud AI avatar for now
-    years: "2023–Present",
+    years: "2024–Present",
     summary: "Actively prototyping and shipping tools at the intersection of AI and product building.",
     paragraphs: [
       "Passionate about Gen AI - actively prototyping and shipping tools:",
@@ -77,7 +77,7 @@ const experience = [
     skills: ["Entrepreneurship", "Start-up Leadership (0-10)", "Real Money Gaming", "Fantasy Sports", "E-commerce Marketplace", "SaaS Product Management", "AI Consulting", "Retail Analytics", "Inventory Management", "Enterprise SaaS"]
   },
   {
-    role: "Software Engineer",
+    role: "Software Engineer / Product Manager (Infrastructure)",
     company: "Tata Consultancy Services (TCS)",
     website: "https://www.tcs.com/",
     logoUrl: "https://logo.clearbit.com/tcs.com", // Keep existing or verify
