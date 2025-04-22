@@ -167,7 +167,7 @@ export const About = () => {
           <>
             <h3 className="font-playfair text-2xl font-bold mb-4 text-primary">🧠 Areas of Interest</h3>
             <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed space-y-1">
-              <li>User Onboarding</li>
+              <li>Onboarding</li>
               <li>Search</li>
               <li>Back Office</li>
               <li>Platform Building</li>
@@ -199,8 +199,8 @@ export const About = () => {
                   <li>New Product Development</li>
                   <li>Developer Experience</li>
                   <li>Consumer Experience</li>
-                  <li>Partner/Merchant/Retailer Experience</li>
-                  <li>Driver/Rider Experience</li>
+                  <li>Partner Experience</li>
+                  <li>Driver Experience</li>
                 </ul>
               </div>
               <div>
@@ -219,8 +219,8 @@ export const About = () => {
                 <ul className="list-disc list-inside ml-4">
                   <li>Machine/Deep Learning</li>
                   <li>Gen AI, LLMs, Multi-Modal Agents</li>
-                  <li>TensorFlow, ScikitLearn, LangChain</li>
-                  <li>Chat GPT, Claude, Gemini, Ollama</li>
+                  <li>TensorFlow, SkLearn, LangChain</li>
+                  <li>ChatGPT, Claude, Gemini</li>
                   <li>Replicate, Hugging Face, Vercel</li>
                   <li>Bolt, Lovable, Cursor</li>
                 </ul>
