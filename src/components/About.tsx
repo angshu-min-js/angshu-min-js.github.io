@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // Updated experience data based on resume
 const experience = [
   {
-    role: "Product Lead (Partner Onboarding & Shop Connectors)",
+    role: "Product Lead, Partner Onboarding and Shop Connectors",
     company: "Zalando SE",
     website: "https://www.zalando.de/",
     logoUrl: "https://logo.clearbit.com/zalando.de", // Keep existing or verify
@@ -20,7 +20,7 @@ const experience = [
     skills: ["B2B Product Strategy", "Platform Strategy", "Partner Experience", "API Ecosystems", "E-commerce Integrations", "Cross-functional Leadership", "Roadmapping", "Gen AI Application", "Self-Service Platforms"]
   },
   {
-    role: "Gen AI Side Projects",
+    role: "Full Stack Product Manager, Agentic Systems",
     company: "Personal Projects", // Changed company name for clarity
     website: "https://qloudai.app", 
     logoUrl: "https://qloudai.app/assets/avatar.png", // Keeping Qloud AI avatar for now
@@ -35,7 +35,7 @@ const experience = [
     skills: ["Gen AI", "LLMs", "Voice Interfaces", "Multi-modal Agents", "Rapid Prototyping", "Community Building", "Product Innovation"]
   },
   {
-    role: "Product Lead (Identity, Access, and Workflow Mgmt.)",
+    role: "Product Lead, Identity, Access, and Workflow Mgmt.",
     company: "Zeta Tech (Directi)",
     website: "https://www.zeta.tech/",
     logoUrl: "https://logo.clearbit.com/zeta.tech", // Keep existing or verify
@@ -48,7 +48,7 @@ const experience = [
     skills: ["Identity & Access Management (IAM)", "Workflow Automation", "Banking-as-a-Service (BaaS)", "API Platforms", "Mobile SDKs", "People Management", "Team Leadership", "Fintech", "Global Product Scaling", "Developer Experience"]
   },
   {
-    role: "Senior Product Manager (Driver Onboarding)",
+    role: "Senior Product Manager, Driver Onboarding",
     company: "Ola Cabs",
     website: "https://www.olacabs.com/",
     logoUrl: "https://logo.clearbit.com/olacabs.com", // Keep existing or verify
@@ -62,7 +62,7 @@ const experience = [
     skills: ["AI/ML Product Management", "OCR Technology", "Process Automation", "Cost Reduction", "Compliance Management", "Rule Engines", "Global Rollout", "Mobility Tech"]
   },
   {
-    role: "Co-founder (CPTO) / Head of Product",
+    role: "Co-founder (CPTO) / Head of Product / Consultant",
     company: "Early Stage Startups",
     website: "https://angshumangupta.com/",
     logoUrl: "/CL_logo_TM.png",
@@ -77,7 +77,7 @@ const experience = [
     skills: ["Entrepreneurship", "Start-up Leadership (0-10)", "Real Money Gaming", "Fantasy Sports", "E-commerce Marketplace", "SaaS Product Management", "AI Consulting", "Retail Analytics", "Inventory Management", "Enterprise SaaS"]
   },
   {
-    role: "Software Engineer / Product Manager (Infrastructure)",
+    role: "Software Engineer",
     company: "Tata Consultancy Services (TCS)",
     website: "https://www.tcs.com/",
     logoUrl: "https://logo.clearbit.com/tcs.com", // Keep existing or verify
