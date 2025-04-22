@@ -21,13 +21,13 @@ const experience = [
   },
   {
     role: "Full Stack Product Manager, Agentic Systems",
-    company: "Personal Projects", // Changed company name for clarity
+    company: "Qloud AI (Personal Projects)", // Changed company name for clarity
     website: "https://qloudai.app", 
     logoUrl: "https://qloudai.app/assets/avatar.png", // Keeping Qloud AI avatar for now
     years: "2024–Present",
-    summary: "Actively prototyping and shipping tools at the intersection of AI and product building.",
+    summary: "Designing and orchestrating autonomous LLM-based systems to automate and scale digital workflows. Blending product, engineering, and AI agent ops.",
     paragraphs: [
-      "Passionate about Gen AI - actively prototyping and shipping tools:",
+      "I am passionate about Gen AI - actively prototyping and shipping tools:",
       "Product Builders: A community and knowledge hub for building and scaling digital products using AI agents.",
       "German with Nik: A voice-based LLM tutor designed to help users practice and learn spoken German.",
       "Captions GPT: A multi-modal agent that helps social media users generate captions for videos and images."
