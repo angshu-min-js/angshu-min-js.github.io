@@ -10,6 +10,22 @@ import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import React, { useEffect } from "react";
 
+// Declare gtag on the window object for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+// Helper function to send events to Google Analytics
+const trackEvent = (eventName: string, eventParams: object) => {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  } else {
+    console.warn('gtag function not found. Ensure Google Analytics is loaded.');
+  }
+};
+
 const Index = () => {
   // Control visibility of the modals (Dialogs)
   const [prioritizationOpen, setPrioritizationOpen] = React.useState(false);
@@ -26,6 +42,17 @@ const Index = () => {
       burnoutMeterOpen 
     });
   }, [prioritizationOpen, featureMetricOpen, stackChallengeOpen, burnoutMeterOpen]);
+
+  const handleGameClick = (gameName: string, view: 'desktop' | 'mobile') => {
+    console.log(`${gameName} button clicked (${view})`);
+    trackEvent('game_button_click', { 
+      game_name: gameName,
+      view: view
+    });
+    // Optionally open the dialog here based on gameName
+    // Example:
+    // if (gameName === 'Prioritization Game') setPrioritizationOpen(true);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -67,7 +94,7 @@ const Index = () => {
                     variant="outline"
                     className="font-semibold text-sm w-full"
                     aria-label="Open prioritization game"
-                    onClick={() => console.log("Prioritization button clicked (desktop)")}
+                    onClick={() => handleGameClick('Prioritization Game', 'desktop')}
                   >
                     Prioritization Game
                   </Button>
@@ -84,7 +111,7 @@ const Index = () => {
                     variant="outline"
                     className="font-semibold text-sm w-full"
                     aria-label="Open feature-metric matcher game"
-                    onClick={() => console.log("Feature-Metric button clicked (desktop)")}
+                    onClick={() => handleGameClick('Feature-Metric Matcher', 'desktop')}
                   >
                     Feature-Metric Matcher
                   </Button>
@@ -101,7 +128,7 @@ const Index = () => {
                     variant="outline"
                     className="font-semibold text-sm w-full"
                     aria-label="Open stack challenge game"
-                    onClick={() => console.log("Stack Challenge button clicked (desktop)")}
+                    onClick={() => handleGameClick('Stack Challenge', 'desktop')}
                   >
                     Stack Challenge
                   </Button>
@@ -118,7 +145,7 @@ const Index = () => {
                     variant="outline"
                     className="font-semibold text-sm w-full"
                     aria-label="Open burnout meter game"
-                    onClick={() => console.log("Burnout Meter button clicked (desktop)")}
+                    onClick={() => handleGameClick('Burnout Meter', 'desktop')}
                   >
                     Burnout Meter
                   </Button>
@@ -142,7 +169,7 @@ const Index = () => {
                   variant="outline"
                   className="font-semibold text-sm w-full"
                   aria-label="Open prioritization game"
-                  onClick={() => console.log("Prioritization button clicked (mobile)")}
+                  onClick={() => handleGameClick('Prioritization Game', 'mobile')}
                 >
                   Prioritization Game
                 </Button>
@@ -159,7 +186,7 @@ const Index = () => {
                   variant="outline"
                   className="font-semibold text-sm w-full"
                   aria-label="Open feature-metric matcher game"
-                  onClick={() => console.log("Feature-Metric button clicked (mobile)")}
+                  onClick={() => handleGameClick('Feature-Metric Matcher', 'mobile')}
                 >
                   Feature-Metric Matcher
                 </Button>
@@ -176,7 +203,7 @@ const Index = () => {
                   variant="outline"
                   className="font-semibold text-sm w-full"
                   aria-label="Open stack challenge game"
-                  onClick={() => console.log("Stack Challenge button clicked (mobile)")}
+                  onClick={() => handleGameClick('Stack Challenge', 'mobile')}
                 >
                   Stack Challenge
                 </Button>
@@ -193,7 +220,7 @@ const Index = () => {
                   variant="outline"
                   className="font-semibold text-sm w-full"
                   aria-label="Open burnout meter game"
-                  onClick={() => console.log("Burnout Meter button clicked (mobile)")}
+                  onClick={() => handleGameClick('Burnout Meter', 'mobile')}
                 >
                   Burnout Meter
                 </Button>

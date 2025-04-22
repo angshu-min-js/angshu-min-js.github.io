@@ -59,6 +59,23 @@ The project is deployed to GitHub Pages using the `gh-pages` package.
 
 A custom domain (`angshumangupta.com`) is configured via the GitHub repository settings to point to the GitHub Pages site.
 
+## Analytics (Google Analytics)
+
+Google Analytics 4 (GA4) is integrated to track website usage and user interactions.
+
+- **Measurement ID:** `G-K6MH14YG40`
+- **Implementation:**
+    - The base GA4 tag (`gtag.js`) is included directly in `index.html` to enable automatic page view tracking and provide the global `gtag` function.
+    - TypeScript declarations (`declare global { interface Window { gtag?: ... } }`) are added in relevant `.tsx` files to inform the type checker about the global `gtag` function.
+    - A helper function `trackEvent(eventName, eventParams)` is used within components to send custom events to GA4 via `window.gtag('event', ...)`.
+
+- **Custom Events Tracked:**
+    - `page_view`: Tracked automatically by the GA4 tag.
+    - `social_link_click`: Fired when a social media link is clicked (`src/components/SocialLinks.tsx`). Includes parameters: `link_name`, `link_url`.
+    - `resume_link_click`: Fired when the Resume PDF link or Audio Resume button is clicked (`src/components/ResumeLinks.tsx`). Includes parameter: `type` ('pdf' or 'audio').
+    - `audio_resume_play`: Fired when the audio resume player is started (`src/components/ResumeLinks.tsx`).
+    - `game_button_click`: Fired when any interactive game button is clicked (`src/pages/Index.tsx`). Includes parameters: `game_name`, `view` ('desktop' or 'mobile').
+
 ## Interactive PM Games
 
 The portfolio includes several interactive mini-games designed to be fun and reflect common Product Management challenges.
@@ -181,4 +198,6 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 - Provides `onClose` prop for dialog dismissal.
 
 ---
+
+Feel free to contribute or suggest improvements!
 

@@ -1,6 +1,22 @@
 import React from "react";
 import { Linkedin, Github, Codepen, Newspaper, Palette, Mail } from "lucide-react";
 
+// Declare gtag on the window object for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+// Helper function to send events to Google Analytics
+const trackEvent = (eventName: string, eventParams: object) => {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, eventParams);
+  } else {
+    console.warn('gtag function not found. Ensure Google Analytics is loaded.');
+  }
+};
+
 const social = [
   {
     name: "LinkedIn",
@@ -48,6 +64,7 @@ export const SocialLinks: React.FC<SocialLinksProps> = ({ vertical = false }) =>
         rel="noopener noreferrer"
         aria-label={name}
         className="text-gray-400 hover:text-accent transition-colors duration-200"
+        onClick={() => trackEvent('social_link_click', { link_name: name, link_url: href })}
       >
         <Icon size={28} strokeWidth={1.8} />
       </a>
