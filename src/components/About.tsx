@@ -121,7 +121,7 @@ export const About = () => {
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🚀 The Early Days</h4>
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    I wrote my first lines of code at the age of 10, built computer games, and customized game installations for my friends. That early fascination with technology has never left me. Even as I pursued Mechanical and Aerospace Engineering — and founded the Aeronautical Society in college — I always found myself drawn to solving problems through code and design.
+                    I wrote my first lines of code at the age of 10, built computer games, and customized game installations for my friends. That early fascination with technology has never left me. Even as I pursued Mechanical and Aerospace Engineering — and founded the Aeronautical Society in college — I always found myself drawn to solving problems through technology.
                   </p>
                 </div>
 
