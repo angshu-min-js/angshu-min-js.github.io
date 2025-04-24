@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
+// Define RoleType
+type RoleType = 'Individual Contributor' | 'Product People Manager' | 'General Manager' | 'Agent Manager';
+
 // Updated experience data based on resume
 const experience = [
   {
     role: "Product Lead, Partner Onboarding and Shop Connectors",
+    roleType: 'Individual Contributor' as RoleType, // Managing product areas/teams
     company: "Zalando SE",
     website: "https://www.zalando.de/",
     logoUrl: "https://logo.clearbit.com/zalando.de", // Keep existing or verify
@@ -21,6 +25,7 @@ const experience = [
   },
   {
     role: "Full Stack Product Manager, Agentic Systems",
+    roleType: 'Agent Manager' as RoleType, // Personal projects, building
     company: "Qloud AI (Personal Projects)", // Changed company name for clarity
     website: "https://qloudai.app", 
     logoUrl: "https://qloudai.app/assets/avatar.png", // Keeping Qloud AI avatar for now
@@ -28,14 +33,15 @@ const experience = [
     summary: "Designing and orchestrating autonomous LLM-based systems to automate and scale digital workflows. Blending product, engineering, and AI agent ops.",
     paragraphs: [
       "I am passionate about Gen AI - actively prototyping and shipping tools:",
-      "Product Builders: A community and knowledge hub for building and scaling digital products using AI agents.",
-      "German with Nik: A voice-based LLM tutor designed to help users practice and learn spoken German.",
-      "Captions GPT: A multi-modal agent that helps social media users generate captions for videos and images."
+      '<a href="https://productbuilders.xyz" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Product Builders</a>: A community and knowledge hub for building and scaling digital products using AI agents.',
+      '<a href="https://germanwithnik.com/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">German with Nik</a>: A voice-based LLM tutor designed to help users practice and learn spoken German.', // Placeholder URL
+      '<a href="https://captionsgpt.site/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Captions GPT</a>: A multi-modal agent that helps social media users generate captions for videos and images.' // Placeholder URL
     ],
     skills: ["Gen AI", "LLMs", "Voice Interfaces", "Multi-modal Agents", "Rapid Prototyping", "Community Building", "Product Innovation"]
   },
   {
     role: "Product Lead, Identity, Access, and Workflow Mgmt.",
+    roleType: 'Product People Manager' as RoleType, // Managed a team of 3 PMs
     company: "Zeta Tech (Directi)",
     website: "https://www.zeta.tech/",
     logoUrl: "https://logo.clearbit.com/zeta.tech", // Keep existing or verify
@@ -49,6 +55,7 @@ const experience = [
   },
   {
     role: "Senior Product Manager, Driver Onboarding",
+    roleType: 'Product People Manager' as RoleType, // Led project, focus on individual contribution
     company: "Ola Cabs",
     website: "https://www.olacabs.com/",
     logoUrl: "https://logo.clearbit.com/olacabs.com", // Keep existing or verify
@@ -63,6 +70,7 @@ const experience = [
   },
   {
     role: "Co-founder (CPTO) / Head of Product / Consultant",
+    roleType: 'General Manager' as RoleType, // Head of Product implies managing product/team
     company: "Early Stage Startups",
     website: "https://angshumangupta.com/",
     logoUrl: "/CL_logo_TM.png",
@@ -78,6 +86,7 @@ const experience = [
   },
   {
     role: "Software Engineer / Product Manager (Infrastructure)",
+    roleType: 'Individual Contributor' as RoleType, // Early roles + infra PM focused on tool
     company: "Tata Consultancy Services (TCS)",
     website: "https://www.tcs.com/",
     logoUrl: "https://logo.clearbit.com/tcs.com", // Keep existing or verify
@@ -91,6 +100,20 @@ const experience = [
     skills: ["Infrastructure Product Management", "Software Development (Java)", "QA Testing", "Subject Matter Expertise", "Unix Based Systems", "Ubuntu"]
   },
 ];
+
+// Function to get badge styles based on role type
+const getRoleTypeBadgeStyle = (roleType: RoleType) => {
+  switch (roleType) {
+    case 'Individual Contributor':
+      return 'bg-blue-100 text-blue-800';
+    case 'Product People Manager':
+      return 'bg-green-100 text-green-800';
+    case 'General Manager': // Added case, though not used currently
+      return 'bg-purple-100 text-purple-800';
+    default:
+      return 'bg-gray-100 text-gray-800';
+  }
+};
 
 export const About = () => {
   const [activeSection, setActiveSection] = useState<string>("about");
@@ -141,9 +164,13 @@ export const About = () => {
 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🤖 Beyond Work</h4>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    Outside of work, I'm deeply bullish on Generative AI. I spend my free time tinkering, building small apps, and writing about the future of product building on productbuilders.xyz. It's where I share what I learn, open-source ideas, and connect with others who love building as much as I do.
-                  </p>
+                  <p 
+                    className="text-gray-700 text-lg leading-relaxed"
+                    dangerouslySetInnerHTML={{
+                      __html: 
+                        'Outside of work, I\'m deeply bullish on Generative AI. I spend my free time tinkering, building small apps, and writing about the future of product building on <a href="https://productbuilders.xyz" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">productbuilders.xyz</a>. It\'s where I share what I learn, open-source ideas, and connect with others who love building as much as I do.'
+                    }}
+                  />
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg">
@@ -282,9 +309,16 @@ export const About = () => {
             <ul className="space-y-6">
               {experience.map((exp) => (
                 <li key={exp.role + exp.company} className="bg-white p-5 rounded-lg shadow-sm">
-                  <div className="flex justify-between items-start mb-2">
-                    <h4 className="font-bold text-lg text-primary flex-1 mr-2">{exp.role}</h4>
-                    <span className="text-gray-400 text-sm text-right flex-shrink-0">{exp.years}</span>
+                  <div className="flex justify-between items-start mb-2 flex-wrap">
+                    <div className="flex items-center flex-wrap mb-1 md:mb-0">
+                      <h4 className="font-bold text-lg text-primary mr-2">{exp.role}</h4>
+                      <span 
+                        className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${getRoleTypeBadgeStyle(exp.roleType)}`}
+                      >
+                        {exp.roleType}
+                      </span>
+                    </div>
+                    <span className="text-gray-400 text-sm text-right flex-shrink-0 w-full md:w-auto mt-1 md:mt-0">{exp.years}</span>
                   </div>
                   <div className="flex items-center text-gray-700 font-semibold mb-3">
                     {exp.logoUrl && !imageErrors[exp.company] && (
@@ -311,7 +345,7 @@ export const About = () => {
                   <p className="text-gray-500 italic text-sm mb-3">{exp.summary}</p>
                   <div className="text-gray-600 text-sm leading-relaxed space-y-2">
                     {exp.paragraphs.map((paragraph, index) => (
-                      <p key={index}>{paragraph}</p>
+                      <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
                     ))}
                     {exp.skills && exp.skills.length > 0 && (
                       <div className="pt-3">
