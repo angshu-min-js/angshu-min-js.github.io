@@ -15,7 +15,7 @@ const experience = [
     summary: "Spearheading B2B partner onboarding and e-commerce integrations, driving significant growth.",
     paragraphs: [
       "Spearheading two core product areas for Zalando's B2B business (Zeos): Partner Onboarding and E-Commerce Shop Integrations (Shopify, Salesforce, Scayle, etc.).",
-      "Achieved outcomes including 99% faster onboarding, 10x market expansion, and 70% D2C market penetration, contributing to over €XXX Mn+ in revenue.",
+      "Achieved outcomes including 99% faster onboarding, 10x market expansion, and 70% D2C market penetration, contributing to over €XXX Mn in revenue.",
       "Defined and executed a multi-year platform strategy, translating complex operational needs into scalable product roadmaps, securing endorsements from Senior Leadership.",
       "Driving cross-functional collaboration across Design, Engineering, Data, Commercial, Operations, Legal, Channel & Markets, Domain Teams, and Finance.",
       "Managing the platform's Onboarding & Connector Self-Service, API Services, Dev Documentation, and Back-Offices.",
