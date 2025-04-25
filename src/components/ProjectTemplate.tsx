@@ -11,7 +11,7 @@ export interface ProjectData {
   id: string;
   title: string;
   company: string;
-  year: number;
+  year: string | number;
   shortDescription: string;
   situation: string;
   steps: {

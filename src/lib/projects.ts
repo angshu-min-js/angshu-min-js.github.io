@@ -5,7 +5,7 @@ export const projects: ProjectData[] = [
     id: 'zalando-platform',
     title: '🚀 Building Zalando\'s (ZEOS) Partner Platform: 0 to 1 journey within a listed company',
     company: 'Zalando SE',
-    year: 2023,
+    year: "2023 - 2024",
     shortDescription: 'Led the transformation of Zalando\'s logistics capabilities into a full-fledged logistics-as-a-service platform, scaling from 1 to 50 merchants per month.',
     situation: 'When I joined Zalando, Europe\'s leading fashion marketplace, I was tasked with scaling a bold new ambition — transforming Zalando\'s logistics capabilities, branded as Zeos, into a full-fledged logistics-as-a-service platform. The mission was clear: help merchants sell not just on Zalando, but across marketplaces like Amazon, Otto, and About You — and do it at scale.\n\nThe first thing I noticed? We were onboarding just one merchant per month. Digging deeper, the reasons became clear:\n- The onboarding process was entirely manual 🧾\n- There was no clear platform or tech infrastructure to support scaling ⚙️\n- Teams worked in silos with no shared domain models or reusable interfaces 🚧\n\nYet, the business goals were ambitious: 10 merchants in 2023 → 20 in 2024 → 40+ in 2025, driven by new markets, non-Zalando demand, and expanding marketplace presence 🌍\n\nIt was clear — a platform rethink was necessary.',
     steps: {
@@ -47,7 +47,7 @@ export const projects: ProjectData[] = [
     id: 'zeta-identity',
     title: '🔐 From Tickets to Trust: Launching a Self-Serve Identity Platform at Zeta',
     company: 'Zeta',
-    year: 2021,
+    year: "2021 - 2022",
     shortDescription: 'Built a self-service identity platform that reduced support tickets by 30% and transformed access management across internal and external users.',
     situation: '🧠 Context\nZeta\'s IAM platform powers access for multiple internal and external product suites. Identity changes and access requests were common — but relied on tenant admins and manual backoffice workflows, creating friction and ticket overhead.\n\n🎯 Goal\nMake access and identity self-serviceable for all users — employees, customers, partners — without depending on support or tenant admins.\n\n📊 Business Impact\n• Reduce support ticket volume related to access issues\n• Improve resolution time by 100% (i.e., eliminate ticket dependency)\n• Create a table-stakes experience comparable to industry leaders (Okta, Ping)\n\n🔍 Discovery\nTraced user journeys:\n• User logs in → Hits access block → Doesn\'t know why or whom to contact → Raises a support ticket\n• Tenant admins had to log into backoffice, find the user, and manually update access\n• Ticket aging: Avg 2–5 days → Created productivity loss & poor experience\n• Conducted customer interviews (internal & external)\n\n🤯 Core Problems\n• Users didn\'t know what roles/access they had\n• No visibility on how to request access\n• No standard identity view → led to duplicated or incorrect identities\n• Tenant admins were overburdened with repetitive access requests',
     steps: {
@@ -127,7 +127,7 @@ export const projects: ProjectData[] = [
     id: "zeta-devex",
     title: "👨‍💻 Code, Clarity, and Confidence: Elevating Developer Experience at Zeta",
     company: "Zeta Tech (Directi)",
-    year: 2022,
+    year: 2021,
     shortDescription: "Transformed Zeta's IAM platform developer experience, reducing Time to Hello World by 50% and significantly cutting support tickets.",
     situation: "🌍 Context\nZeta's Identity and Access Management (IAM) platform powers access for a wide range of enterprise products. As our platform scaled, the number of internal developers integrating with it also increased. However, the developer journey—from creating tokens to managing roles—was often unclear. Most of the feedback centered around a single issue: developers didn't know where to start or what to do next.\n\n🎯 Business Goal\nReduce support tickets and incidents related to IAM integrations by making the developer journey intuitive and well-documented.\n\n🎯 Product Objective\nImprove the developer experience (DevEx) with better documentation, simplified interfaces, and clear guidance—so developers can move faster with confidence.\n\n🎯 Key Result\n⏱️ Time to Hello World (TTHW) for Bot Token setup reduced by 50%.",
     steps: {
