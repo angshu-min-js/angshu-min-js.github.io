@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react"; // Import icons for the accordion
+import { Link } from 'react-router-dom';
+import { projects } from '../lib/projects';
 
 // Define RoleType
 type RoleType = 'Individual Contributor' | 'Product People Manager' | 'General Manager' | 'Agent Manager';
@@ -117,12 +120,19 @@ const getRoleTypeBadgeStyle = (roleType: RoleType) => {
 
 export const About = () => {
   const [activeSection, setActiveSection] = useState<string>("about");
+  // State for tracking which portfolio project is expanded
+  const [expandedProject, setExpandedProject] = useState<string | null>(null);
   
   // Add state to track image loading errors
   const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
   
   const handleImageError = (company: string) => {
     setImageErrors(prev => ({...prev, [company]: true}));
+  };
+
+  // Function to toggle expanded project
+  const toggleProject = (projectId: string) => {
+    setExpandedProject(expandedProject === projectId ? null : projectId);
   };
 
   // Placeholder URLs - Replace with actual URLs if found
@@ -371,6 +381,52 @@ export const About = () => {
             </div>
           </>
         );
+      case "portfolio":
+        return (
+          <>
+            <h3 className="font-playfair text-2xl font-bold mb-4 text-primary">📂 Product Journey Portfolio</h3>
+            <p className="text-gray-600 mb-6 italic">A detailed look at key product initiatives I've led throughout my career</p>
+            
+            <div className="space-y-6">
+              {projects.map((project) => (
+                <div key={project.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
+                  {/* Project header - always visible */}
+                  <div className="p-5">
+                    <div>
+                      <Link 
+                        to={`/project/${project.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block hover:opacity-75 transition-opacity"
+                      >
+                        <h4 className="font-bold text-lg text-primary hover:text-accent">{project.title}</h4>
+                        <div className="flex items-center text-gray-600 text-sm mt-1">
+                          <span className="font-medium">{project.company}</span>
+                          <span className="mx-2">•</span>
+                          <span>{project.year}</span>
+                        </div>
+                        <p className="text-gray-500 mt-2">{project.shortDescription}</p>
+                      </Link>
+                      <div className="mt-4">
+                        <Link
+                          to={`/project/${project.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-accent hover:text-accent-dark transition-colors"
+                        >
+                          View Details
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        );
       default:
         return (
           <>
@@ -385,7 +441,7 @@ export const About = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <div className="flex space-x-4 mb-8">
+      <div className="flex flex-wrap gap-2 mb-8">
         <button
           onClick={() => setActiveSection("about")}
           className={`px-4 py-2 rounded-lg ${
@@ -405,6 +461,16 @@ export const About = () => {
           }`}
         >
           Experience
+        </button>
+        <button
+          onClick={() => setActiveSection("portfolio")}
+          className={`px-4 py-2 rounded-lg ${
+            activeSection === "portfolio"
+              ? "bg-primary text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Portfolio
         </button>
         <button
           onClick={() => setActiveSection("expertise")}
