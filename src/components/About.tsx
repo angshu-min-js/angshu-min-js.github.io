@@ -395,8 +395,6 @@ export const About = () => {
                     <div>
                       <Link 
                         to={`/project/${project.id}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="block hover:opacity-75 transition-opacity"
                       >
                         <h4 className="font-bold text-lg text-primary hover:text-accent">{project.title}</h4>

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && copy CNAME dist\\",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "build:dev": "vite build --mode development",
