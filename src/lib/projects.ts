@@ -159,6 +159,42 @@ export const projects: ProjectData[] = [
       "Sandbox environments accelerate adoption",
       "Visual guidance reduces cognitive load"
     ]
+  },
+  {
+    id: 'leagueadd-data-roadmap',
+    title: '📊 Scaling 0 to 1: Data-Driven Growth Hacking at LeagueAdda',
+    company: 'LeagueAdda',
+    year: '2018 - 2020',
+    shortDescription: "Used business and product data to drive LeagueAdda's roadmap and growth as Business Head.",
+    situation: 'As the Business Head of LeagueAdda, I was responsible for scaling the platform from 0 to 1. To do this, I built and maintained a comprehensive data dashboard that tracked business health, product metrics, and user engagement. This data-driven approach enabled me to align the product roadmap with business goals and respond quickly to market needs.',
+    steps: {
+      research: [
+        'Collected and monitored key business metrics: user growth, retention, revenue, and engagement',
+        'Tracked product usage data and user feedback to identify pain points and opportunities',
+        'Benchmarked against competitors and industry standards to set ambitious but realistic targets'
+      ],
+      strategy: [
+        'Defined business goals and mapped them to actionable product objectives',
+        'Prioritized roadmap features based on data insights and business impact',
+        'Aligned cross-functional teams (product, engineering, marketing) around data-driven priorities'
+      ],
+      development: [
+        'Launched new features and product improvements based on roadmap priorities',
+        'Iterated quickly using weekly data reviews and feedback loops',
+        'Scaled the platform to support rapid user growth and new business models'
+      ]
+    },
+    impact: [
+      'Achieved significant user growth and improved retention rates',
+      'Increased revenue and diversified business streams',
+      'Built a culture of data-driven decision making across the team',
+      'Enabled rapid iteration and alignment between business and product goals'
+    ],
+    lessons: [
+      'Data is a powerful tool for aligning teams and driving business outcomes',
+      'Continuous monitoring and iteration are key to scaling from 0 to 1',
+      'A single source of truth accelerates decision making and transparency'
+    ],
   }
 ];
 

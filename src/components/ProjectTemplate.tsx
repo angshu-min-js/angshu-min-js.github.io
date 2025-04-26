@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronLeft } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
+import LeagueAddDashboard from './LeagueAddDashboard';
 
 export interface ProjectStep {
   title: string;
@@ -21,6 +22,7 @@ export interface ProjectData {
   };
   impact: string[];
   lessons: string[];
+  dashboard?: any; // Optional dashboard property
 }
 
 interface ProjectTemplateProps {
@@ -97,6 +99,9 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
 
         {/* Main Content */}
         <div className="space-y-8">
+          {/* LeagueAddDashboard at the top for leagueadd-data-roadmap */}
+          {project.id === 'leagueadd-data-roadmap' && <LeagueAddDashboard />}
+
           {/* Situation Section */}
           <section className="bg-white rounded-xl shadow-sm p-8">
             <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair">The Situation</h2>
