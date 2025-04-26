@@ -84,46 +84,6 @@ export const projects: ProjectData[] = [
     ]
   },
   {
-    id: 'ola-digitization',
-    title: '🚗 Ola Document Digitization: Scaling AI to Onboard Millions of Drivers',
-    company: 'Ola Cabs',
-    year: 2021,
-    shortDescription: 'Reduced driver onboarding time from 3 hours to 30 mins through AI-driven document digitization, enabling rapid international expansion and improved supply-side metrics.',
-    situation: '🧠 Context\nAs Ola expanded globally (UK, Australia, NZ), onboarding supply (drivers) quickly and compliantly became a critical problem to solve. Manual document checks led to long onboarding times, high drop-offs, and compliance risks — slowing down international expansion.\n\n🎯 Goal\nReduce onboarding turnaround time from 3 hours to 30 mins — an 80% reduction — while improving funnel conversion and ensuring compliance via AI-driven document digitization.\n\n📊 Business Impact\n• Unlock new revenue in international markets by improving supply-side onboarding\n• Power a $1B+ revenue ambition with faster driver onboarding\n• Improve agent productivity (CVT team) and reduce headcount dependency over 6 rollout phases\n\n🔍 Discovery\nTraced driver onboarding journey:\n• Driver App → CVT agent → Manual Review → Quality Checks → Feedback Loop to Driver\n• Conducted funnel analysis → 30% of drivers were dropping off\n• Root cause: Incorrect documents, unclear rejections, slow feedback loop\n• Supplemented with customer call recordings and CVT agent interviews\n\n🤯 Core Problems\n• Drivers didn\'t know why their documents failed\n• High TAT → many didn\'t return to complete onboarding\n• Manual document digitization wasn\'t scalable or consistent\n• A robust compliance engine needed standardized digitization',
-    steps: {
-      research: [
-        'Conducted comprehensive driver onboarding journey analysis revealing 30% drop-off rate',
-        'Analyzed customer call recordings and CVT agent interviews to identify pain points',
-        'Evaluated build vs. buy options → chose in-house development (2Y ROI, extensibility, privacy)',
-        'Tested with historical Indian data as proxy for classification and extraction validation'
-      ],
-      strategy: [
-        'Designed multi-component AI platform with image quality detection, document classification, and OCR processing',
-        'Planned phased market rollout: London → ANZ → Global',
-        'Focused on reducing CVT agent time and building self-serve driver experience',
-        'Defined clear north-star metric: Driver onboarding time reduction'
-      ],
-      development: [
-        'Built Core OCR Platform with FFT for blur detection and RGB channel thresholds',
-        'Implemented VGG19-based document classifier with market-specific training',
-        'Integrated Azure Cognitive OCR API with custom regex-based field extraction',
-        'Enhanced driver app with visual cues and improved first-time upload UX',
-        'Developed quick prototype using Django + Azure Cognitive Services to demonstrate value proposition and secure SLT buy-in and project budget'
-      ]
-    },
-    impact: [
-      'Initial Release (Week 1) ❌:\n• Started with 70% digitization accuracy\n• CVT rework actually increased by ~10%\n• Required additional agent support',
-      'Improved Results (Week 4+) ✅:\n• Accuracy improved dramatically to 95%\n• Reduced onboarding time from 3 hours to 30 mins\n• Significantly decreased funnel drop-off rate',
-      'Long-term Success 🚀:\n• Successfully scaled across UK and ANZ markets\n• Created foundation for 6-phase CVT dependency reduction\n• Improved driver supply in all pilot markets'
-    ],
-    lessons: [
-      'Driver experience is just as important as backend automation - UX improvements significantly reduced document rejections',
-      'Starting with a scrappy prototype gave us speed + confidence to scale',
-      'Local document variance required continuous model tuning per geography',
-      'Cross-functional collaboration (CVT, Ops, Supply, Engineering) was crucial for successful rollout'
-    ]
-  },
-  {
     id: "zeta-devex",
     title: "👨‍💻 Code, Clarity, and Confidence: Elevating Developer Experience at Zeta",
     company: "Zeta Tech (Directi)",
@@ -158,6 +118,46 @@ export const projects: ProjectData[] = [
       "Documentation is a product, not an afterthought",
       "Sandbox environments accelerate adoption",
       "Visual guidance reduces cognitive load"
+    ]
+  },
+  {
+    id: 'ola-digitization',
+    title: '🚗 Ola Document Digitization: Scaling AI to Onboard Millions of Drivers',
+    company: 'Ola Cabs',
+    year: "2020 - 2021",
+    shortDescription: 'Reduced driver onboarding time from 3 hours to 30 mins through AI-driven document digitization, enabling rapid international expansion and improved supply-side metrics.',
+    situation: '🧠 Context\nAs Ola expanded globally (UK, Australia, NZ), onboarding supply (drivers) quickly and compliantly became a critical problem to solve. Manual document checks led to long onboarding times, high drop-offs, and compliance risks — slowing down international expansion.\n\n🎯 Goal\nReduce onboarding turnaround time from 3 hours to 30 mins — an 80% reduction — while improving funnel conversion and ensuring compliance via AI-driven document digitization.\n\n📊 Business Impact\n• Unlock new revenue in international markets by improving supply-side onboarding\n• Power a $1B+ revenue ambition with faster driver onboarding\n• Improve agent productivity (CVT team) and reduce headcount dependency over 6 rollout phases\n\n🔍 Discovery\nTraced driver onboarding journey:\n• Driver App → CVT agent → Manual Review → Quality Checks → Feedback Loop to Driver\n• Conducted funnel analysis → 30% of drivers were dropping off\n• Root cause: Incorrect documents, unclear rejections, slow feedback loop\n• Supplemented with customer call recordings and CVT agent interviews\n\n🤯 Core Problems\n• Drivers didn\'t know why their documents failed\n• High TAT → many didn\'t return to complete onboarding\n• Manual document digitization wasn\'t scalable or consistent\n• A robust compliance engine needed standardized digitization',
+    steps: {
+      research: [
+        'Conducted comprehensive driver onboarding journey analysis revealing 30% drop-off rate',
+        'Analyzed customer call recordings and CVT agent interviews to identify pain points',
+        'Evaluated build vs. buy options → chose in-house development (2Y ROI, extensibility, privacy)',
+        'Tested with historical Indian data as proxy for classification and extraction validation'
+      ],
+      strategy: [
+        'Designed multi-component AI platform with image quality detection, document classification, and OCR processing',
+        'Planned phased market rollout: London → ANZ → Global',
+        'Focused on reducing CVT agent time and building self-serve driver experience',
+        'Defined clear north-star metric: Driver onboarding time reduction'
+      ],
+      development: [
+        'Built Core OCR Platform with FFT for blur detection and RGB channel thresholds',
+        'Implemented VGG19-based document classifier with market-specific training',
+        'Integrated Azure Cognitive OCR API with custom regex-based field extraction',
+        'Enhanced driver app with visual cues and improved first-time upload UX',
+        'Developed quick prototype using Django + Azure Cognitive Services to demonstrate value proposition and secure SLT buy-in and project budget'
+      ]
+    },
+    impact: [
+      'Initial Release (Week 1) ❌:\n• Started with 70% digitization accuracy\n• CVT rework actually increased by ~10%\n• Required additional agent support',
+      'Improved Results (Week 4+) ✅:\n• Accuracy improved dramatically to 95%\n• Reduced onboarding time from 3 hours to 30 mins\n• Significantly decreased funnel drop-off rate',
+      'Long-term Success 🚀:\n• Successfully scaled across UK and ANZ markets\n• Created foundation for 6-phase CVT dependency reduction\n• Improved driver supply in all pilot markets'
+    ],
+    lessons: [
+      'Driver experience is just as important as backend automation - UX improvements significantly reduced document rejections',
+      'Starting with a scrappy prototype gave us speed + confidence to scale',
+      'Local document variance required continuous model tuning per geography',
+      'Cross-functional collaboration (CVT, Ops, Supply, Engineering) was crucial for successful rollout'
     ]
   },
   {

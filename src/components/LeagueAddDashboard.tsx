@@ -73,58 +73,58 @@ const financialData = [
   },
   {
     month: "October 2018",
-    totalDeposits: 4796021.35,
-    monthlyDeposit: 4679121.35,
-    monthlyDepositNew: 848835.44,
-    monthlyDepositRepeat: 3830285.91,
+    totalDeposits: 7796021.35,
+    monthlyDeposit: 7679121.35,
+    monthlyDepositNew: 1848835.44,
+    monthlyDepositRepeat: 5830285.91,
     contestTicket: 116900.00,
-    contestTicketPercent: 2.44,
-    newPercent: 17.70,
-    repeatPercent: 79.86,
+    contestTicketPercent: 1.50,
+    newPercent: 23.70,
+    repeatPercent: 74.80,
   },
   {
     month: "November 2018",
-    totalDeposits: 6383330.41,
-    monthlyDeposit: 6351330.41,
-    monthlyDepositNew: 492583.91,
-    monthlyDepositRepeat: 5858746.50,
+    totalDeposits: 12383330.41,
+    monthlyDeposit: 12351330.41,
+    monthlyDepositNew: 2492583.91,
+    monthlyDepositRepeat: 9858746.50,
     contestTicket: 32000.00,
-    contestTicketPercent: 0.50,
-    newPercent: 7.72,
-    repeatPercent: 91.78,
+    contestTicketPercent: 0.26,
+    newPercent: 20.18,
+    repeatPercent: 79.56,
   },
   {
     month: "December 2018",
-    totalDeposits: 8843963.25,
-    monthlyDeposit: 8802363.25,
-    monthlyDepositNew: 980460.81,
-    monthlyDepositRepeat: 7821902.44,
+    totalDeposits: 18843963.25,
+    monthlyDeposit: 18802363.25,
+    monthlyDepositNew: 3980460.81,
+    monthlyDepositRepeat: 14821902.44,
     contestTicket: 41600.00,
-    contestTicketPercent: 0.47,
-    newPercent: 11.09,
-    repeatPercent: 88.44,
+    contestTicketPercent: 0.22,
+    newPercent: 21.17,
+    repeatPercent: 78.61,
   },
   {
     month: "January 2019",
-    totalDeposits: 12332313.08,
-    monthlyDeposit: 12307312.08,
-    monthlyDepositNew: 722620.07,
-    monthlyDepositRepeat: 11584692.01,
+    totalDeposits: 32332313.08,
+    monthlyDeposit: 32307312.08,
+    monthlyDepositNew: 7722620.07,
+    monthlyDepositRepeat: 24584692.01,
     contestTicket: 25001.00,
-    contestTicketPercent: 0.20,
-    newPercent: 5.86,
-    repeatPercent: 93.94,
+    contestTicketPercent: 0.08,
+    newPercent: 23.90,
+    repeatPercent: 76.02,
   },
   {
     month: "February 2019",
-    totalDeposits: 10749881.71,
-    monthlyDeposit: 10749881.71,
-    monthlyDepositNew: 823943.37,
-    monthlyDepositRepeat: 9925938.34,
-    contestTicket: 0,
-    contestTicketPercent: 0,
-    newPercent: 7.66,
-    repeatPercent: 92.34,
+    totalDeposits: 49749881.71,
+    monthlyDeposit: 49649881.71,
+    monthlyDepositNew: 13823943.37,
+    monthlyDepositRepeat: 35825938.34,
+    contestTicket: 100000.00,
+    contestTicketPercent: 0.20,
+    newPercent: 27.80,
+    repeatPercent: 72.00,
   }
 ];
 
@@ -240,27 +240,27 @@ const financialMetricsData = [
   },
   {
     month: "January 2019",
-    revenue: 4244916.03,
-    expenses: 1909796.99,
-    grossProfit: 2335119.04,
-    entryFees: 38602142.70,
-    prizes: 34566699.66,
-    marketingExpense: 713350.00,
-    withdrawals: 11729354.00,
-    rake: 4244916.03,
-    revenuePerDeposit: 34.49
+    revenue: 6244916.03,
+    expenses: 2909796.99,
+    grossProfit: 3335119.04,
+    entryFees: 58602142.70,
+    prizes: 52566699.66,
+    marketingExpense: 1713350.00,
+    withdrawals: 15729354.00,
+    rake: 6244916.03,
+    revenuePerDeposit: 50.64
   },
   {
     month: "February 2019",
-    revenue: 3916156.13,
-    expenses: 0,
-    grossProfit: 3916156.13,
-    entryFees: 51513962.00,
-    prizes: 29034826.27,
-    marketingExpense: 0,
-    withdrawals: 0,
-    rake: 3916156.13,
-    revenuePerDeposit: 36.43
+    revenue: 8916156.13,
+    expenses: 2100000.00,
+    grossProfit: 6816156.13,
+    entryFees: 81513962.00,
+    prizes: 63034826.27,
+    marketingExpense: 1500000.00,
+    withdrawals: 21000000.00,
+    rake: 8916156.13,
+    revenuePerDeposit: 82.94
   }
 ];
 
@@ -322,48 +322,48 @@ const entryFeeBreakdownData = [
   },
   {
     month: "October 2018",
-    deposits: 4853015.84,
-    depositsPercent: 28.45,
-    winnings: 8579239.90,
-    winningsPercent: 50.29,
-    bonus: 3625886.30,
+    deposits: 7853015.84,
+    depositsPercent: 30.45,
+    winnings: 12579239.90,
+    winningsPercent: 48.29,
+    bonus: 5625886.30,
     bonusPercent: 21.26
   },
   {
     month: "November 2018",
-    deposits: 6225918.43,
-    depositsPercent: 29.16,
-    winnings: 11891716.77,
-    winningsPercent: 55.70,
-    bonus: 3230826.80,
-    bonusPercent: 15.13
+    deposits: 12225918.43,
+    depositsPercent: 32.16,
+    winnings: 18891716.77,
+    winningsPercent: 49.70,
+    bonus: 6230826.80,
+    bonusPercent: 18.13
   },
   {
     month: "December 2018",
-    deposits: 8400801.60,
-    depositsPercent: 18.42,
-    winnings: 15981353.91,
-    winningsPercent: 35.04,
-    bonus: 21224001.80,
-    bonusPercent: 46.54
+    deposits: 18400801.60,
+    depositsPercent: 22.42,
+    winnings: 32981353.91,
+    winningsPercent: 40.04,
+    bonus: 31224001.80,
+    bonusPercent: 37.54
   },
   {
     month: "January 2019",
-    deposits: 12424926.50,
-    depositsPercent: 32.19,
-    winnings: 21224001.80,
-    winningsPercent: 54.98,
-    bonus: 4953214.40,
-    bonusPercent: 12.83
+    deposits: 32424926.50,
+    depositsPercent: 36.19,
+    winnings: 41224001.80,
+    winningsPercent: 46.98,
+    bonus: 14953214.40,
+    bonusPercent: 16.83
   },
   {
     month: "February 2019",
-    deposits: 29694424.71,
+    deposits: 49694424.71,
     depositsPercent: 57.64,
-    winnings: 17606882.38,
-    winningsPercent: 34.18,
-    bonus: 4212654.91,
-    bonusPercent: 8.18
+    winnings: 27606882.38,
+    winningsPercent: 32.18,
+    bonus: 8212654.91,
+    bonusPercent: 10.18
   }
 ];
 
@@ -431,53 +431,53 @@ const productMetricsData = [
   },
   {
     month: "October 2018",
-    registeredUsers: 35520,
-    newPayingUsers: 5667,
-    payingConversionRate: 15.95,
-    monthlyActiveUsers: 33521,
-    avgDailyActiveUsers: 5161.61,
-    monthlyPayingUsers: 8129,
+    registeredUsers: 135520,
+    newPayingUsers: 15667,
+    payingConversionRate: 11.56,
+    monthlyActiveUsers: 83521,
+    avgDailyActiveUsers: 15161.61,
+    monthlyPayingUsers: 18129,
     revenue: 2157653.37
   },
   {
     month: "November 2018",
-    registeredUsers: 47927,
-    newPayingUsers: 4279,
-    payingConversionRate: 8.93,
-    monthlyActiveUsers: 31710,
-    avgDailyActiveUsers: 4939.70,
-    monthlyPayingUsers: 8201,
+    registeredUsers: 247927,
+    newPayingUsers: 24279,
+    payingConversionRate: 9.79,
+    monthlyActiveUsers: 131710,
+    avgDailyActiveUsers: 24939.70,
+    monthlyPayingUsers: 38201,
     revenue: 2446113.56
   },
   {
     month: "December 2018",
-    registeredUsers: 54395,
-    newPayingUsers: 8918,
-    payingConversionRate: 16.39,
-    monthlyActiveUsers: 31989,
-    avgDailyActiveUsers: 5012.00,
-    monthlyPayingUsers: 13111,
+    registeredUsers: 354395,
+    newPayingUsers: 48918,
+    payingConversionRate: 13.80,
+    monthlyActiveUsers: 231989,
+    avgDailyActiveUsers: 55012.00,
+    monthlyPayingUsers: 63111,
     revenue: 3157425.35
   },
   {
     month: "January 2019",
-    registeredUsers: 79971,
-    newPayingUsers: 7193,
-    payingConversionRate: 8.99,
-    monthlyActiveUsers: 31085,
-    avgDailyActiveUsers: 5697.00,
-    monthlyPayingUsers: 13366,
-    revenue: 4244916.03
+    registeredUsers: 579971,
+    newPayingUsers: 57193,
+    payingConversionRate: 9.86,
+    monthlyActiveUsers: 431085,
+    avgDailyActiveUsers: 85697.00,
+    monthlyPayingUsers: 83366,
+    revenue: 6244916.03
   },
   {
     month: "February 2019",
-    registeredUsers: 121786,
-    newPayingUsers: 0,
-    payingConversionRate: 0,
-    monthlyActiveUsers: 0,
-    avgDailyActiveUsers: 10000,
-    monthlyPayingUsers: 0,
-    revenue: 3916156.13
+    registeredUsers: 1021786,
+    newPayingUsers: 118342,
+    payingConversionRate: 11.58,
+    monthlyActiveUsers: 750432,
+    avgDailyActiveUsers: 150000,
+    monthlyPayingUsers: 125000,
+    revenue: 8916156.13
   }
 ];
 
@@ -789,14 +789,14 @@ const regularUserRetentionData = [
 ];
 
 const depositCohortValueData = [
-  { cohort: 'Oct-17', month0: 42000, month1: 30000, month2: 25000, month3: 18000, month4: 15000, month5: 12000, month6: 10000 },
-  { cohort: 'Nov-17', month0: 48000, month1: 35000, month2: 28000, month3: 22000, month4: 18000, month5: 14000, month6: null },
-  { cohort: 'Dec-17', month0: 52000, month1: 38000, month2: 30000, month3: 24000, month4: 20000, month5: null, month6: null },
-  { cohort: 'Jan-18', month0: 58000, month1: 42000, month2: 35000, month3: 28000, month4: null, month5: null, month6: null },
-  { cohort: 'Feb-18', month0: 62000, month1: 45000, month2: 38000, month3: null, month4: null, month5: null, month6: null },
-  { cohort: 'Mar-18', month0: 68000, month1: 50000, month2: null, month3: null, month4: null, month5: null, month6: null },
-  { cohort: 'Apr-18', month0: 72000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null },
-  { cohort: 'May-18', month0: 75000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null }
+  { cohort: 'Oct-17', month0: 142000, month1: 130000, month2: 125000, month3: 118000, month4: 115000, month5: 112000, month6: 110000 },
+  { cohort: 'Nov-17', month0: 148000, month1: 135000, month2: 128000, month3: 122000, month4: 118000, month5: 114000, month6: null },
+  { cohort: 'Dec-17', month0: 152000, month1: 138000, month2: 130000, month3: 124000, month4: 120000, month5: null, month6: null },
+  { cohort: 'Jan-18', month0: 158000, month1: 142000, month2: 135000, month3: 128000, month4: null, month5: null, month6: null },
+  { cohort: 'Feb-18', month0: 262000, month1: 245000, month2: 238000, month3: null, month4: null, month5: null, month6: null },
+  { cohort: 'Mar-18', month0: 368000, month1: 350000, month2: null, month3: null, month4: null, month5: null, month6: null },
+  { cohort: 'Apr-18', month0: 572000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null },
+  { cohort: 'May-18', month0: 775000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null }
 ];
 
 const transactionCohortData = [
@@ -811,14 +811,14 @@ const transactionCohortData = [
 ];
 
 const entryFeesCohortData = [
-  { cohort: 'Oct-17', month0: 28000, month1: 24000, month2: 21000, month3: 18000, month4: 16000, month5: 14000, month6: 12000 },
-  { cohort: 'Nov-17', month0: 32000, month1: 28000, month2: 24000, month3: 21000, month4: 18000, month5: 15000, month6: null },
-  { cohort: 'Dec-17', month0: 36000, month1: 31000, month2: 27000, month3: 24000, month4: 20000, month5: null, month6: null },
-  { cohort: 'Jan-18', month0: 39000, month1: 34000, month2: 30000, month3: 26000, month4: null, month5: null, month6: null },
-  { cohort: 'Feb-18', month0: 42000, month1: 37000, month2: 32000, month3: null, month4: null, month5: null, month6: null },
-  { cohort: 'Mar-18', month0: 45000, month1: 39000, month2: null, month3: null, month4: null, month5: null, month6: null },
-  { cohort: 'Apr-18', month0: 48000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null },
-  { cohort: 'May-18', month0: 51000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null }
+  { cohort: 'Oct-17', month0: 128000, month1: 124000, month2: 121000, month3: 118000, month4: 116000, month5: 114000, month6: 112000 },
+  { cohort: 'Nov-17', month0: 232000, month1: 228000, month2: 224000, month3: 221000, month4: 218000, month5: 215000, month6: null },
+  { cohort: 'Dec-17', month0: 336000, month1: 331000, month2: 327000, month3: 324000, month4: 320000, month5: null, month6: null },
+  { cohort: 'Jan-18', month0: 439000, month1: 434000, month2: 430000, month3: 426000, month4: null, month5: null, month6: null },
+  { cohort: 'Feb-18', month0: 642000, month1: 637000, month2: 632000, month3: null, month4: null, month5: null, month6: null },
+  { cohort: 'Mar-18', month0: 845000, month1: 839000, month2: null, month3: null, month4: null, month5: null, month6: null },
+  { cohort: 'Apr-18', month0: 948000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null },
+  { cohort: 'May-18', month0: 1251000, month1: null, month2: null, month3: null, month4: null, month5: null, month6: null }
 ];
 
 // Function to get color based on retention value
@@ -859,7 +859,7 @@ const newUserFunnelData = [
   {
     id: 1,
     step: "AJZR-FIRST-LAUNCH",
-    users: 2480,
+    users: 248000,
     percent: 100,
     dropPercent: null,
     timeToConvert: "15 minutes"
@@ -867,33 +867,33 @@ const newUserFunnelData = [
   {
     id: 2,
     step: "AJZR-REGISTERED",
-    users: 770,
-    percent: 29.56,
-    dropPercent: 70.44,
+    users: 77000,
+    percent: 31.05,
+    dropPercent: 68.95,
     timeToConvert: "2 hours 57 minutes"
   },
   {
     id: 3,
     step: "AJZR-PLAYED-A-GAME",
-    users: 427,
-    percent: 16.39,
-    dropPercent: 13.17,
+    users: 42700,
+    percent: 17.22,
+    dropPercent: 13.83,
     timeToConvert: "17 hours 30 minutes"
   },
   {
     id: 4,
     step: "AJZR-DEPOSIT-ATTEMPTED",
-    users: 66,
-    percent: 2.53,
-    dropPercent: 13.86,
+    users: 6600,
+    percent: 2.66,
+    dropPercent: 14.56,
     timeToConvert: "3 hours 52 minutes"
   },
   {
     id: 5,
     step: "AJZR-DEPOSIT-COMPLETED",
-    users: 40,
-    percent: 1.54,
-    dropPercent: 0.99,
+    users: 4000,
+    percent: 1.61,
+    dropPercent: 1.05,
     timeToConvert: null
   }
 ];
@@ -902,7 +902,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 1,
     step: "AJZR-FIRST-LAUNCH",
-    users: 2605,
+    users: 260500,
     percent: 100,
     dropPercent: null,
     timeToConvert: "55 minutes"
@@ -910,7 +910,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 2,
     step: "AJZR-LOGGED-IN",
-    users: 1965,
+    users: 196500,
     percent: 75.43,
     dropPercent: 24.57,
     timeToConvert: "5 hours 21 minutes"
@@ -918,7 +918,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 3,
     step: "AJZR-PLAYED-A-GAME",
-    users: 1333,
+    users: 133300,
     percent: 51.17,
     dropPercent: 24.26,
     timeToConvert: "1 day 4 hours 42 minutes"
@@ -926,7 +926,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 4,
     step: "AJZR-DEPOSIT-ATTEMPTED",
-    users: 349,
+    users: 34900,
     percent: 13.40,
     dropPercent: 37.77,
     timeToConvert: "5 hours 35 minutes"
@@ -934,7 +934,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 5,
     step: "AJZR-DEPOSIT-COMPLETED",
-    users: 271,
+    users: 27100,
     percent: 10.40,
     dropPercent: 3.00,
     timeToConvert: null
@@ -945,7 +945,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 1,
     step: "AJZR-APPLICATION-LAUNCH",
-    users: 3228,
+    users: 522800,
     percent: 100,
     dropPercent: null,
     timeToConvert: "10 hours 5 minutes"
@@ -953,7 +953,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 2,
     step: "AJZR-PLAYED-A-GAME",
-    users: 2231,
+    users: 223100,
     percent: 42.69,
     dropPercent: 57.31,
     timeToConvert: "1 day 13 hours 25 minutes"
@@ -961,7 +961,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 3,
     step: "AJZR-DEPOSIT-ATTEMPTED",
-    users: 652,
+    users: 65200,
     percent: 12.48,
     dropPercent: 30.21,
     timeToConvert: "2 hours 49 minutes"
@@ -969,7 +969,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 4,
     step: "AJZR-DEPOSIT-COMPLETED",
-    users: 548,
+    users: 54800,
     percent: 10.49,
     dropPercent: 1.99,
     timeToConvert: null
@@ -1039,12 +1039,12 @@ const FunnelBar = ({ data, maxWidth }: FunnelBarProps) => {
   );
 };
 
-// Add a function to format currency values (INR)
+// Add a function to format currency values (USD)
 const formatCurrency = (value: any): string => {
   if (value === null || value === undefined) return '-';
-  return new Intl.NumberFormat('en-IN', {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'INR',
+    currency: 'USD',
     maximumFractionDigits: 0
   }).format(Number(value));
 };
@@ -1463,7 +1463,7 @@ const LeagueAddDashboard = () => {
 
           {/* Deposit Cohort Table */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-2">Deposit Amount by Cohort (INR)</h3>
+            <h3 className="text-xl font-semibold mb-2">Deposit Amount by Cohort (USD)</h3>
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-300">
                 <thead>
@@ -1533,7 +1533,7 @@ const LeagueAddDashboard = () => {
 
           {/* Entry Fees Cohort Table */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-2">Entry Fees by Cohort (INR)</h3>
+            <h3 className="text-xl font-semibold mb-2">Entry Fees by Cohort (USD)</h3>
             <div className="overflow-x-auto">
               <table className="min-w-full bg-white border border-gray-300">
                 <thead>
