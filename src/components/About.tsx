@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react"; // Import icons for the accordion
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { projects } from '../lib/projects';
 
 // Define RoleType
@@ -119,7 +119,12 @@ const getRoleTypeBadgeStyle = (roleType: RoleType) => {
 };
 
 export const About = () => {
-  const [activeSection, setActiveSection] = useState<string>("about");
+  const location = useLocation();
+  const navigate = useNavigate();
+  // Read tab from query param on mount
+  const params = new URLSearchParams(location.search);
+  const initialTab = params.get('tab') || 'about';
+  const [activeSection, setActiveSection] = useState<string>(initialTab);
   // State for tracking which portfolio project is expanded
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
   
@@ -138,6 +143,16 @@ export const About = () => {
   // Placeholder URLs - Replace with actual URLs if found
   const isbLogoUrl = "https://logo.clearbit.com/isb.edu"; // Example, verify
   const kiitLogoUrl = "https://logo.clearbit.com/kiit.ac.in"; // Example, verify
+
+  // Update URL when activeSection changes
+  React.useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (activeSection !== params.get('tab')) {
+      params.set('tab', activeSection);
+      navigate({ search: params.toString() }, { replace: true });
+    }
+    // eslint-disable-next-line
+  }, [activeSection]);
 
   const renderSection = () => {
     switch (activeSection) {
@@ -386,15 +401,13 @@ export const About = () => {
           <>
             <h3 className="font-playfair text-2xl font-bold mb-4 text-primary">📂 Product Journey Portfolio</h3>
             <p className="text-gray-600 mb-6 italic">A detailed look at key product initiatives I've led throughout my career</p>
-            
             <div className="space-y-6">
               {projects.map((project) => (
                 <div key={project.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
-                  {/* Project header - always visible */}
                   <div className="p-5">
                     <div>
                       <Link 
-                        to={`/project/${project.id}`}
+                        to={`/project/${project.id}?tab=portfolio`}
                         className="block hover:opacity-75 transition-opacity"
                       >
                         <h4 className="font-bold text-lg text-primary hover:text-accent">{project.title}</h4>
@@ -404,20 +417,13 @@ export const About = () => {
                           <span>{project.year}</span>
                         </div>
                         <p className="text-gray-500 mt-2">{project.shortDescription}</p>
-                      </Link>
-                      <div className="mt-4">
-                        <Link
-                          to={`/project/${project.id}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-accent hover:text-accent-dark transition-colors"
-                        >
+                        <div className="mt-4 inline-flex items-center text-accent hover:text-accent-dark transition-colors">
                           View Details
                           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                        </Link>
-                      </div>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>

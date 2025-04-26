@@ -1,7 +1,8 @@
 import React from 'react';
 import { ChevronLeft } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import LeagueAddDashboard from './LeagueAddDashboard';
+import { useEffect, useState } from 'react';
 
 export interface ProjectStep {
   title: string;
@@ -23,6 +24,7 @@ export interface ProjectData {
   impact: string[];
   lessons: string[];
   dashboard?: any; // Optional dashboard property
+  strategyPaper?: string; // Optional path to a markdown strategy paper
 }
 
 interface ProjectTemplateProps {
@@ -31,7 +33,28 @@ interface ProjectTemplateProps {
 
 export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
   const { id } = useParams();
+  const location = useLocation();
   const project = id ? getProject(id) : undefined;
+
+  // Get the tab param from the URL, default to 'portfolio'
+  const params = new URLSearchParams(location.search);
+  const tab = params.get('tab') || 'portfolio';
+
+  // Scroll to top on mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [markdown, setMarkdown] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (project && project.strategyPaper && project.id === 'zeta-iam-strategy') {
+      fetch(`/${project.strategyPaper}`)
+        .then(res => res.text())
+        .then(setMarkdown)
+        .catch(() => setMarkdown('Could not load strategy paper.'));
+    }
+  }, [project]);
 
   if (!project) {
     return <div>Project not found</div>;
@@ -75,11 +98,11 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Back button */}
         <Link
-          to="/"
+          to={`/?tab=${tab}`}
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-6 transition-colors"
         >
           <ChevronLeft className="w-5 h-5 mr-1" />
-          Back to Portfolio
+          Back to {tab.charAt(0).toUpperCase() + tab.slice(1)}
         </Link>
 
         {/* Header Section */}
@@ -101,6 +124,26 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
         <div className="space-y-8">
           {/* LeagueAddDashboard at the top for leagueadd-data-roadmap */}
           {project.id === 'leagueadd-data-roadmap' && <LeagueAddDashboard />}
+
+          {/* Strategy Paper as Google Doc iframe for zeta-iam-strategy */}
+          {project.id === 'zeta-iam-strategy' && (
+            <section className="bg-white rounded-xl shadow-sm p-8">
+              <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair flex items-center">
+                <span className="text-2xl mr-2">📄</span>
+                Strategy Paper
+              </h2>
+              <div className="w-full" style={{ minHeight: 800 }}>
+                <iframe
+                  src="https://docs.google.com/document/d/e/2PACX-1vTliWT2-che9RpW9uf4AAYbAyjLY-znffEZ2vPLgcfesihgJrk3wH6hTeSi3L_rKH3nvFFXUAveaf8h/pub?embedded=true"
+                  width="100%"
+                  height="800"
+                  style={{ border: 'none' }}
+                  title="Zeta IAM Strategy Paper"
+                  allowFullScreen
+                />
+              </div>
+            </section>
+          )}
 
           {/* Situation Section */}
           <section className="bg-white rounded-xl shadow-sm p-8">

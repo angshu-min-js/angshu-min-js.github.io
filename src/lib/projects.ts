@@ -2,16 +2,57 @@ import { ProjectData } from '../components/ProjectTemplate';
 
 export const projects: ProjectData[] = [
   {
+    id: 'zalando-merchant-onboarding',
+    title: '🚀 3-Year Roadmap: Enabling the Non-Zalando Merchant Onboarding to Unlock 10x Growth',
+    company: 'Zalando SE',
+    year: "2023 - Present",
+    shortDescription: 'Led the strategic transformation of ZEOS\'s merchant platform to enable non-Zalando sellers, reducing onboarding time from XXX+ days to ~X days while unlocking hundreds of millions in potential revenue.',
+    situation: 'At ZEOS, Europe\'s leading online fashion platform, I was entrusted with a long-term strategic mission — launching a new category of merchants: non-Zalando sellers.\nThe ambition was bold: 10x the merchant acquisition funnel, driving hundreds of millions of euros in new revenue 💶.\nBut to get there, we had to reimagine our entire merchant platform, across multiple teams, over a three-year journey.\n\n🔍 The Starting Point: Building a Dream That Didn\'t Exist Yet\nThe goal was clear:\nAllow external brands and retailers — not selling through Zalando\'s curated assortment — to use our logistics services (Zeos) across marketplaces like Amazon, Otto, and About You 🛍️.\nThe challenges:\n• No existing tech foundation for non-Zalando merchants\n• Fragmented ownership across Legal, Commercial, Operations, and Tech\n• Extremely manual merchant onboarding process — average onboarding time was XXX+ days 🐢\n\nSuccess demanded vision, structured discovery, stakeholder orchestration, and multi-year execution.',
+    steps: {
+      research: [
+        'Led deep discovery workshops across functions: Legal, Operations, Commercial, and Tech',
+        'Analyzed platform gaps and extensibility requirements for non-Zalando merchant support',
+        'Evaluated marketplace integration requirements for Amazon, Otto, and About You',
+        'Mapped existing merchant onboarding process and identified bottlenecks'
+      ],
+      strategy: [
+        'Consolidated insights into comprehensive requirements document and PRFAQ',
+        'Secured Senior Leadership buy-in for multi-year strategic program',
+        'Developed phased roadmap with clear milestones and success metrics',
+        'Created cross-functional governance model for program execution'
+      ],
+      development: [
+        'Year 1: Built core merchant data platform and standardized merchant profiles',
+        'Year 2: Extended platform for business data and logistics flows, reducing onboarding time to ~X days',
+        'Year 3: Launched Connector Strategy with Shopify, Scayle, and Salesforce Commerce Cloud integrations',
+        'Implemented automated logistics offerings and marketplace-specific integrations',
+        'Developed merchant self-service flows and operational playbooks for scale'
+      ]
+    },
+    impact: [
+      '10x increase in merchant acquisition funnel',
+      'Dramatic reduction in onboarding time (from XXX+ days → ~X days)',
+      'Hundreds of millions in potential incremental revenue for Zalando Logistics',
+      'Established future-proof platform capable of scaling across multiple merchant types and marketplaces'
+    ],
+    lessons: [
+      'Think in Horizons: Balancing short-term deliverables with a long-term north star kept momentum and focus alive',
+      'Cross-functional orchestration is everything: Success wasn\'t just Tech-driven — it was a true partnership across Legal, Ops, Commercial, and Engineering',
+      'Clarity wins: In a complex, multi-year initiative, over-communicating the "why" and "what" kept teams energized and aligned',
+      'Start with a strong foundation: Rushing to scale without the right data models and platform architecture would have led to painful rebuilds later'
+    ]
+  },
+  {
     id: 'zalando-platform',
     title: '🚀 Building Zalando\'s (ZEOS) Partner Platform: 0 to 1 journey within a listed company',
     company: 'Zalando SE',
     year: "2023 - 2024",
-    shortDescription: 'Led the transformation of Zalando\'s logistics capabilities into a full-fledged logistics-as-a-service platform, scaling from 1 to 50 merchants per month.',
-    situation: 'When I joined Zalando, Europe\'s leading fashion marketplace, I was tasked with scaling a bold new ambition — transforming Zalando\'s logistics capabilities, branded as Zeos, into a full-fledged logistics-as-a-service platform. The mission was clear: help merchants sell not just on Zalando, but across marketplaces like Amazon, Otto, and About You — and do it at scale.\n\nThe first thing I noticed? We were onboarding just one merchant per month. Digging deeper, the reasons became clear:\n- The onboarding process was entirely manual 🧾\n- There was no clear platform or tech infrastructure to support scaling ⚙️\n- Teams worked in silos with no shared domain models or reusable interfaces 🚧\n\nYet, the business goals were ambitious: 10 merchants in 2023 → 20 in 2024 → 40+ in 2025, driven by new markets, non-Zalando demand, and expanding marketplace presence 🌍\n\nIt was clear — a platform rethink was necessary.',
+    shortDescription: 'Led the transformation of Zalando\'s logistics capabilities into a full-fledged logistics-as-a-service platform, scaling from 1 to XXX merchants per month.',
+    situation: 'When I joined Zalando, Europe\'s leading fashion marketplace, I was tasked with scaling a bold new ambition — transforming Zalando\'s logistics capabilities, branded as Zeos, into a full-fledged logistics-as-a-service platform. The mission was clear: help merchants sell not just on Zalando, but across marketplaces like Amazon, Otto, and About You — and do it at scale.\n\nThe first thing I noticed? We were onboarding just one merchant per month. Digging deeper, the reasons became clear:\n- The onboarding process was entirely manual 🧾\n- There was no clear platform or tech infrastructure to support scaling ⚙️\n- Teams worked in silos with no shared domain models or reusable interfaces 🚧\n\nYet, the business goals were ambitious: X merchants in 2023 → XX in 2024 → XXX in 2025, driven by new markets, non-Zalando demand, and expanding marketplace presence 🌍\n\nIt was clear — a platform rethink was necessary.',
     steps: {
       research: [
         'Interviewed Ops, Commercial, Strategy, and Tech teams to understand the jobs-to-be-done and pain points',
-        'Analyzed how competitors like Amazon MCF or Otto operate, and where we lagged',
+        'Analyzed how competitors like Amazon MCF or Flexport, etc and where we lagged',
         'Identified core components: Merchant Business Profile, Marketplace + Warehouse + Carrier configurations, Customization modules',
         'Defined three key platform interfaces: APIs for shop integrations, Backoffice tools for operations, Self-service flows for merchants 👩‍💻'
       ],
@@ -26,27 +67,109 @@ export const projects: ProjectData[] = [
         'Built internal tools to scale operational support',
         'Exposed APIs for external partners and shop connectors',
         'Rolled out self-service interfaces to reduce Ops dependency',
-        'Reduced onboarding time from 30 days to <1 day ⏱️',
-        'Scaled capacity from 1 merchant/month to 50/month'
+        'Reduced onboarding time from XX days to <1 day ⏱️',
+        'Scaled capacity from 1 merchant/month to XXX merchant/month'
       ]
     },
     impact: [
-      'Scaled merchant onboarding capacity from 1 to 50 merchants per month',
-      'Reduced onboarding time from 30 days to less than 1 day',
+      'Scaled merchant onboarding capacity from 1 to XXX merchants per month',
+      'Reduced onboarding time from XX days to less than 1 day',
       'Enabled multi-marketplace and multi-country merchant launches',
       'Achieved efficient scaling without proportional Ops resource increase',
       'Established competitive advantage with modern, near self-service onboarding experience'
     ],
     lessons: [
       'Operate in ambiguity: Navigating a new domain, across countries and teams, required relentless clarity-seeking',
-      'Cross-functional collaboration wins: Worked closely with 5+ operational managers and multiple tech squads — shared language and goals were essential',
+      'Cross-functional collaboration wins: Worked closely with 5+ operational teams and multiple tech squads — shared language and goals were essential',
       'Think platform-first: This wasn\'t about features. It was about building extensible, reusable infrastructure that could evolve with our business'
     ]
   },
   {
+    id: 'zeta-change-management',
+    title: '🔧 Change Management at Zeta: Aligning Teams to Drive Strategic Customer Goals',
+    company: 'Zeta Tech (Directi)',
+    year: "2022 - 2023",
+    shortDescription: 'Led organizational restructuring and platform strategy transformation that accelerated delivery timelines by several months while optimizing banking operations platform to meet enterprise customer requirements.',
+    situation: 'At Zeta, a leading banking tech platform, I was tasked with a critical mission — optimize our operational platform to meet the strategic needs of a key banking customer.\nThe challenge? Our Solutions Teams and Platform Teams were misaligned, pulling in different directions.\n\n🔍 The Starting Point: A Disconnect Between Platform and Customer Needs\nWhen I stepped into the situation, it was clear:\n• The customer demanded a unified operational platform for credit, debit, prepaid, and UPI transactions 🏦\n• The Platform team was building generic workflows, not tailored to complex banking requirements 🏗️\n• Solutions teams were stuck, unable to move fast without deep platform support ⚙️\n\nThis misalignment threatened our ability to deliver and scale.',
+    steps: {
+      research: [
+        'Conducted deep dives with the customer to map real-world operational needs',
+        'Analyzed team structure inefficiencies and identified root causes of misalignment',
+        'Mapped cross-functional dependencies between solutions delivery and platform engineering teams',
+        'Evaluated competing organizational models for financial technology platform development'
+      ],
+      strategy: [
+        'Developed dual-track approach: tactical quick wins through POD model while planning strategic organizational redesign',
+        'Crafted detailed business case for senior leadership showing ROI of banking-specific platform capabilities',
+        'Designed new organizational structure with clear separation between platform engineering and customer delivery teams',
+        'Created transition roadmap with specific milestones and success metrics'
+      ],
+      development: [
+        'Formed a small, agile POD — engineers, a solutions architect, and a delivery lead',
+        'Laser-focused the POD on delivering key use cases, showing quick wins to both customer and internal teams 🚀',
+        'Created two tracks with clear ownership',
+        'Appointed 3 PMs — each aligned to specific business and long-term platform goals',
+        'Looped in VP early, ensuring executive sponsorship',
+        'Communicated transparently with affected teams, explaining "why" the change was needed',
+        'Focused on collaboration, not blame — resetting goals and rhythms across teams'
+      ]
+    },
+    impact: [
+      'Increased speed of customer delivery — critical workflows were rolled out months faster',
+      'Improved platform quality, tailor-made for the banking domain',
+      'Enhanced internal clarity and morale — people knew their focus areas and growth paths'
+    ],
+    lessons: [
+      'Do what is right, fearlessly: If the structure is wrong, fix it — even if it\'s uncomfortable',
+      'Change needs sponsorship: I succeeded because I involved leadership early and often',
+      'Reflect, but don\'t self-blame: In retro, I realized I could have trusted my instincts sooner and stressed less'
+    ]
+  },
+  {
+    id: 'zeta-iam-strategy',
+    title: '🛡️ Zeta IAM: Rebuilding Trust and Clarity with a Long-Term Strategy',
+    company: 'Zeta Tech (Directi)',
+    year: '2022 - 2023',
+    shortDescription: 'Unified the organization with a long-term IAM strategy paper, realigning teams, clarifying customer focus, and setting a new north star for platform success.',
+    situation: 'The organization was at a crossroads. Priorities kept shifting, teams were siloed, and employee engagement was dropping. I recognized the urgent need for clarity and trust, deciding to create a comprehensive Strategy Paper to realign everyone and the leadership thereby set a course for success.',
+    steps: {
+      research: [
+        'Conducted internal listening tours to uncover confusion, lack of vision, and cross-team misalignment.',
+        'Analyzed customer segmentation and market learnings to identify the most scalable and profitable focus.',
+        'Benchmarked against previous years\' CIAM/EIAM strategies and roadmaps.'
+      ],
+      strategy: [
+        'Framed the Strategy Paper to answer: What should our new focus be, and how do we organize to deliver impact?',
+        'Structured the paper into clear sections: Objective, Customer, Current Strategy, Assumptions, Team Realignment, Specialized Strategies, Programs, and North Stars.',
+        'Defined a single platform as the core product, with all other products as enablers.',
+        'Set clear short-term and long-term goals, with a focus on large banks and platform success metrics.'
+      ],
+      development: [
+        'Broke down specialized strategies for CIAM/EIAM, KMS, and ACS, each with clear priorities and north stars.',
+        'Created a detailed table of strategic programs, owners, and managers, all aligned to measurable north stars.',
+        'Established a common prioritization model (P1–P4) and regular cross-team ceremonies for roadmap alignment.',
+        'Presented the Strategy Paper in a company-wide meeting, restoring clarity, motivation, and shared purpose.'
+      ]
+    },
+    impact: [
+      'Unified the organization around a clear customer and product focus.',
+      'Established a single, cross-team roadmap and shared OKRs.',
+      'Improved employee engagement and trust in leadership.',
+      'Accelerated platform execution and collaboration across teams.',
+      'Set measurable north stars for CIAM/EIAM, KMS, and ACS.'
+    ],
+    lessons: [
+      'A clear, shared strategy is the foundation for execution and morale.',
+      'Regular cross-team alignment prevents silos and confusion.',
+      'Focusing on the right customer segment unlocks scalable growth.',
+      'Strategy is not just a document—it\'s a catalyst for cultural change.'
+    ],
+    strategyPaper: 'strategy/zeta-iam-strategy.md'
+  },
+  {
     id: 'zeta-identity',
     title: '🔐 From Tickets to Trust: Launching a Self-Serve Identity Platform at Zeta',
-    company: 'Zeta',
+    company: 'Zeta Tech (Directi)',
     year: "2021 - 2022",
     shortDescription: 'Built a self-service identity platform that reduced support tickets by 30% and transformed access management across internal and external users.',
     situation: '🧠 Context\nZeta\'s IAM platform powers access for multiple internal and external product suites. Identity changes and access requests were common — but relied on tenant admins and manual backoffice workflows, creating friction and ticket overhead.\n\n🎯 Goal\nMake access and identity self-serviceable for all users — employees, customers, partners — without depending on support or tenant admins.\n\n📊 Business Impact\n• Reduce support ticket volume related to access issues\n• Improve resolution time by 100% (i.e., eliminate ticket dependency)\n• Create a table-stakes experience comparable to industry leaders (Okta, Ping)\n\n🔍 Discovery\nTraced user journeys:\n• User logs in → Hits access block → Doesn\'t know why or whom to contact → Raises a support ticket\n• Tenant admins had to log into backoffice, find the user, and manually update access\n• Ticket aging: Avg 2–5 days → Created productivity loss & poor experience\n• Conducted customer interviews (internal & external)\n\n🤯 Core Problems\n• Users didn\'t know what roles/access they had\n• No visibility on how to request access\n• No standard identity view → led to duplicated or incorrect identities\n• Tenant admins were overburdened with repetitive access requests',
@@ -162,40 +285,40 @@ export const projects: ProjectData[] = [
   },
   {
     id: 'leagueadd-data-roadmap',
-    title: '📊 Scaling 0 to 1: Data-Driven Growth Hacking at LeagueAdda',
+    title: '📊 Scaling 0 to 10: Data-Driven Growth Hacking at LeagueAdda',
     company: 'LeagueAdda',
     year: '2018 - 2020',
     shortDescription: "Used business and product data to drive LeagueAdda's roadmap and growth as Business Head.",
-    situation: 'As the Business Head of LeagueAdda, I was responsible for scaling the platform from 0 to 1. To do this, I built and maintained a comprehensive data dashboard that tracked business health, product metrics, and user engagement. This data-driven approach enabled me to align the product roadmap with business goals and respond quickly to market needs.',
+    situation: 'As the Business Head of LeagueAdda, I was responsible for scaling our fantasy sports platform from 0 to 10. To achieve this ambitious goal, I built and maintained a comprehensive data dashboard that tracked business health, product metrics, and user engagement across our sports gaming application. This data-driven approach enabled me to align the product roadmap with business goals and respond quickly to market needs in the competitive fantasy sports industry.',
     steps: {
       research: [
-        'Collected and monitored key business metrics: user growth, retention, revenue, and engagement',
-        'Tracked product usage data and user feedback to identify pain points and opportunities',
-        'Benchmarked against competitors and industry standards to set ambitious but realistic targets'
+        'Collected and monitored key fantasy sports business metrics: user growth, player retention rates, gaming revenue, and match engagement',
+        'Tracked product usage data and user feedback to identify pain points and opportunities in the fantasy gaming experience',
+        'Benchmarked against fantasy sports competitors and industry standards to set ambitious but realistic targets for growth'
       ],
       strategy: [
-        'Defined business goals and mapped them to actionable product objectives',
-        'Prioritized roadmap features based on data insights and business impact',
-        'Aligned cross-functional teams (product, engineering, marketing) around data-driven priorities'
+        'Defined business goals and mapped them to actionable product objectives for our fantasy sports platform',
+        'Prioritized roadmap features based on data insights and business impact across user segments',
+        'Aligned cross-functional teams (product, engineering, marketing) around data-driven priorities for platform growth'
       ],
       development: [
-        'Launched new features and product improvements based on roadmap priorities',
-        'Iterated quickly using weekly data reviews and feedback loops',
-        'Scaled the platform to support rapid user growth and new business models'
+        'Launched new fantasy sports features and product improvements based on roadmap priorities and user feedback',
+        'Iterated quickly using weekly data reviews and feedback loops from gaming sessions',
+        'Scaled the platform infrastructure to support rapid user growth and new fantasy sports contests'
       ]
     },
     impact: [
-      'Achieved significant user growth and improved retention rates',
-      'Increased revenue and diversified business streams',
-      'Built a culture of data-driven decision making across the team',
-      'Enabled rapid iteration and alignment between business and product goals'
+      'Achieved significant user growth and improved retention rates across fantasy sports segments',
+      'Increased gaming revenue and diversified business streams through new contest formats',
+      'Built a culture of data-driven decision making across the fantasy sports platform team',
+      'Enabled rapid iteration and alignment between business metrics and product development goals'
     ],
     lessons: [
-      'Data is a powerful tool for aligning teams and driving business outcomes',
-      'Continuous monitoring and iteration are key to scaling from 0 to 1',
-      'A single source of truth accelerates decision making and transparency'
+      'Data analytics is a powerful tool for aligning teams and driving business outcomes in fantasy sports',
+      'Continuous monitoring and iteration are key to scaling from 0 to 10 in a competitive gaming market',
+      'A single source of truth accelerates decision making and transparency for product roadmapping'
     ],
-  }
+  },
 ];
 
 export function getProjectById(id: string): ProjectData | undefined {
