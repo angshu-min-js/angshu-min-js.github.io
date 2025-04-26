@@ -3,7 +3,7 @@ import { ProjectData } from '../components/ProjectTemplate';
 export const projects: ProjectData[] = [
   {
     id: 'zalando-merchant-onboarding',
-    title: '🚀 3-Year Roadmap: Enabling the Non-Zalando Merchant Onboarding to Unlock 10x Growth',
+    title: '📈 3-Year Roadmap: Enabling the Non-Zalando Merchant Onboarding to Unlock 10x Growth',
     company: 'Zalando SE',
     year: "2023 - Present",
     shortDescription: 'Led the strategic transformation of ZEOS\'s merchant platform to enable non-Zalando sellers, reducing onboarding time from XXX+ days to ~X days while unlocking hundreds of millions in potential revenue.',

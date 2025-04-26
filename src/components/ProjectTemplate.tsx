@@ -125,24 +125,42 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
           {/* LeagueAddDashboard at the top for leagueadd-data-roadmap */}
           {project.id === 'leagueadd-data-roadmap' && <LeagueAddDashboard />}
 
-          {/* Strategy Paper as Google Doc iframe for zeta-iam-strategy */}
+          {/* Strategy Paper as Google Doc and Slides iframe for zeta-iam-strategy */}
           {project.id === 'zeta-iam-strategy' && (
-            <section className="bg-white rounded-xl shadow-sm p-8">
-              <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair flex items-center">
-                <span className="text-2xl mr-2">📄</span>
-                Strategy Paper
-              </h2>
-              <div className="w-full" style={{ minHeight: 800 }}>
-                <iframe
-                  src="https://docs.google.com/document/d/e/2PACX-1vTliWT2-che9RpW9uf4AAYbAyjLY-znffEZ2vPLgcfesihgJrk3wH6hTeSi3L_rKH3nvFFXUAveaf8h/pub?embedded=true"
-                  width="100%"
-                  height="800"
-                  style={{ border: 'none' }}
-                  title="Zeta IAM Strategy Paper"
-                  allowFullScreen
-                />
-              </div>
-            </section>
+            <>
+              <section className="bg-white rounded-xl shadow-sm p-8 mb-8">
+                <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair flex items-center">
+                  <span className="text-2xl mr-2">📊</span>
+                  Strategy Paper: Year 1 (Slides)
+                </h2>
+                <div className="w-full" style={{ minHeight: 569 }}>
+                  <iframe
+                    src="https://docs.google.com/presentation/d/e/2PACX-1vQRLuYPTaboXK5weMA9BLf9RpnrVSTbBTCRfNFNvZOshoZ2nbkmPefvJmVgbctf-2UhsvTiDVzA8m_B/pubembed?start=false&loop=false&delayms=3000"
+                    width="100%"
+                    height="569"
+                    style={{ border: 'none' }}
+                    title="Zeta IAM Strategy Slides Year 1"
+                    allowFullScreen
+                  />
+                </div>
+              </section>
+              <section className="bg-white rounded-xl shadow-sm p-8">
+                <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair flex items-center">
+                  <span className="text-2xl mr-2">📄</span>
+                  Strategy Paper: Year 2 (Document)
+                </h2>
+                <div className="w-full" style={{ minHeight: 800 }}>
+                  <iframe
+                    src="https://docs.google.com/document/d/e/2PACX-1vTliWT2-che9RpW9uf4AAYbAyjLY-znffEZ2vPLgcfesihgJrk3wH6hTeSi3L_rKH3nvFFXUAveaf8h/pub?embedded=true"
+                    width="100%"
+                    height="800"
+                    style={{ border: 'none' }}
+                    title="Zeta IAM Strategy Paper Year 2"
+                    allowFullScreen
+                  />
+                </div>
+              </section>
+            </>
           )}
 
           {/* Situation Section */}
