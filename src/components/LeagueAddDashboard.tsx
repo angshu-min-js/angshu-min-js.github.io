@@ -1322,7 +1322,7 @@ const LeagueAddDashboard = () => {
 
       {/* Funnel Analysis */}
       <section className="bg-white rounded-xl shadow p-6 mb-8">
-        <h3 className="font-semibold text-lg mb-2 text-primary">Funnel Analysis</h3>
+        <h3 className="font-semibold text-lg mb-2 text-primary">Funnel Analysis (Daily)</h3>
         <div className="grid grid-cols-1 gap-8">
           <div className="mb-8">
             <h4 className="font-semibold mb-3">New User Funnel</h4>
@@ -1349,7 +1349,7 @@ const LeagueAddDashboard = () => {
 
       {/* Cohort Analysis */}
       <section className="bg-white rounded-xl shadow p-6 mb-8">
-        <h3 className="font-semibold text-lg mb-2 text-primary">Cohort Analysis</h3>
+        <h3 className="font-semibold text-lg mb-2 text-primary">Cohort Analysis (Monthly)</h3>
         
         {/* Cohort Analysis Section */}
         <div className="mt-8">
