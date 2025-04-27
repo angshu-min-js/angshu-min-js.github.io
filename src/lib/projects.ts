@@ -87,10 +87,11 @@ export const projects: ProjectData[] = [
     company: 'Zeta Tech (Directi)',
     year: "2022 - 2023",
     shortDescription: 'Led organizational restructuring and platform strategy transformation that accelerated delivery timelines by several months while optimizing banking operations platform to meet enterprise customer requirements.',
-    situation: 'At Zeta, a leading banking tech platform, I was tasked with a critical mission — optimize our operational platform to meet the strategic needs of a key banking customer.\nThe challenge? Our Solutions Teams and Platform Teams were misaligned, pulling in different directions.\n\n🔍 The Starting Point: A Disconnect Between Platform and Customer Needs\nWhen I stepped into the situation, it was clear:\n• The customer demanded a unified operational platform for credit, debit, prepaid, and UPI transactions 🏦\n• The Platform team was building generic workflows, not tailored to complex banking requirements 🏗️\n• Solutions teams were stuck, unable to move fast without deep platform support ⚙️\n\nThis misalignment threatened our ability to deliver and scale.',
+    situation: 'At Zeta, a leading banking tech platform, I was tasked with a critical mission — optimize our operational platform to meet the strategic needs of a key banking customer.\n\nThe challenge? Our Solutions Teams and Platform Teams were misaligned, pulling in different directions.\n\n🔍 The Starting Point: A Disconnect Between Platform and Customer Needs\n\nWhen I stepped into the situation, it was clear:\n\n• The customer demanded a single ops platform for credit, debit, prepaid, and UPI transactions 🏦\n\n• The Platform team was building generic workflows, not tailored to complex banking requirements 🏗️\n\n• Solutions teams were stuck, unable to move fast without deep platform support ⚙️\n\nThis misalignment threatened our ability to deliver and scale.',
     steps: {
       research: [
         'Conducted deep dives with the customer to map real-world operational needs',
+        'Understood the competitive landscape of workflow management for banks',
         'Analyzed team structure inefficiencies and identified root causes of misalignment',
         'Mapped cross-functional dependencies between solutions delivery and platform engineering teams',
         'Evaluated competing organizational models for financial technology platform development'

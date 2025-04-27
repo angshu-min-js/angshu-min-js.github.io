@@ -186,23 +186,41 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
             <div className="prose prose-lg max-w-none text-gray-700">
               {project.situation.includes('Note:') ? (
                 <>
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {project.situation.split('Note:')[0]}
-                  </ReactMarkdown>
-                  <div className="flex items-start bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400 mt-4">
-                    <span className="text-yellow-500 font-medium mr-2">📝</span>
+                  <div className="space-y-4">
+                    <ReactMarkdown 
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        p: ({node, ...props}) => <p className="mb-4" {...props} />,
+                        ul: ({node, ...props}) => <ul className="my-6 ml-6 list-disc" {...props} />,
+                        li: ({node, ...props}) => <li className="mt-2" {...props} />
+                      }}
+                    >
+                      {project.situation.split('Note:')[0]}
+                    </ReactMarkdown>
+                  </div>
+                  <div className="flex items-start bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400 mt-6 mb-2">
+                    <span className="text-yellow-500 font-medium mr-3 text-xl">📝</span>
                     <div>
-                      <span className="text-yellow-600 text-sm font-medium mb-1 block">Note</span>
+                      <span className="text-yellow-700 text-sm font-medium mb-2 block">NOTE</span>
                       <span className="text-gray-700 leading-relaxed whitespace-pre-line">
-                        Note: {project.situation.split('Note:')[1]}
+                        {project.situation.split('Note:')[1].trim()}
                       </span>
                     </div>
                   </div>
                 </>
               ) : (
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {project.situation}
-                </ReactMarkdown>
+                <div className="space-y-4">
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      p: ({node, ...props}) => <p className="mb-4" {...props} />,
+                      ul: ({node, ...props}) => <ul className="my-6 ml-6 list-disc" {...props} />,
+                      li: ({node, ...props}) => <li className="mt-2" {...props} />
+                    }}
+                  >
+                    {project.situation}
+                  </ReactMarkdown>
+                </div>
               )}
             </div>
           </section>
