@@ -199,5 +199,42 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 
 ---
 
+### 5. PM vs Engineer Tic Tac Toe (`TicTacToeGame.tsx`)
+
+**Product Requirements:**
+
+- **Goal:** A playful representation of the PM vs Engineering dynamic through a Tic Tac Toe game where the user (PM) plays against the computer (Engineer).
+- **Gameplay:**
+    - Classic Tic Tac Toe rules: Players take turns placing their symbols (X for PM, O for Engineer) on a 3x3 grid.
+    - The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins.
+    - If all cells are filled with no winner, the game is a draw.
+    - The user plays as the PM (X) and always goes first.
+    - The computer plays as the Engineer (O).
+    - The game keeps track of the score for both players across multiple games.
+- **Unique Feature:** The Engineer (computer) occasionally makes suboptimal moves (with a 30% probability), allowing the PM to win sometimes, simulating real-world scenarios where engineering and product management need to find a balance.
+- **UI:** Clean 3x3 grid, clear player symbols, score tracking, turn indicator, and game status messages.
+
+**Implementation Details:**
+
+- Built as a React functional component (`TicTacToeGame`).
+- Uses `useState` hooks to manage:
+    - Game board state (`board`) - a 9-cell array representing the 3x3 grid.
+    - Current turn (`turn`) - alternates between 'PM' and 'Engineer'.
+    - Winner state (`winner`) - tracks who won or if there's a draw.
+    - Scores for both players (`pmScore` and `engineerScore`).
+- Uses `useEffect` to check for a winner after each move and to trigger the computer's move when it's the Engineer's turn.
+- Implements the minimax algorithm for intelligent computer moves:
+    - `findBestMove` function identifies the optimal move for the Engineer.
+    - `minimax` function recursively evaluates possible board positions.
+    - `makeEngineerMove` handles the computer's turn, with a 30% chance of making a random move instead of the optimal one.
+- `handleCellClick` manages user input when clicking a cell.
+- `resetGame` reinitializes the board for a new game.
+- `checkWinner` evaluates if either player has won or if it's a draw.
+- Uses Shadcn UI components (`Button`) and Lucide React icons (`X`, `Circle`, `RefreshCw`).
+- Displays toast notifications for game outcomes.
+- Provides `onClose` prop for dialog dismissal.
+
+---
+
 Feel free to contribute or suggest improvements!
 

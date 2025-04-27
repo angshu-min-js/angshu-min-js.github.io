@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowUp, ArrowDown, Check } from "lucide-react";
+import { ArrowUp, ArrowDown, Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/sonner";
 
@@ -45,11 +45,22 @@ export const QuickPrioritizationGame: React.FC<QuickPrioritizationGameProps> = (
   };
 
   return (
-    <section className="bg-white rounded-lg shadow-xl p-5 max-w-xl mx-auto animate-fade-in">
+    <section className="bg-white rounded-lg shadow-xl p-5 max-w-xl mx-auto animate-fade-in overflow-y-auto max-h-[90vh] w-full">
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-playfair text-xl font-semibold text-primary">
           Quick Prioritization Game
         </h3>
+        {onClose && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onClose}
+            className="h-8 w-8 rounded-full"
+            aria-label="Close"
+          >
+            <X className="h-4 w-4" />
+          </Button>
+        )}
       </div>
       <p className="text-gray-700 text-sm mb-4">
         Drag tasks to order them by priority. Put the most urgent or impactful at the top!
@@ -65,22 +76,22 @@ export const QuickPrioritizationGame: React.FC<QuickPrioritizationGameProps> = (
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-accent"
+                className="hover:bg-accent h-8 w-8"
                 aria-label="Move up"
                 disabled={idx === 0}
                 onClick={() => handleMove(idx, "up")}
               >
-                <ArrowUp size={18} />
+                <ArrowUp size={16} />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
-                className="hover:bg-accent"
+                className="hover:bg-accent h-8 w-8"
                 aria-label="Move down"
                 disabled={idx === tasks.length - 1}
                 onClick={() => handleMove(idx, "down")}
               >
-                <ArrowDown size={18} />
+                <ArrowDown size={16} />
               </Button>
             </div>
           </li>

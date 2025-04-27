@@ -6,6 +6,7 @@ import { QuickPrioritizationGame } from "@/components/QuickPrioritizationGame";
 import { FeatureMetricMatcher } from "@/components/FeatureMetricMatcher";
 import { StackChallenge } from "@/components/StackChallenge";
 import { BurnoutMeter } from "@/components/BurnoutMeter";
+import { TicTacToeGame } from "@/components/TicTacToeGame";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import React, { useEffect } from "react";
@@ -32,6 +33,7 @@ const Index = () => {
   const [featureMetricOpen, setFeatureMetricOpen] = React.useState(false);
   const [stackChallengeOpen, setStackChallengeOpen] = React.useState(false);
   const [burnoutMeterOpen, setBurnoutMeterOpen] = React.useState(false);
+  const [ticTacToeOpen, setTicTacToeOpen] = React.useState(false);
 
   // Debug dialog status
   useEffect(() => {
@@ -39,9 +41,10 @@ const Index = () => {
       prioritizationOpen, 
       featureMetricOpen, 
       stackChallengeOpen,
-      burnoutMeterOpen 
+      burnoutMeterOpen,
+      ticTacToeOpen
     });
-  }, [prioritizationOpen, featureMetricOpen, stackChallengeOpen, burnoutMeterOpen]);
+  }, [prioritizationOpen, featureMetricOpen, stackChallengeOpen, burnoutMeterOpen, ticTacToeOpen]);
 
   const handleGameClick = (gameName: string, view: 'desktop' | 'mobile') => {
     console.log(`${gameName} button clicked (${view})`);
@@ -57,12 +60,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Enhanced header with navigation elements */}
-      <header className="w-full pt-10">
+      <header className="w-full pt-0">
         <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
           {/* Left side - Social links */}
-          <div className="hidden lg:flex lg:w-1/5 mb-6 lg:mb-0 justify-end pr-8">
+          <div className="hidden lg:flex lg:w-1/5 mb-0 lg:mb-0 justify-end pr-8">
             <div>
-              <h3 className="text-sm font-medium text-gray-500 mb-3">Connect With Me</h3>
+              <h3 className="text-sm font-medium text-gray-500 mb-2">Connect With Me</h3>
               <SocialLinks vertical={true} />
             </div>
           </div>
@@ -75,17 +78,17 @@ const Index = () => {
               tagline="En-route to Full Stack Product Person"
             />
             {/* Mobile-only social links */}
-            <div className="flex lg:hidden mt-6 mb-4">
+            <div className="flex lg:hidden mt-2 mb-2">
               <SocialLinks vertical={false} />
             </div>
           </div>
           
           {/* Right side - Resume links and Interactive games */}
-          <div className="hidden lg:flex lg:w-1/5 mb-6 lg:mb-0 flex-col items-start pl-8">
-            <h3 className="text-sm font-medium text-gray-500 mb-3">Resources</h3>
+          <div className="hidden lg:flex lg:w-1/5 mb-2 lg:mb-0 flex-col items-start pl-8">
+            <h3 className="text-sm font-medium text-gray-500 mb-2">Resources</h3>
             <ResumeLinks vertical={true} />
             
-            <h3 className="text-sm font-medium text-gray-500 mt-6 mb-3">Interactive PM Games</h3>
+            <h3 className="text-sm font-medium text-gray-500 mt-4 mb-2">Interactive PM Games</h3>
             <div className="flex flex-col w-full space-y-2">
               {/* Desktop Prioritization Game Dialog */}
               <Dialog open={prioritizationOpen} onOpenChange={setPrioritizationOpen}>
@@ -154,14 +157,31 @@ const Index = () => {
                   <BurnoutMeter onClose={() => setBurnoutMeterOpen(false)} />
                 </DialogContent>
               </Dialog>
+
+              {/* Desktop TicTacToe Dialog */}
+              <Dialog open={ticTacToeOpen} onOpenChange={setTicTacToeOpen}>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="font-semibold text-sm w-full"
+                    aria-label="Open tic tac toe game"
+                    onClick={() => handleGameClick('Tic Tac Toe', 'desktop')}
+                  >
+                    PM vs Engineer
+                  </Button>
+                </DialogTrigger>
+                <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-md flex items-center justify-center">
+                  <TicTacToeGame onClose={() => setTicTacToeOpen(false)} />
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
         
         {/* Mobile-only resume links and game buttons */}
-        <div className="flex lg:hidden flex-col items-center mt-4 mb-6 px-4">
+        <div className="flex lg:hidden flex-col items-center mt-2 mb-2 px-4">
           <ResumeLinks vertical={false} />
-          <div className="w-full max-w-xs mt-4 space-y-2">
+          <div className="w-full max-w-xs mt-2 space-y-2">
             {/* Mobile Prioritization Game Dialog */}
             <Dialog open={prioritizationOpen} onOpenChange={setPrioritizationOpen}>
               <DialogTrigger asChild>
@@ -174,7 +194,7 @@ const Index = () => {
                   Prioritization Game
                 </Button>
               </DialogTrigger>
-              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-xl flex items-center justify-center">
+              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none w-[95vw] sm:max-w-xl flex items-center justify-center">
                 <QuickPrioritizationGame onClose={() => setPrioritizationOpen(false)} />
               </DialogContent>
             </Dialog>
@@ -191,7 +211,7 @@ const Index = () => {
                   Feature-Metric Matcher
                 </Button>
               </DialogTrigger>
-              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
+              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none w-[95vw] sm:max-w-2xl flex items-center justify-center">
                 <FeatureMetricMatcher onClose={() => setFeatureMetricOpen(false)} />
               </DialogContent>
             </Dialog>
@@ -208,7 +228,7 @@ const Index = () => {
                   Stack Challenge
                 </Button>
               </DialogTrigger>
-              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
+              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none w-[95vw] sm:max-w-2xl flex items-center justify-center">
                 <StackChallenge onClose={() => setStackChallengeOpen(false)} />
               </DialogContent>
             </Dialog>
@@ -225,8 +245,25 @@ const Index = () => {
                   Burnout Meter
                 </Button>
               </DialogTrigger>
-              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none max-w-2xl flex items-center justify-center">
+              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none w-[95vw] sm:max-w-2xl flex items-center justify-center">
                 <BurnoutMeter onClose={() => setBurnoutMeterOpen(false)} />
+              </DialogContent>
+            </Dialog>
+
+            {/* Mobile TicTacToe Dialog */}
+            <Dialog open={ticTacToeOpen} onOpenChange={setTicTacToeOpen}>
+              <DialogTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="font-semibold text-sm w-full"
+                  aria-label="Open tic tac toe game"
+                  onClick={() => handleGameClick('Tic Tac Toe', 'mobile')}
+                >
+                  PM vs Engineer
+                </Button>
+              </DialogTrigger>
+              <DialogContent hideCloseButton className="p-0 bg-transparent border-none shadow-none w-[95vw] sm:max-w-md flex items-center justify-center">
+                <TicTacToeGame onClose={() => setTicTacToeOpen(false)} />
               </DialogContent>
             </Dialog>
           </div>
@@ -238,7 +275,7 @@ const Index = () => {
         <About />
       </main>
       
-      <footer className="mt-auto py-8 text-center text-gray-300 text-xs tracking-wide">
+      <footer className="mt-auto py-4 text-center text-gray-300 text-xs tracking-wide">
         &copy; {new Date().getFullYear()} Angshuman Gupta &mdash; En-route to Full Stack Product Person
       </footer>
     </div>

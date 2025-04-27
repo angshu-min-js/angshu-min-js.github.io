@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { X } from 'lucide-react';
 
 interface Task {
   id: string;
@@ -95,91 +96,103 @@ export const BurnoutMeter = ({ onClose }: { onClose: () => void }) => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Burnout Meter</h2>
-        <Button variant="ghost" onClick={onClose}>×</Button>
+    <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden max-h-[90vh] overflow-y-auto">
+      <div className="bg-primary text-white px-6 py-4 flex justify-between items-center">
+        <h2 className="text-xl font-bold">Burnout Meter</h2>
+        {onClose && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onClose}
+            className="h-8 w-8 rounded-full text-white hover:bg-primary/80"
+            aria-label="Close"
+          >
+            <X className="h-4 w-4" />
+          </Button>
+        )}
       </div>
 
-      {!gameOver ? (
-        <>
-          <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-2">Sprint {currentSprint}/3</h3>
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-sm text-gray-600">Team Capacity: {TEAM_CAPACITY}</span>
-              <span className={`text-sm font-semibold ${totalEffort > TEAM_CAPACITY ? 'text-red-500' : 'text-green-500'}`}>
-                Total Effort: {totalEffort}
-              </span>
-            </div>
-            <Progress value={(totalEffort / TEAM_CAPACITY) * 100} className="mb-4" />
-            
-            <div className="mb-4">
-              <h4 className="text-sm font-semibold mb-2">Burnout Meter</h4>
-              <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
-                <div 
-                  className={`absolute top-0 left-0 h-full ${getBurnoutColor()}`}
-                  style={{ width: `${burnoutLevel}%` }}
-                />
+      <div className="p-6">
+        {!gameOver ? (
+          <>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Sprint {currentSprint}/3</h3>
+              <div className="flex flex-wrap justify-between items-center mb-2">
+                <span className="text-sm text-gray-600">Team Capacity: {TEAM_CAPACITY}</span>
+                <span className={`text-sm font-semibold ${totalEffort > TEAM_CAPACITY ? 'text-red-500' : 'text-green-500'}`}>
+                  Total Effort: {totalEffort}
+                </span>
+              </div>
+              <Progress value={(totalEffort / TEAM_CAPACITY) * 100} className="mb-4" />
+              
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold mb-2">Burnout Meter</h4>
+                <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div 
+                    className={`absolute top-0 left-0 h-full ${getBurnoutColor()}`}
+                    style={{ width: `${burnoutLevel}%` }}
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            {initialTasks.map(task => (
-              <Card 
-                key={task.id}
-                className={`p-4 cursor-pointer transition-all ${
-                  selectedTasks.some(t => t.id === task.id) ? 'border-primary bg-gray-50' : ''
-                }`}
-                onClick={() => handleTaskSelect(task)}
-              >
-                <div className="flex justify-between items-start">
-                  <h4 className="font-semibold">{task.name}</h4>
-                  <div className="flex gap-2">
-                    <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Effort: {task.effort}</span>
-                    <span className="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Impact: {task.impact}</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {initialTasks.map(task => (
+                <Card 
+                  key={task.id}
+                  className={`p-4 cursor-pointer transition-all ${
+                    selectedTasks.some(t => t.id === task.id) ? 'border-primary bg-gray-50' : ''
+                  }`}
+                  onClick={() => handleTaskSelect(task)}
+                >
+                  <div className="flex flex-col sm:flex-row justify-between items-start gap-2">
+                    <h4 className="font-semibold">{task.name}</h4>
+                    <div className="flex gap-2 flex-wrap">
+                      <span className="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">Effort: {task.effort}</span>
+                      <span className="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Impact: {task.impact}</span>
+                    </div>
                   </div>
-                </div>
-                <p className="text-sm text-gray-600 mt-2">{task.notes}</p>
-              </Card>
-            ))}
-          </div>
-
-          <div className="flex justify-between items-center">
-            <div>
-              <p className="text-sm text-gray-600">Total Impact: {currentImpact}</p>
-              {totalEffort > TEAM_CAPACITY && (
-                <p className="text-sm text-red-500">Warning: Team is overloaded!</p>
-              )}
+                  <p className="text-sm text-gray-600 mt-2">{task.notes}</p>
+                </Card>
+              ))}
             </div>
-            <Button 
-              onClick={handleSprintComplete}
-              disabled={selectedTasks.length === 0}
-            >
-              Complete Sprint
+
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+              <div>
+                <p className="text-sm text-gray-600">Total Impact: {currentImpact}</p>
+                {totalEffort > TEAM_CAPACITY && (
+                  <p className="text-sm text-red-500">Warning: Team is overloaded!</p>
+                )}
+              </div>
+              <Button 
+                onClick={handleSprintComplete}
+                disabled={selectedTasks.length === 0}
+              >
+                Complete Sprint
+              </Button>
+            </div>
+          </>
+        ) : (
+          <div className="text-center py-8">
+            <h3 className="text-2xl font-bold mb-4">Game Over!</h3>
+            <div className="mb-6">
+              <p className="text-lg mb-2">Final Impact Score: {totalImpact}</p>
+              <p className="text-lg mb-2">Team Status: {getBurnoutStatus()}</p>
+              <p className="text-xl font-semibold text-primary">{getEndGameMessage()}</p>
+            </div>
+            <Button onClick={() => {
+              setCurrentSprint(1);
+              setSelectedTasks([]);
+              setSprints([]);
+              setBurnoutLevel(0);
+              setTotalImpact(0);
+              setGameOver(false);
+            }}>
+              Play Again
             </Button>
           </div>
-        </>
-      ) : (
-        <div className="text-center py-8">
-          <h3 className="text-2xl font-bold mb-4">Game Over!</h3>
-          <div className="mb-6">
-            <p className="text-lg mb-2">Final Impact Score: {totalImpact}</p>
-            <p className="text-lg mb-2">Team Status: {getBurnoutStatus()}</p>
-            <p className="text-xl font-semibold text-primary">{getEndGameMessage()}</p>
-          </div>
-          <Button onClick={() => {
-            setCurrentSprint(1);
-            setSelectedTasks([]);
-            setSprints([]);
-            setBurnoutLevel(0);
-            setTotalImpact(0);
-            setGameOver(false);
-          }}>
-            Play Again
-          </Button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }; 

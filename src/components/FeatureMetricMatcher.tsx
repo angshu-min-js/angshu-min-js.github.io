@@ -115,10 +115,21 @@ export const FeatureMetricMatcher: React.FC<FeatureMetricMatcherProps> = ({ onCl
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-xl overflow-hidden max-w-2xl w-full">
+    <div className="bg-white rounded-lg shadow-xl overflow-hidden max-w-2xl w-full max-h-[90vh] overflow-y-auto">
       {/* Header */}
       <div className="bg-primary text-white px-6 py-4 flex justify-between items-center">
         <h2 className="text-xl font-bold">Feature-Metric Matcher</h2>
+        {onClose && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onClose}
+            className="h-8 w-8 rounded-full text-white hover:bg-primary/80"
+            aria-label="Close"
+          >
+            <X className="h-4 w-4" />
+          </Button>
+        )}
       </div>
       
       {/* Game content */}
@@ -128,7 +139,7 @@ export const FeatureMetricMatcher: React.FC<FeatureMetricMatcherProps> = ({ onCl
           Select a feature first, then select a metric to create a match.
         </p>
         
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Features column */}
           <div>
             <h3 className="font-medium text-gray-900 mb-3">Features</h3>
