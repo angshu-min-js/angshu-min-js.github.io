@@ -24,10 +24,12 @@ This repository contains the source code for Angshuman Gupta's personal portfoli
     git clone <repository-url>
     cd <repository-directory>
     ```
+
 2.  **Install dependencies:**
     ```bash
     npm install
     ```
+
 3.  **Run the development server:**
     ```bash
     npm run dev
@@ -38,6 +40,7 @@ This repository contains the source code for Angshuman Gupta's personal portfoli
     ```bash
     npm run build
     ```
+
 5.  **Preview the production build:**
     ```bash
     npm run preview
@@ -51,6 +54,7 @@ The project is deployed to GitHub Pages using the `gh-pages` package.
     ```bash
     npm run build
     ```
+
 2.  **Deploy to GitHub Pages:**
     ```bash
     npm run deploy
@@ -64,6 +68,7 @@ A custom domain (`angshumangupta.com`) is configured via the GitHub repository s
 Google Analytics 4 (GA4) is integrated to track website usage and user interactions.
 
 - **Measurement ID:** `G-K6MH14YG40`
+
 - **Implementation:**
     - The base GA4 tag (`gtag.js`) is included directly in `index.html` to enable automatic page view tracking and provide the global `gtag` function.
     - TypeScript declarations (`declare global { interface Window { gtag?: ... } }`) are added in relevant `.tsx` files to inform the type checker about the global `gtag` function.
@@ -87,6 +92,7 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 **Product Requirements:**
 
 - **Goal:** Simulate a quick prioritization exercise where the user must select a limited number of features based on Value and Effort.
+
 - **Gameplay:**
     - Present the user with a list of features, each having a Value score and an Effort score.
     - Define a maximum Effort capacity for the sprint/selection.
@@ -95,18 +101,24 @@ The portfolio includes several interactive mini-games designed to be fun and ref
     - Prevent selecting more features if the Effort capacity is exceeded.
     - Provide visual feedback on selected items and capacity usage.
     - Display the final score (Total Value) when the user finishes.
+
 - **UI:** Simple card-based layout for features, clear display of Value, Effort, and Capacity.
 
 **Implementation Details:**
 
 - Built as a React functional component (`QuickPrioritizationGame`).
+
 - Uses `useState` hook to manage:
     - Selected features (`selectedItems`).
     - Total current effort (`currentEffort`).
     - Total current value (`currentValue`).
+
 - Feature data is hardcoded within the component.
+
 - Logic involves checking capacity constraints before adding a feature.
+
 - Uses Shadcn UI components (`Button`, `Card`, `Progress`) for styling.
+
 - Includes a close button (`onClose` prop) to dismiss the game dialog.
 
 ---
@@ -116,22 +128,30 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 **Product Requirements:**
 
 - **Goal:** Test the user's ability to connect product features/initiatives with the appropriate success metrics.
+
 - **Gameplay:**
     - Present two columns: one with Features/Initiatives and one with Metrics.
     - Allow the user to drag and drop metrics onto the corresponding features.
     - Provide immediate feedback on whether the match is correct or incorrect.
     - Keep track of the score (number of correct matches).
     - Show a final score and feedback upon completion.
+
 - **UI:** Two-column layout, drag-and-drop interface, visual cues for correct/incorrect matches.
 
 **Implementation Details:**
 
 - Built as a React functional component (`FeatureMetricMatcher`).
+
 - Uses `react-beautiful-dnd` library for drag-and-drop functionality.
+
 - `useState` manages the state of features, metrics, dropped items, score, and feedback messages.
+
 - Data for features and metrics is hardcoded.
+
 - The `onDragEnd` handler contains the logic to check if the dropped metric matches the target feature.
+
 - Uses Shadcn UI components (`Button`, `Card`) and custom styling.
+
 - Provides `onClose` prop for dialog dismissal.
 
 ---
@@ -141,20 +161,27 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 **Product Requirements:**
 
 - **Goal:** Simulate a basic technical stack decision process based on project requirements.
+
 - **Gameplay:**
     - Present a scenario or project requirement (e.g., "Build a simple blog").
     - Offer choices for different layers of a tech stack (e.g., Frontend Framework, Backend Language, Database).
     - Allow the user to select one option for each layer.
     - Based on the combination chosen, provide feedback on the suitability of the stack for the given scenario (e.g., "Good choice!", "Overkill!", "Might face scaling issues.").
+
 - **UI:** Simple selection interface (radio buttons or cards), clear presentation of the scenario and choices, feedback area.
 
 **Implementation Details:**
 
 - Built as a React functional component (`StackChallenge`).
+
 - Uses `useState` to track the selected option for each stack layer (frontend, backend, database) and the resulting feedback.
+
 - Data for scenarios and stack options is hardcoded.
+
 - A `handleSubmit` function evaluates the selected combination and sets the appropriate feedback message based on predefined logic.
+
 - Uses Shadcn UI components (`Button`, `Card`, `RadioGroup`, `Label`).
+
 - Provides `onClose` prop for dialog dismissal.
 
 ---
@@ -164,25 +191,31 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 **Product Requirements:**
 
 - **Goal:** Simulate sprint planning, focusing on balancing feature impact against team effort capacity and potential burnout.
+
 - **Gameplay:**
     - **Sprint Planning:**
         - Present a backlog of 6 tasks with associated Effort and Impact scores.
         - Allow users to select tasks for the current sprint.
         - Show running total Effort vs. Team Capacity (fixed at 15 points).
         - Display a Burnout Meter (visual bar) that increases if capacity is exceeded.
+    
     - **Sprint Review:**
         - Upon completing a sprint, show the Impact added and team feedback ("Overwhelmed!" or "Well-paced!").
         - Increase the Burnout Meter if the team was overloaded.
+    
     - **Progression:** Proceed through 3 sprints.
+    
     - **Endgame:**
         - Show the Final Total Impact score.
         - Display the final Burnout Status (e.g., "Happy team", "Okay", "Burned out").
         - Provide a summary message based on the outcome.
+
 - **UI:** Task selection via clickable cards, progress bars for effort and burnout, clear indicators for sprint number, effort, impact, and capacity.
 
 **Implementation Details:**
 
 - Built as a React functional component (`BurnoutMeter`).
+
 - Uses `useState` to manage:
     - Current sprint number (`currentSprint`).
     - Selected tasks for the current sprint (`selectedTasks`).
@@ -190,11 +223,17 @@ The portfolio includes several interactive mini-games designed to be fun and ref
     - Current burnout level (`burnoutLevel`).
     - Total accumulated impact (`totalImpact`).
     - Game over state (`gameOver`).
+
 - Task data (`initialTasks`) and `TEAM_CAPACITY` are hardcoded constants.
+
 - `handleTaskSelect` toggles task selection.
+
 - `handleSprintComplete` calculates sprint results, updates burnout and total impact, and transitions to the next sprint or game over state.
+
 - Helper functions (`getBurnoutStatus`, `getEndGameMessage`, `getBurnoutColor`) determine final status, messages, and UI elements based on state.
+
 - Uses Shadcn UI components (`Button`, `Card`, `Progress` - custom implementation for color).
+
 - Provides `onClose` prop for dialog dismissal.
 
 ---
@@ -204,6 +243,7 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 **Product Requirements:**
 
 - **Goal:** A playful representation of the PM vs Engineering dynamic through a Tic Tac Toe game where the user (PM) plays against the computer (Engineer).
+
 - **Gameplay:**
     - Classic Tic Tac Toe rules: Players take turns placing their symbols (X for PM, O for Engineer) on a 3x3 grid.
     - The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins.
@@ -211,27 +251,38 @@ The portfolio includes several interactive mini-games designed to be fun and ref
     - The user plays as the PM (X) and always goes first.
     - The computer plays as the Engineer (O).
     - The game keeps track of the score for both players across multiple games.
+
 - **Unique Feature:** The Engineer (computer) occasionally makes suboptimal moves (with a 30% probability), allowing the PM to win sometimes, simulating real-world scenarios where engineering and product management need to find a balance.
+
 - **UI:** Clean 3x3 grid, clear player symbols, score tracking, turn indicator, and game status messages.
 
 **Implementation Details:**
 
 - Built as a React functional component (`TicTacToeGame`).
+
 - Uses `useState` hooks to manage:
     - Game board state (`board`) - a 9-cell array representing the 3x3 grid.
     - Current turn (`turn`) - alternates between 'PM' and 'Engineer'.
     - Winner state (`winner`) - tracks who won or if there's a draw.
     - Scores for both players (`pmScore` and `engineerScore`).
+
 - Uses `useEffect` to check for a winner after each move and to trigger the computer's move when it's the Engineer's turn.
+
 - Implements the minimax algorithm for intelligent computer moves:
     - `findBestMove` function identifies the optimal move for the Engineer.
     - `minimax` function recursively evaluates possible board positions.
     - `makeEngineerMove` handles the computer's turn, with a 30% chance of making a random move instead of the optimal one.
+
 - `handleCellClick` manages user input when clicking a cell.
+
 - `resetGame` reinitializes the board for a new game.
+
 - `checkWinner` evaluates if either player has won or if it's a draw.
+
 - Uses Shadcn UI components (`Button`) and Lucide React icons (`X`, `Circle`, `RefreshCw`).
+
 - Displays toast notifications for game outcomes.
+
 - Provides `onClose` prop for dialog dismissal.
 
 ---
