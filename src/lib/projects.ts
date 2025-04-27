@@ -3,85 +3,82 @@ import { ProjectData } from '../components/ProjectTemplate';
 export const projects: ProjectData[] = [
   {
     id: 'zalando-merchant-onboarding',
-    title: '📈 3-Year Roadmap: Enabling the Non-Zalando Merchant Onboarding to Unlock 10x Growth',
+    title: '📈 3-Year Roadmap: Unlocking 10x Growth in the B2B Merchant Funnel at Zalando Logistics',
     company: 'Zalando SE',
-    year: "2023 - Present",
-    shortDescription: 'Led the strategic transformation of ZEOS\'s merchant platform to enable non-Zalando sellers, reducing onboarding time from XXX+ days to ~X days while unlocking hundreds of millions in potential revenue.',
-    situation: 'At ZEOS, Europe\'s leading online fashion platform, I was entrusted with a long-term strategic mission — launching a new category of merchants: non-Zalando sellers.\nThe ambition was bold: 10x the merchant acquisition funnel, driving hundreds of millions of euros in new revenue 💶.\nBut to get there, we had to reimagine our entire merchant platform, across multiple teams, over a three-year journey.\n\n🔍 The Starting Point: Building a Dream That Didn\'t Exist Yet\nThe goal was clear:\nAllow external brands and retailers — not selling through Zalando\'s curated assortment — to use our logistics services (Zeos) across marketplaces like Amazon, Otto, and About You 🛍️.\nThe challenges:\n• No existing tech foundation for non-Zalando merchants\n• Fragmented ownership across Legal, Commercial, Operations, and Tech\n• Extremely manual merchant onboarding process — average onboarding time was XXX+ days 🐢\n\nSuccess demanded vision, structured discovery, stakeholder orchestration, and multi-year execution.',
+    year: '2023 - Present',
+    shortDescription: 'Led the strategic transformation of ZEOS\'s merchant platform to enable non-Zalando and DTC sellers, reducing onboarding time from XXX+ days to ~X days and unlocking hundreds of millions in potential revenue.',
+    situation: 'At Zalando, Europe\'s leading fashion platform, I was entrusted with a transformative mission — 10x the merchant acquisition funnel for our Logistics-as-a-Service business, ZEOS.\n\nThe ambition was bold: expand beyond Zalando sellers to onboard external marketplace sellers and DTC brands at scale 🚀.\n\n🔍 The Starting Point: Breaking Through Systemic Barriers\n\nChallenges were steep:\n\n• Extremely slow onboarding — taking XXX+ days 🐢\n\n• No tech infrastructure to support non-Zalando merchants\n\n• Heavy dependence on costly, slow external integrators\n\nSuccess demanded a platform rethink, cross-functional orchestration, and disciplined, multi-year execution.\n\nNote: Marketplace names and figures mentioned here are fictionalized for confidentiality and illustrative purposes.',
     steps: {
       research: [
-        'Led deep discovery workshops across functions: Legal, Operations, Commercial, and Tech',
-        'Analyzed platform gaps and extensibility requirements for non-Zalando merchant support',
-        'Evaluated marketplace integration requirements for Amazon, Otto, and About You',
-        'Mapped existing merchant onboarding process and identified bottlenecks'
+        'Spearheaded deep discovery workshops across Commercial, Legal, Operations, and Tech\n',
+        'Segmented merchant types: marketplace sellers vs DTC brands\n',
+        'Performed platform gap analysis to identify extensibility needs for non-Zalando onboarding\n',
+        'Mapped integrator landscape (e.g., TradeLink, ChannelPro) and identified dependency bottlenecks\n'
       ],
       strategy: [
-        'Consolidated insights into comprehensive requirements document and PRFAQ',
-        'Secured Senior Leadership buy-in for multi-year strategic program',
-        'Developed phased roadmap with clear milestones and success metrics',
-        'Created cross-functional governance model for program execution'
+        'Consolidated findings into a comprehensive Requirements Document and PRFAQ\n',
+        'Secured Senior Leadership Team (SLT) buy-in for a multi-year platform transformation\n',
+        'Designed a phased 3-year roadmap aligned with merchant growth and revenue targets\n',
+        'Built cross-functional governance and resourced two dedicated Engineering PODs\n'
       ],
       development: [
-        'Year 1: Built core merchant data platform and standardized merchant profiles',
-        'Year 2: Extended platform for business data and logistics flows, reducing onboarding time to ~X days',
-        'Year 3: Launched Connector Strategy with Shopify, Scayle, and Salesforce Commerce Cloud integrations',
-        'Implemented automated logistics offerings and marketplace-specific integrations',
-        'Developed merchant self-service flows and operational playbooks for scale'
+        'Year 1: Built Merchant Registration and Data Platform with standardized profiles\n',
+        'Year 2: Extended platform for business data, logistics flows, and marketplace-specific SLAs, reducing onboarding time to ~X days\n',
+        'Year 3: Launched Connector Strategy with direct integrations to ShopSphere, CommerceFlow, and SalesPlus\n',
+        'Enabled merchant self-service onboarding, reducing dependency on external integrators and internal Ops resources\n',
+        'Rolled out operational playbooks and automated validation processes to support scaling\n'
       ]
     },
     impact: [
-      '10x increase in merchant acquisition funnel',
-      'Dramatic reduction in onboarding time (from XXX+ days → ~X days)',
-      'Hundreds of millions in potential incremental revenue for Zalando Logistics',
-      'Established future-proof platform capable of scaling across multiple merchant types and marketplaces'
+      '10x increase in merchant acquisition funnel 📈\n',
+      'Reduced onboarding time dramatically (from XXX+ days → ~X days) ⚡\n',
+      'Unlocked hundreds of millions in potential incremental revenue for Zalando Logistics 💶\n',
+      'Established a scalable, modular onboarding and logistics platform for multi-marketplace and DTC sellers\n'
     ],
     lessons: [
-      'Think in Horizons: Balancing short-term deliverables with a long-term north star kept momentum and focus alive',
-      'Cross-functional orchestration is everything: Success wasn\'t just Tech-driven — it was a true partnership across Legal, Ops, Commercial, and Engineering',
-      'Clarity wins: In a complex, multi-year initiative, over-communicating the "why" and "what" kept teams energized and aligned',
-      'Start with a strong foundation: Rushing to scale without the right data models and platform architecture would have led to painful rebuilds later'
+      'Think in Horizons: Balanced quick wins with long-term platform investments to keep momentum\n',
+      'Cross-functional orchestration wins: Success depended on tight collaboration across Tech, Commercial, Legal, and Ops\n',
+      'Clarity is critical: Clear and constant communication kept a multi-year, cross-team effort on track\n',
+      'Invest early in extensibility: Strong data models and architecture choices prevented painful future rebuilds\n'
     ]
   },
   {
-    id: 'zalando-platform',
-    title: '🚀 Building Zalando\'s (ZEOS) Partner Platform: 0 to 1 journey within a listed company',
+    id: 'zalando-partner-platform',
+    title: '🚀 Building a Scalable Partner Platform: 0 to 1 Journey Inside a Listed Company',
     company: 'Zalando SE',
-    year: "2023 - 2024",
-    shortDescription: 'Led the transformation of Zalando\'s logistics capabilities into a full-fledged logistics-as-a-service platform, scaling from 1 to XXX merchants per month.',
-    situation: 'When I joined Zalando, Europe\'s leading fashion marketplace, I was tasked with scaling a bold new ambition — transforming Zalando\'s logistics capabilities, branded as Zeos, into a full-fledged logistics-as-a-service platform. The mission was clear: help merchants sell not just on Zalando, but across marketplaces like Amazon, Otto, and About You — and do it at scale.\n\nThe first thing I noticed? We were onboarding just one merchant per month. Digging deeper, the reasons became clear:\n- The onboarding process was entirely manual 🧾\n- There was no clear platform or tech infrastructure to support scaling ⚙️\n- Teams worked in silos with no shared domain models or reusable interfaces 🚧\n\nYet, the business goals were ambitious: X merchants in 2023 → XX in 2024 → XXX in 2025, driven by new markets, non-Zalando demand, and expanding marketplace presence 🌍\n\nIt was clear — a platform rethink was necessary.',
+    year: '2022 - 2023',
+    shortDescription: 'Led the design and launch of a scalable Partner Platform to onboard merchants across multiple marketplaces and DTC channels, reducing activation time from weeks to less than a day and enabling exponential merchant growth.',
+    situation: 'When I joined Zalando, Europe\'s leading fashion marketplace, I was tasked with scaling a bold new ambition — scaling the merchant onboarding for Zalando\'s logistics branded as Zeos, helping to build Europe\'s leading logistics-as-a-service.\n\nThe mission was clear: help merchants sell not just on Zalando, but across multiple external marketplaces and own-ecommerce platforms using ZEOS, and do it at scale.\n\nThe first thing I noticed? We were onboarding just one merchant per month.\nDigging deeper, the reasons became clear:\n\nThe onboarding process was entirely manual 🧾\n\nNo clear platform or tech infrastructure existed to support scaling ⚙️\n\nTeams worked in silos, without shared domain models or reusable interfaces 🚧\n\nYet, the business goals were ambitious: X merchants in 2023 → XX in 2024 → XXX in 2025, driven by new markets, non-Zalando merchant onboarding, and expanding external marketplace presence 🌍.\n\nIt was clear — a full platform rethink was necessary.\n\nNote: Marketplace names and figures mentioned here are fictionalized for confidentiality and illustrative purposes.',
     steps: {
       research: [
-        'Interviewed Ops, Commercial, Strategy, and Tech teams to understand the jobs-to-be-done and pain points',
-        'Analyzed how competitors like Amazon MCF or Flexport, etc and where we lagged',
-        'Identified core components: Merchant Business Profile, Marketplace + Warehouse + Carrier configurations, Customization modules',
-        'Defined three key platform interfaces: APIs for shop integrations, Backoffice tools for operations, Self-service flows for merchants 👩‍💻'
+        'Conducted deep discovery interviews with Operations, Commercial, Strategy, and Tech teams\n',
+        'Benchmarked logistics players\' onboarding models to identify competitive gaps\n',
+        'Identified core building blocks: Business Profile Management, Marketplace/Warehouse/Carrier Configuration, Customization Interfaces\n',
+        'Defined platform interfaces: APIs, Backoffice tools, and Merchant Self-service flows\n'
       ],
       strategy: [
-        'Documented clear Product Strategy explaining why we needed a platform and its components',
-        'Created phased roadmap aligned with merchant growth targets',
-        'Collaborated with Engineering, Ops, and Business to align on system design',
-        'Secured Senior Leadership buy-in for shift from manual ops to product-led model',
-        'Ensured dedicated engineering capacity by aligning on priorities and timelines 📅'
+        'Documented a clear Product Strategy detailing platform vision, components, and phased roadmap\n',
+        'Collaborated with Engineering, Operations, and Commercial teams to design scalable system architecture\n',
+        'Secured Senior Leadership Team (SLT) buy-in to shift from manual Ops to a product-led onboarding model\n',
+        'Prioritized platformization over one-off feature delivery, aligning with merchant acquisition and activation goals\n'
       ],
       development: [
-        'Built internal tools to scale operational support',
-        'Exposed APIs for external partners and shop connectors',
-        'Rolled out self-service interfaces to reduce Ops dependency',
-        'Reduced onboarding time from XX days to <1 day ⏱️',
-        'Scaled capacity from 1 merchant/month to XXX merchant/month'
+        'Built internal operational tools to scale without proportional headcount increases\n',
+        'Launched APIs for merchant onboarding, integrators, and internal domain teams\n',
+        'Rolled out self-service onboarding interfaces to minimize Ops involvement\n',
+        'Enabled multi-marketplace onboarding flows and cross-country expansion readiness\n'
       ]
     },
     impact: [
-      'Scaled merchant onboarding capacity from 1 to XXX merchants per month',
-      'Reduced onboarding time from XX days to less than 1 day',
-      'Enabled multi-marketplace and multi-country merchant launches',
-      'Achieved efficient scaling without proportional Ops resource increase',
-      'Established competitive advantage with modern, near self-service onboarding experience'
+      'Scaled merchant onboarding capacity multi-fold 📈\n',
+      'Reduced activation time from weeks to less than a day ⏱️\n',
+      'Significantly reduced manual Ops handovers, freeing up teams for complex cases 🔧\n',
+      'Established a scalable Partner Platform foundation for multi-marketplace and DTC merchant launches\n'
     ],
     lessons: [
-      'Operate in ambiguity: Navigating a new domain, across countries and teams, required relentless clarity-seeking',
-      'Cross-functional collaboration wins: Worked closely with 5+ operational teams and multiple tech squads — shared language and goals were essential',
-      'Think platform-first: This wasn\'t about features. It was about building extensible, reusable infrastructure that could evolve with our business'
+      'Operate in Ambiguity: Clarity-seeking was essential across new domains and markets\n',
+      'Cross-functional Collaboration Wins: Deep partnerships across Tech, Ops, and Commercial were critical\n',
+      'Think Platform-First: Scaling success was driven by extensibility, reusability, and evolution, not just feature delivery\n'
     ]
   },
   {
@@ -280,7 +277,7 @@ export const projects: ProjectData[] = [
       'Driver experience is just as important as backend automation - UX improvements significantly reduced document rejections',
       'Starting with a scrappy prototype gave us speed + confidence to scale',
       'Local document variance required continuous model tuning per geography',
-      'Cross-functional collaboration (CVT, Ops, Supply, Engineering) was crucial for successful rollout'
+      'Cross-functional collaboration (CVT, Ops, Supply, Data Science, Engineering) was crucial for successful rollout'
     ]
   },
   {

@@ -3,6 +3,8 @@ import { ChevronLeft } from 'lucide-react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import LeagueAddDashboard from './LeagueAddDashboard';
 import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export interface ProjectStep {
   title: string;
@@ -73,6 +75,10 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
     return step.toLowerCase().includes('prototype') || step.toLowerCase().includes('proof of concept');
   };
 
+  const isNoteStep = (step: string) => {
+    return step.toLowerCase().includes('note:') || step.toLowerCase().startsWith('note ');
+  };
+
   const renderStep = (step: string) => {
     if (isPrototypeStep(step)) {
       return (
@@ -80,6 +86,17 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
           <span className="text-blue-500 font-medium mr-2">💡</span>
           <div>
             <span className="text-blue-600 text-sm font-medium mb-1 block">Strategic Prototype</span>
+            <span className="text-gray-700 leading-relaxed whitespace-pre-line">{step}</span>
+          </div>
+        </div>
+      );
+    }
+    if (isNoteStep(step)) {
+      return (
+        <div className="flex items-start bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400">
+          <span className="text-yellow-500 font-medium mr-2">📝</span>
+          <div>
+            <span className="text-yellow-600 text-sm font-medium mb-1 block">Note</span>
             <span className="text-gray-700 leading-relaxed whitespace-pre-line">{step}</span>
           </div>
         </div>
@@ -167,7 +184,26 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
           <section className="bg-white rounded-xl shadow-sm p-8">
             <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair">The Situation</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
-              {renderFormattedText(project.situation)}
+              {project.situation.includes('Note:') ? (
+                <>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {project.situation.split('Note:')[0]}
+                  </ReactMarkdown>
+                  <div className="flex items-start bg-yellow-50 rounded-lg p-4 border-l-4 border-yellow-400 mt-4">
+                    <span className="text-yellow-500 font-medium mr-2">📝</span>
+                    <div>
+                      <span className="text-yellow-600 text-sm font-medium mb-1 block">Note</span>
+                      <span className="text-gray-700 leading-relaxed whitespace-pre-line">
+                        Note: {project.situation.split('Note:')[1]}
+                      </span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {project.situation}
+                </ReactMarkdown>
+              )}
             </div>
           </section>
 
