@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { X } from 'lucide-react';
+import { toast } from "@/components/ui/sonner";
 
 interface Task {
   id: string;
@@ -95,21 +96,38 @@ export const BurnoutMeter = ({ onClose }: { onClose: () => void }) => {
     return "bg-red-500";
   };
 
+  const shareUrl = `${window.location.origin}/#/?game=burnout-meter`;
+  const handleShare = () => {
+    navigator.clipboard.writeText(shareUrl);
+    toast("Link copied!", { description: "Share this game with others." });
+  };
+
   return (
     <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden max-h-[90vh] overflow-y-auto">
       <div className="bg-primary text-white px-6 py-4 flex justify-between items-center">
         <h2 className="text-xl font-bold">Burnout Meter</h2>
-        {onClose && (
+        <div className="flex items-center gap-2">
           <Button
             variant="ghost"
             size="icon"
-            onClick={onClose}
+            onClick={handleShare}
             className="h-8 w-8 rounded-full text-white hover:bg-primary/80"
-            aria-label="Close"
+            aria-label="Share"
           >
-            <X className="h-4 w-4" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="6" cy="12" r="2" fill="currentColor"/><circle cx="18" cy="6" r="2" fill="currentColor"/><circle cx="18" cy="18" r="2" fill="currentColor"/><line x1="7.5" y1="11" x2="16" y2="7" stroke="currentColor" strokeWidth="2"/><line x1="7.5" y1="13" x2="16" y2="17" stroke="currentColor" strokeWidth="2"/></svg>
           </Button>
-        )}
+          {onClose && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onClose}
+              className="h-8 w-8 rounded-full text-white hover:bg-primary/80"
+              aria-label="Close"
+            >
+              <X className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
       </div>
 
       <div className="p-6">

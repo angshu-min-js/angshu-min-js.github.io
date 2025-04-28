@@ -10,6 +10,7 @@ import { TicTacToeGame } from "@/components/TicTacToeGame";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import React, { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 
 // Declare gtag on the window object for TypeScript
 declare global {
@@ -35,6 +36,8 @@ const Index = () => {
   const [burnoutMeterOpen, setBurnoutMeterOpen] = React.useState(false);
   const [ticTacToeOpen, setTicTacToeOpen] = React.useState(false);
 
+  const location = useLocation();
+
   // Debug dialog status
   useEffect(() => {
     console.log("Dialog states:", { 
@@ -45,6 +48,32 @@ const Index = () => {
       ticTacToeOpen
     });
   }, [prioritizationOpen, featureMetricOpen, stackChallengeOpen, burnoutMeterOpen, ticTacToeOpen]);
+
+  React.useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const game = params.get('game');
+    if (game) {
+      switch (game) {
+        case 'prioritization':
+          setPrioritizationOpen(true);
+          break;
+        case 'feature-metric':
+          setFeatureMetricOpen(true);
+          break;
+        case 'stack-challenge':
+          setStackChallengeOpen(true);
+          break;
+        case 'burnout-meter':
+          setBurnoutMeterOpen(true);
+          break;
+        case 'tictactoe':
+          setTicTacToeOpen(true);
+          break;
+        default:
+          break;
+      }
+    }
+  }, [location.search]);
 
   const handleGameClick = (gameName: string, view: 'desktop' | 'mobile') => {
     console.log(`${gameName} button clicked (${view})`);
