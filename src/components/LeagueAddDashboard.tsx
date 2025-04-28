@@ -859,7 +859,7 @@ const newUserFunnelData = [
   {
     id: 1,
     step: "AJZR-FIRST-LAUNCH",
-    users: 248000,
+    users: 3720000,
     percent: 100,
     dropPercent: null,
     timeToConvert: "15 minutes"
@@ -867,7 +867,7 @@ const newUserFunnelData = [
   {
     id: 2,
     step: "AJZR-REGISTERED",
-    users: 77000,
+    users: 1155000,
     percent: 31.05,
     dropPercent: 68.95,
     timeToConvert: "2 hours 57 minutes"
@@ -875,7 +875,7 @@ const newUserFunnelData = [
   {
     id: 3,
     step: "AJZR-PLAYED-A-GAME",
-    users: 42700,
+    users: 640500,
     percent: 17.22,
     dropPercent: 13.83,
     timeToConvert: "17 hours 30 minutes"
@@ -883,7 +883,7 @@ const newUserFunnelData = [
   {
     id: 4,
     step: "AJZR-DEPOSIT-ATTEMPTED",
-    users: 6600,
+    users: 99000,
     percent: 2.66,
     dropPercent: 14.56,
     timeToConvert: "3 hours 52 minutes"
@@ -891,7 +891,7 @@ const newUserFunnelData = [
   {
     id: 5,
     step: "AJZR-DEPOSIT-COMPLETED",
-    users: 4000,
+    users: 60000,
     percent: 1.61,
     dropPercent: 1.05,
     timeToConvert: null
@@ -902,7 +902,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 1,
     step: "AJZR-FIRST-LAUNCH",
-    users: 260500,
+    users: 3907500,
     percent: 100,
     dropPercent: null,
     timeToConvert: "55 minutes"
@@ -910,7 +910,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 2,
     step: "AJZR-LOGGED-IN",
-    users: 196500,
+    users: 2947500,
     percent: 75.43,
     dropPercent: 24.57,
     timeToConvert: "5 hours 21 minutes"
@@ -918,7 +918,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 3,
     step: "AJZR-PLAYED-A-GAME",
-    users: 133300,
+    users: 1999500,
     percent: 51.17,
     dropPercent: 24.26,
     timeToConvert: "1 day 4 hours 42 minutes"
@@ -926,7 +926,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 4,
     step: "AJZR-DEPOSIT-ATTEMPTED",
-    users: 34900,
+    users: 523500,
     percent: 13.40,
     dropPercent: 37.77,
     timeToConvert: "5 hours 35 minutes"
@@ -934,7 +934,7 @@ const existingPlayerNewLoginFunnelData = [
   {
     id: 5,
     step: "AJZR-DEPOSIT-COMPLETED",
-    users: 27100,
+    users: 406500,
     percent: 10.40,
     dropPercent: 3.00,
     timeToConvert: null
@@ -945,7 +945,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 1,
     step: "AJZR-APPLICATION-LAUNCH",
-    users: 522800,
+    users: 7842000,
     percent: 100,
     dropPercent: null,
     timeToConvert: "10 hours 5 minutes"
@@ -953,7 +953,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 2,
     step: "AJZR-PLAYED-A-GAME",
-    users: 223100,
+    users: 3346500,
     percent: 42.69,
     dropPercent: 57.31,
     timeToConvert: "1 day 13 hours 25 minutes"
@@ -961,7 +961,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 3,
     step: "AJZR-DEPOSIT-ATTEMPTED",
-    users: 65200,
+    users: 978000,
     percent: 12.48,
     dropPercent: 30.21,
     timeToConvert: "2 hours 49 minutes"
@@ -969,7 +969,7 @@ const existingPlayerLoggedInFunnelData = [
   {
     id: 4,
     step: "AJZR-DEPOSIT-COMPLETED",
-    users: 54800,
+    users: 822000,
     percent: 10.49,
     dropPercent: 1.99,
     timeToConvert: null

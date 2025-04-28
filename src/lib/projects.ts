@@ -170,7 +170,28 @@ export const projects: ProjectData[] = [
     company: 'Zeta Tech (Directi)',
     year: "2021 - 2022",
     shortDescription: 'Built a self-service identity platform that reduced support tickets by 30% and transformed access management across internal and external users.',
-    situation: '🧠 Context\nZeta\'s IAM platform powers access for multiple internal and external product suites. Identity changes and access requests were common — but relied on tenant admins and manual backoffice workflows, creating friction and ticket overhead.\n\n🎯 Goal\nMake access and identity self-serviceable for all users — employees, customers, partners — without depending on support or tenant admins.\n\n📊 Business Impact\n• Reduce support ticket volume related to access issues\n• Improve resolution time by 100% (i.e., eliminate ticket dependency)\n• Create a table-stakes experience comparable to industry leaders (Okta, Ping)\n\n🔍 Discovery\nTraced user journeys:\n• User logs in → Hits access block → Doesn\'t know why or whom to contact → Raises a support ticket\n• Tenant admins had to log into backoffice, find the user, and manually update access\n• Ticket aging: Avg 2–5 days → Created productivity loss & poor experience\n• Conducted customer interviews (internal & external)\n\n🤯 Core Problems\n• Users didn\'t know what roles/access they had\n• No visibility on how to request access\n• No standard identity view → led to duplicated or incorrect identities\n• Tenant admins were overburdened with repetitive access requests',
+    situation: `🧠 Context: Zeta's IAM platform powers access for multiple internal and external product suites. Identity changes and access requests were common — but relied on tenant admins and manual backoffice workflows, creating friction and ticket overhead.
+
+🎯 Goal:
+Make access and identity self-serviceable for all users — employees, customers, partners — without depending on support or tenant admins reducing the manual support and tickets.
+
+📊 Business Impact
+\n• Reduce support ticket volume related to access issues
+\n• Improve resolution time by 100% (i.e., eliminate ticket dependency)
+\n• Create a table-stakes experience comparable to industry leaders (Okta, Ping)
+
+🔍 Discovery
+Traced user journeys:
+\n• User logs in → Hits access block → Doesn't know why or whom to contact → Raises a support ticket
+\n• Tenant admins had to log into backoffice, find the user, and manually update access
+\n• Ticket aging: Avg 2–5 days → Created productivity loss & poor experience
+\n• Conducted customer interviews (internal & external)
+
+🤯 Core Problems
+\n• Users didn't know what roles/access they had
+\n• No visibility on how to request access
+\n• No standard identity view → led to duplicated or incorrect identities
+\n• Tenant admins were overburdened with repetitive access requests`,
     steps: {
       research: [
         'Mapped key personas: End users (employees, customers) and Tenant admins (partners, ops, internal IT)',
