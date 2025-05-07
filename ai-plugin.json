@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Angshuman Gupta Portfolio",
+  "name_for_model": "angshumangupta",
+  "description_for_human": "Access Angshuman Gupta's portfolio, projects, and expertise in product leadership and technology.",
+  "description_for_model": "Plugin to search Angshuman Gupta's portfolio website for projects, experience, expertise, games, and contact information. Use this to find information about his role as a Product Leader, his work experience at companies like Zalando, Zeta Tech, Ola Cabs, and Craftloom, as well as his interactive PM games and projects.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://angshumangupta.com/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://angshumangupta.com/CL_logo_TM.png",
+  "contact_email": "mail@angshumangupta.com",
+  "legal_info_url": "https://angshumangupta.com/terms"
+} 

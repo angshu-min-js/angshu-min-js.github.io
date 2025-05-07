@@ -1,0 +1,233 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Angshuman Gupta Portfolio API",
+    "description": "API for accessing Angshuman Gupta's portfolio information, projects, experience, and expertise.",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://angshumangupta.com"
+    }
+  ],
+  "paths": {
+    "/api/search": {
+      "get": {
+        "operationId": "searchContent",
+        "summary": "Search the portfolio for specific content",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Search query string",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResults"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/projects": {
+      "get": {
+        "operationId": "getProjects",
+        "summary": "Get portfolio projects",
+        "responses": {
+          "200": {
+            "description": "List of projects",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectsList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/experience": {
+      "get": {
+        "operationId": "getExperience",
+        "summary": "Get professional experience",
+        "responses": {
+          "200": {
+            "description": "Professional experience information",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExperienceList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/games": {
+      "get": {
+        "operationId": "getGames",
+        "summary": "Get interactive PM games information",
+        "responses": {
+          "200": {
+            "description": "List of interactive PM games",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GamesList"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SearchResults": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": ["project", "experience", "expertise", "game"]
+                }
+              }
+            }
+          }
+        }
+      },
+      "ProjectsList": {
+        "type": "object",
+        "properties": {
+          "projects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "company": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "string"
+                },
+                "shortDescription": {
+                  "type": "string"
+                },
+                "situation": {
+                  "type": "string"
+                },
+                "steps": {
+                  "type": "object"
+                },
+                "impact": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "lessons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ExperienceList": {
+        "type": "object",
+        "properties": {
+          "experience": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": {
+                  "type": "string"
+                },
+                "company": {
+                  "type": "string"
+                },
+                "years": {
+                  "type": "string"
+                },
+                "summary": {
+                  "type": "string"
+                },
+                "paragraphs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "skills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "GamesList": {
+        "type": "object",
+        "properties": {
+          "games": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
