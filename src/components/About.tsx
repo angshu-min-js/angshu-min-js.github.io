@@ -49,7 +49,7 @@ const experience = [
     website: "https://www.zeta.tech/",
     logoUrl: "https://logo.clearbit.com/zeta.tech", // Keep existing or verify
     years: "2021–2023",
-    summary: "Led Identity & Workflow platforms at BaaS unicorn, scaling to 30M+ identities & enabling 10x revenue growth.",
+    summary: "Led Identity & Workflow platforms at BaaS unicorn, scaling to 30M+ identities & enabling XX Mn ARR (10x revenue growth).",
     paragraphs: [
       "Zeta, is a Banking-as-a-Service (BaaS) unicorn where I led two charters - Identity and Access Management (took from introduction to matured steady-state ~ on track to serve 30 mn+ identities) & Operation Management (operationalised Zeta's multi-stack banking offerings ~ on track for 10X revenue growth).",
       "Defined and owned the product strategy, long-term roadmap, and quarter-wise OKRs for both and directly managed a team of 3 PMs, each owning a specific product objective (pillar). I moved out as I wanted to explore the culture outside India, especially in Germany."
@@ -63,7 +63,7 @@ const experience = [
     website: "https://www.olacabs.com/",
     logoUrl: "https://logo.clearbit.com/olacabs.com", // Keep existing or verify
     years: "2020–2021",
-    summary: "Launched AI/ML platform reducing driver verification time by 33% and costs by 50%.",
+    summary: "Launched AI/ML platform reducing driver verification time by 76% and costs by 50%.",
     paragraphs: [
       "During my short stint at Ola, I had the opportunity to lead the company's largest full-scale data science and machine learning project. I spearheaded the launch of an OCR (optical character recognition) platform for document digitization and verification, digitising the onboarding flow for approximately 2mn drivers (India, UK, and NZ). The platform was designed to reduce the cost of CVT (customer verification and validation) by 50%, resulting in significant cost savings for the company.",
       "It was an exciting and challenging project, but I was passionate about the potential impact it could have on the company and its customers. With a talented team at my side, we worked tirelessly to develop and launch the platform, leveraging the latest advances in AI and machine learning technology.",
@@ -89,7 +89,7 @@ const experience = [
   },
   {
     role: "Software Engineer / Product Manager (Infrastructure)",
-    roleType: 'Individual Contributor' as RoleType, // Early roles + infra PM focused on tool
+    roleType: 'Team Leader' as RoleType, // Early roles + infra PM focused on tool
     company: "Tata Consultancy Services (TCS)",
     website: "https://www.tcs.com/",
     logoUrl: "https://logo.clearbit.com/tcs.com", // Keep existing or verify
