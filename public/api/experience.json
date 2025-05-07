@@ -1,0 +1,52 @@
+{
+  "experience": [
+    {
+      "role": "Product Lead, Partner Onboarding and Shop Connectors",
+      "company": "Zalando SE",
+      "years": "Mar 2023 – Present",
+      "summary": "Spearheading B2B partner onboarding and e-commerce integrations, driving significant growth.",
+      "paragraphs": [
+        "Spearheading two core product areas for Zalando's B2B business (Zeos): Partner Onboarding and E-Commerce Shop Integrations (Shopify, Salesforce, Scayle, etc.).",
+        "Achieved outcomes including 99% faster onboarding, 10x market expansion, and 70% D2C market penetration, contributing to over €XXX Mn in revenue.",
+        "Defined and executed a multi-year platform strategy, translating complex operational needs into scalable product roadmaps, securing endorsements from Senior Leadership.",
+        "Driving cross-functional collaboration across Design, Engineering, Data, Commercial, Operations, Legal, Channel & Markets, Domain Teams, and Finance.",
+        "Managing the platform's Onboarding & Connector Self-Service, API Services, Dev Documentation, and Back-Offices.",
+        "Coaching product teams on using Gen AI for productivity and innovation."
+      ],
+      "skills": ["B2B Product Strategy", "Platform Strategy", "Partner Experience", "API Ecosystems", "E-commerce Integrations", "Cross-functional Leadership", "Roadmapping", "Gen AI Application", "Self-Service Platforms"]
+    },
+    {
+      "role": "Product Lead, Identity, Access, and Workflow Mgmt.",
+      "company": "Zeta Tech (Directi)",
+      "years": "2021–2023",
+      "summary": "Led Identity & Workflow platforms at BaaS unicorn, scaling to 30M+ identities & enabling 10x revenue growth.",
+      "paragraphs": [
+        "Zeta, is a Banking-as-a-Service (BaaS) unicorn where I led two charters - Identity and Access Management (took from introduction to matured steady-state ~ on track to serve 30 mn+ identities) & Operation Management (operationalised Zeta's multi-stack banking offerings ~ on track for 10X revenue growth).",
+        "Defined and owned the product strategy, long-term roadmap, and quarter-wise OKRs for both and directly managed a team of 3 PMs, each owning a specific product objective (pillar). I moved out as I wanted to explore the culture outside India, especially in Germany."
+      ],
+      "skills": ["Identity & Access Management (IAM)", "Workflow Automation", "Banking-as-a-Service (BaaS)", "API Platforms", "Mobile SDKs", "People Management", "Team Leadership", "Fintech", "Global Product Scaling", "Developer Experience"]
+    },
+    {
+      "role": "Senior Product Manager, Driver Onboarding",
+      "company": "Ola Cabs",
+      "years": "2020–2021",
+      "summary": "Launched AI/ML platform reducing driver verification time by 33% and costs by 50%.",
+      "paragraphs": [
+        "During my short stint at Ola, I had the opportunity to lead the company's largest full-scale data science and machine learning project. I spearheaded the launch of an OCR (optical character recognition) platform for document digitization and verification, digitising the onboarding flow for approximately 2mn drivers (India, UK, and NZ).",
+        "The platform was designed to reduce the cost of CVT (customer verification and validation) by 50%, resulting in significant cost savings for the company."
+      ],
+      "skills": ["AI/ML Product Management", "OCR Technology", "Process Automation", "Cost Reduction", "Compliance Management", "Rule Engines", "Global Rollout", "Mobility Tech"]
+    },
+    {
+      "role": "Co-founder (CPTO) / Head of Product",
+      "company": "Craftloom",
+      "years": "2014–2016",
+      "summary": "Founded Craftloom.com, an online platform for handmade products, connecting artisans directly with customers.",
+      "paragraphs": [
+        "After leaving my position at TCS, I went through a period of soul-searching until I finally found my true calling. Along with a group of friends, I co-founded Craftloom.com, an online platform for handmade products.",
+        "We were motivated by the plight of the many craftsmen and weavers in India who struggled to make a living due to middlemen who siphoned away their profits. Our goal was to provide these artisans with a direct line to customers and help them earn a fair wage for their work."
+      ],
+      "skills": ["Entrepreneurship", "Start-up Leadership", "E-commerce Marketplace", "Artisan Empowerment", "Supply Chain Management", "Customer Experience"]
+    }
+  ]
+} 

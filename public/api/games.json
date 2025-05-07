@@ -1,0 +1,29 @@
+{
+  "games": [
+    {
+      "name": "Prioritization Game",
+      "description": "Practice prioritizing product tasks based on urgency and impact. Drag tasks to order them by priority with the most urgent or impactful at the top.",
+      "url": "https://angshumangupta.com/#/?game=prioritization"
+    },
+    {
+      "name": "Feature-Metric Matcher",
+      "description": "Match product features with the metrics they would most directly impact. Test your understanding of how features influence different business and product metrics.",
+      "url": "https://angshumangupta.com/#/?game=feature-metric"
+    },
+    {
+      "name": "Stack Challenge",
+      "description": "Match different use cases with the most appropriate tech stack. Test your knowledge of which technologies work best for different product requirements.",
+      "url": "https://angshumangupta.com/#/?game=stack-challenge"
+    },
+    {
+      "name": "Burnout Meter",
+      "description": "Balance team capacity and business impact in this sprint planning simulation. Learn to manage team burnout while delivering high-impact features.",
+      "url": "https://angshumangupta.com/#/?game=burnout-meter"
+    },
+    {
+      "name": "PM vs Engineer",
+      "description": "Play a strategic game of Tic Tac Toe representing the classic PM vs Engineer dynamic. Features (X) versus Technical Debt (O)!",
+      "url": "https://angshumangupta.com/#/?game=tictactoe"
+    }
+  ]
+} 

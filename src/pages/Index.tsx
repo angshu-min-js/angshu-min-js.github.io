@@ -9,6 +9,7 @@ import { BurnoutMeter } from "@/components/BurnoutMeter";
 import { TicTacToeGame } from "@/components/TicTacToeGame";
 import { Dialog, DialogTrigger, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import MetaTags from "@/components/MetaTags";
 import React, { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 
@@ -86,8 +87,60 @@ const Index = () => {
     // if (gameName === 'Prioritization Game') setPrioritizationOpen(true);
   };
 
+  // Determine page metadata based on URL params
+  const getPageMetadata = () => {
+    const params = new URLSearchParams(location.search);
+    const game = params.get('game');
+    const project = params.get('project');
+    
+    if (game) {
+      const gameTitles: Record<string, string> = {
+        'prioritization': 'Prioritization Game',
+        'feature-metric': 'Feature-Metric Matcher',
+        'stack-challenge': 'Stack Challenge',
+        'burnout-meter': 'Burnout Meter',
+        'tictactoe': 'PM vs Engineer'
+      };
+      
+      const gameDescriptions: Record<string, string> = {
+        'prioritization': 'Practice prioritizing product tasks based on urgency and impact.',
+        'feature-metric': 'Match product features with the metrics they would most directly impact.',
+        'stack-challenge': 'Match different use cases with the most appropriate tech stack.',
+        'burnout-meter': 'Balance team capacity and business impact in this sprint planning simulation.',
+        'tictactoe': 'Play a strategic game of Tic Tac Toe representing the classic PM vs Engineer dynamic.'
+      };
+      
+      const title = gameTitles[game] || 'Interactive PM Games';
+      const description = gameDescriptions[game] || 'Try interactive product management games on Angshuman Gupta\'s portfolio.';
+      
+      return {
+        title: `${title} | Angshuman Gupta`,
+        description,
+        keywords: 'product management games, interactive PM learning, product prioritization, feature metrics, tech stack, sprint planning',
+        type: 'game'
+      };
+    }
+    
+    // Default homepage metadata
+    return {
+      title: 'Angshuman Gupta | Senior Product Leader',
+      description: 'Angshuman Gupta is a seasoned Product Management professional with expertise in building scalable products. Formerly at Ola and Zeta, specializing in full-stack product development and tech leadership.',
+      keywords: 'Angshuman Gupta, product manager, senior product manager, product head, tech leader, Ola, Zeta, full stack product person',
+      type: 'website'
+    };
+  };
+
+  const metadata = getPageMetadata();
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      <MetaTags 
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+        type={metadata.type}
+      />
+      
       {/* Enhanced header with navigation elements */}
       <header className="w-full pt-0">
         <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">

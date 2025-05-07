@@ -289,3 +289,65 @@ The portfolio includes several interactive mini-games designed to be fun and ref
 
 Feel free to contribute or suggest improvements!
 
+## SEO and AI Searchability
+
+This project has been optimized for both traditional search engines and AI-based search tools like ChatGPT. Here's what has been implemented:
+
+### Search Engine Optimization (SEO)
+
+- **Sitemap.xml**: A comprehensive sitemap has been created that includes:
+  - Main pages (home, experience, projects)
+  - Project detail pages
+  - Game URLs
+  - Legal pages
+  - All with appropriate lastmod, changefreq, and priority attributes
+
+- **Robots.txt**: Updated to include a sitemap directive and to allow all major crawlers access to the site.
+
+- **Structured Data (JSON-LD)**: Rich structured data has been implemented using JSON-LD for better search engine understanding:
+  - Person schema with detailed professional information
+  - Work experience with chronological job history
+  - Project portfolio with detailed attributes
+  - Interactive games as SoftwareApplication entities
+  - The data is dynamically injected into the page via `structured-data.js`
+
+- **Dynamic Meta Tags**: React-Helmet-Async is used to provide optimized metadata for each page:
+  - Custom title, description, and keywords for each page
+  - Open Graph tags for social media sharing
+  - Twitter Card metadata
+  - Appropriate canonical URLs for each route
+  - Content-specific metadata for projects and games
+  - All meta tags update dynamically based on URL parameters
+
+### OpenAI/ChatGPT Integration
+
+- **ChatGPT Plugin**: The website is configured to be discoverable by ChatGPT through the ChatGPT Plugin system:
+  - `ai-plugin.json`: Plugin manifest with website metadata
+  - `openapi.json`: OpenAPI specification defining API endpoints
+  - The plugin enables users to query information about projects, experience, and games
+
+- **API Endpoints**: Static JSON files in the `/api` directory serve as placeholder API responses:
+  - `/api/search.json`: Site-wide search results
+  - `/api/projects.json`: Portfolio projects
+  - `/api/experience.json`: Professional experience
+  - `/api/games.json`: Interactive PM games
+
+- **Terms of Use**: A `terms.html` page defines the terms of use for the website and API.
+
+### How to Use These Features
+
+- **For Search Engines**: Search engines will automatically discover the sitemap.xml via robots.txt and crawl the structured content. The structured data enhances search result displays with rich snippets.
+
+- **For ChatGPT Users**: Once the plugin is registered with OpenAI, users can query your website through ChatGPT with natural language queries like:
+  - "Tell me about Angshuman's product management experience"
+  - "What projects has Angshuman worked on?"
+  - "What interactive games are available on Angshuman's website?"
+
+### SEO Implementation Technical Details
+
+- **Structured Data**: The `/public/structured-data.js` file contains JSON-LD structured data that's dynamically inserted into the document head.
+  
+- **Meta Tags Component**: The `MetaTags.tsx` component provides a reusable way to set page-specific metadata using react-helmet-async.
+
+- **URL-Aware Metadata**: Metadata changes dynamically based on URL parameters (e.g., `?game=prioritization` will show game-specific metadata).
+

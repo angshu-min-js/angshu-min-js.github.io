@@ -5,6 +5,7 @@ import LeagueAddDashboard from './LeagueAddDashboard';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import MetaTags from './MetaTags';
 
 export interface ProjectStep {
   title: string;
@@ -57,6 +58,32 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
         .catch(() => setMarkdown('Could not load strategy paper.'));
     }
   }, [project]);
+
+  // Generate metadata for the project
+  const getProjectMetadata = () => {
+    if (!project) return {
+      title: 'Project Not Found | Angshuman Gupta',
+      description: 'The requested project could not be found.',
+      keywords: 'product management, project, portfolio',
+      type: 'article'
+    };
+
+    // Extract keywords from project content
+    const keywordsFromContent = [
+      project.company,
+      ...project.title.split(' ').filter(word => word.length > 3),
+      ...project.shortDescription.split(' ').filter(word => word.length > 5 && !word.includes('.')).slice(0, 5)
+    ].join(', ').toLowerCase();
+
+    return {
+      title: `${project.title} | ${project.company} | Angshuman Gupta`,
+      description: project.shortDescription,
+      keywords: `product management, ${keywordsFromContent}, case study, product leadership`,
+      type: 'article'
+    };
+  };
+
+  const metadata = getProjectMetadata();
 
   if (!project) {
     return <div>Project not found</div>;
@@ -112,6 +139,13 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <MetaTags
+        title={metadata.title}
+        description={metadata.description}
+        keywords={metadata.keywords}
+        type={metadata.type}
+      />
+      
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Back button */}
         <Link

@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "zeta-change-management",
+      "title": "Enterprise Banking Platform Transformation",
+      "company": "Zeta Tech (Directi)",
+      "year": "2022 - 2023",
+      "shortDescription": "Strategic team alignment for financial technology scale, leading to accelerated delivery timelines and improved collaboration.",
+      "situation": "Platform and Solutions Teams were misaligned with different goals, creating delivery bottlenecks.",
+      "steps": {
+        "research": [
+          "Conducted stakeholder interviews across teams to identify core friction points",
+          "Analyzed development workflows and team structures"
+        ],
+        "strategy": [
+          "Developed dual-track approach to platform and product development",
+          "Designed new team structure and collaboration framework"
+        ],
+        "development": [
+          "Implemented agile ceremonies to align roadmaps",
+          "Created shared KPIs between platform and product teams"
+        ]
+      },
+      "impact": [
+        "Reduced delivery time by 50%",
+        "Improved platform quality with 40% fewer critical bugs",
+        "Enhanced team morale and reduced attrition by 30%",
+        "Strengthened customer relationships with more predictable releases"
+      ],
+      "lessons": [
+        "Organizational design is as critical as technical architecture",
+        "Executive sponsorship is essential for structural changes",
+        "Sharing context between teams is more valuable than rigid processes"
+      ]
+    },
+    {
+      "id": "zeta-identity-platform",
+      "title": "Self-Serve Identity Platform",
+      "company": "Zeta Tech (Directi)",
+      "year": "2021 - 2022",
+      "shortDescription": "Built a self-service identity platform that reduced support tickets by 30% and transformed access management across internal and external users.",
+      "situation": "Identity changes and access requests relied on tenant admins and manual workflows, creating friction and ticket overhead.",
+      "steps": {
+        "research": [
+          "Traced user journeys to identify pain points",
+          "Interviewed customers and admins about access management"
+        ],
+        "strategy": [
+          "Designed self-service portal for all identity management",
+          "Created approval workflows to maintain security"
+        ],
+        "development": [
+          "Built role-based access management system",
+          "Implemented audit trails and compliance reporting"
+        ]
+      },
+      "impact": [
+        "Reduced support tickets by 30%",
+        "Eliminated 2-5 day wait times for access changes",
+        "Created industry-standard experience comparable to Okta and Ping"
+      ],
+      "lessons": [
+        "Self-service requires clear guardrails and policies",
+        "Identity management is a key enabler of business agility",
+        "UX investment has exponential returns in identity products"
+      ]
+    }
+  ]
+} 
