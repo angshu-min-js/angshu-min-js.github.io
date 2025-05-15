@@ -54,6 +54,12 @@
 
   <!-- Project pages -->
   <url>
+    <loc>https://angshumangupta.com/#/?project=german-with-nik</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://angshumangupta.com/#/?project=zeta-change-management</loc>
     <lastmod>2023-09-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -84,6 +90,38 @@
   <url>
     <loc>https://angshumangupta.com/openapi.json</loc>
     <lastmod>2023-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- API endpoints -->
+  <url>
+    <loc>https://angshumangupta.com/api/index.json</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://angshumangupta.com/api/search.json</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://angshumangupta.com/api/projects.json</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://angshumangupta.com/api/experience.json</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://angshumangupta.com/api/games.json</loc>
+    <lastmod>2024-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

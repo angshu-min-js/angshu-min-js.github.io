@@ -119,6 +119,30 @@ const projectSchema = {
       "position": 1,
       "item": {
         "@type": "CreativeWork",
+        "name": "German with Nik: Voice-First German Learning AI App",
+        "headline": "Building a Voice-First German Learning AI App",
+        "description": "A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.",
+        "dateCreated": "2023",
+        "datePublished": "2024",
+        "creator": {
+          "@type": "Person",
+          "name": "Angshuman Gupta"
+        },
+        "url": "https://angshumangupta.com/#/?project=german-with-nik",
+        "keywords": [
+          "Language Learning",
+          "Voice AI",
+          "German",
+          "Mobile App",
+          "Conversational AI"
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CreativeWork",
         "name": "Enterprise Banking Platform Transformation",
         "headline": "Strategic Team Alignment for Financial Technology Scale",
         "description": "Strategic team alignment for banking platform, improving delivery times and cross-team collaboration.",
@@ -139,7 +163,7 @@ const projectSchema = {
     },
     {
       "@type": "ListItem",
-      "position": 2,
+      "position": 3,
       "item": {
         "@type": "CreativeWork",
         "name": "Self-Serve Identity Platform",
