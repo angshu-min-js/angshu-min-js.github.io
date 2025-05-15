@@ -8,7 +8,7 @@ export const projects: ProjectData[] = [
     year: '2024 - 2025',
     shortDescription: 'A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.',
     overview: `**German with Nik** is a mobile app that offers personalized, voice-based German language learning through a smart assistant named **Nik**. It focuses on making real-time conversational learning accessible and affordable. Nik dynamically adapts lessons to user proficiency, covering grammar, vocabulary, pronunciation, and cultural nuances.`,
-    background: `The idea for *German with Nik* came from the founder's own struggle with learning German after moving to Germany in 2023. Traditional classes and native speaker conversations weren't effective. This challenge inspired the use of **generative AI** to build a truly interactive tutor.`,
+    background: `The idea for *German with Nik* came from my own struggle with learning German after moving to Germany in 2023. Traditional classes and native speaker conversations weren't effective. This challenge inspired the use of **generative AI** to build a truly interactive tutor.`,
     journey: {
       researchTable: [
         ["Area", "Insights"],
