@@ -2,6 +2,110 @@ import { ProjectData } from '../components/ProjectTemplate';
 
 export const projects: ProjectData[] = [
   {
+    id: 'german-with-nik',
+    title: '🎓 German with Nik: Real world application of Gen AI',
+    company: 'Qloud AI (Personal Project)',
+    year: '2024 - 2025',
+    shortDescription: 'A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.',
+    overview: `**German with Nik** is a mobile app that offers personalized, voice-based German language learning through a smart assistant named **Nik**. It focuses on making real-time conversational learning accessible and affordable. Nik dynamically adapts lessons to user proficiency, covering grammar, vocabulary, pronunciation, and cultural nuances.`,
+    background: `The idea for *German with Nik* came from the founder's own struggle with learning German after moving to Germany in 2023. Traditional classes and native speaker conversations weren't effective. This challenge inspired the use of **generative AI** to build a truly interactive tutor.`,
+    journey: {
+      researchTable: [
+        ["Area", "Insights"],
+        ["Existing Apps", "Lacked real-time conversation learning."],
+        ["Market Analysis", "Coaching costs: €100–€200+ per month."],
+        ["Early Feedback", "Reddit responses confirmed strong interest."]
+      ],
+      strategy: [
+        '✅ Prototype using ChatGPT Custom GPT showed promising results.',
+        '🎯 **User Persona**: Highly motivated language learners seeking affordable, interactive experiences.',
+        '💰 **Monetization**: Free trial + Subscription (Monthly/Yearly).'
+      ],
+      development: [
+        '**Server**: WebSocket-based Node.js.',
+        '**Retrieval**: RAG using German lesson documents.',
+        '**Client**: Expo React Native app.'
+      ],
+      architecture: '[User Voice Input] → STT (OpenAI Whisper-1) → LLM Agent (Groq LLAMA + RAG) → TTS → [Voice Output by Nik]',
+      techStackTable: [
+        ["Layer", "Technology"],
+        ["Client", "Expo React Native"],
+        ["Integrations", "RevenueCat, Firebase, Posthog"],
+        ["Server", "Node.js"],
+        ["STT API", "Whisper-1 (OpenAI)"],
+        ["LLM API", "Groq (LLAMA)"],
+        ["TTS API", "Whisper/ChatTTS"]
+      ]
+    },
+    roadmapTable: [
+      ["Release", "Date", "Version", "Highlights"],
+      ["R1", "10 Apr 2024", "1.0.4", "Basic flow, LLAMA LLM, onboarding, Play Store deployment."],
+      ["R2", "28 Apr 2024", "1.0.5", "History screen fix, file prompt improvements."],
+      ["R3", "12 May 2024", "1.0.6 - 1.0.7", "Nik V2, Whisper-1 STT, open testing."],
+      ["R4", "12 Jun 2024", "1.0.8", "Android/iOS prod, dark mode, toast messages."],
+      ["R5", "24 Jun 2024", "2.0.0", "Payment module, RevenueCat integration, Apple sign-in."],
+      ["R6", "15 Jul 2024", "2.0.3", "Weekly/monthly plans, OAuth screen, marketing."],
+      ["R7", "8 Sep 2024", "2.0.5", "Server-side integration, pricing update, performance fixes."]
+    ],
+    metricsTables: [
+      {
+        title: '📊 Business Metrics',
+        data: [
+          ["Metric", "Value"],
+          ["Download → Install", "85%"],
+          ["Install → Login/Sign-up", "70%"],
+          ["Login → First Interaction", "60%"],
+          ["Interaction → Subscription", "15%"],
+          ["Trial → Paid Conversion", "35%"],
+          ["30-Day Retention", "40%"],
+          ["WAU (Weekly Active Users)", "25%"]
+        ]
+      },
+      {
+        title: '⚙️ System Metrics',
+        data: [
+          ["Metric", "Avg. Value"],
+          ["Overall Latency", "2.5 sec"],
+          ["STT Latency", "0.5 sec"],
+          ["LLM Processing", "0.5 sec"],
+          ["TTS Latency", "1.5 sec"]
+        ]
+      },
+      {
+        title: '💸 Cost Metrics',
+        data: [
+          ["Metric", "Value"],
+          ["Avg. Cost per Query", "$0.005"],
+          ["Monthly Revenue/User", "€10"],
+          ["Monthly Cost/User", "€2"]
+        ]
+      },
+      {
+        title: '🔍 Feedback Accuracy',
+        data: [
+          ["Dimension", "Score"],
+          ["Context Precision", "90%"],
+          ["Context Recall", "85%"],
+          ["Relevance", "92%"],
+          ["Hallucination (beneficial)", "Controlled"]
+        ]
+      }
+    ],
+    resultsTable: [
+      ["Funnel Step", "Result"],
+      ["Download → Install", "85%"],
+      ["Install → Signup", "70%"],
+      ["Signup → First Interaction", "60%"],
+      ["First Interaction → Subscription", "15%"]
+    ],
+    subscriptionFunnel: '* Trial to Paid Conversion: 35%\n* Retention (30-Day): 40%',
+    conclusion: '💡 This project served as a strong product learning experience in building and scaling a real-world Generative AI application—from prototyping to monetization.\n\n🚀 **Check it out** on Android & iOS :🌐 [www.germanwithnik.com](https://www.germanwithnik.com)',
+    situation: '',
+    steps: { research: [], strategy: [], development: [] },
+    impact: [],
+    lessons: [],
+  },
+  {
     id: 'zalando-merchant-onboarding',
     title: '📈 3-Year Roadmap: Unlocking 10x Growth in the B2B Merchant Funnel at Zalando Logistics',
     company: 'Zalando SE',

@@ -1,6 +1,45 @@
 {
   "projects": [
     {
+      "id": "german-with-nik",
+      "title": "German with Nik: Voice-First German Learning AI App",
+      "company": "Personal Project",
+      "year": "2023 - 2024",
+      "shortDescription": "A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.",
+      "situation": "The idea came from my own struggle with learning German after moving to Germany in 2023. Traditional classes and native speaker conversations weren't effective, which inspired the use of generative AI to build a truly interactive tutor.",
+      "steps": {
+        "research": [
+          "Analyzed existing language learning apps and found they lacked real-time conversation learning",
+          "Conducted market analysis showing coaching costs of €100–€200+ per month",
+          "Gathered early feedback from Reddit that confirmed strong interest"
+        ],
+        "strategy": [
+          "Created a POC using ChatGPT that showed promising results",
+          "Defined user persona: Highly motivated language learners seeking affordable, interactive experiences",
+          "Established monetization model: Free trial + Subscription (Monthly/Yearly)"
+        ],
+        "development": [
+          "Designed system architecture: [User Voice Input] → STT (OpenAI Whisper-1) → LLM Agent (Groq LLAMA + RAG) → TTS → [Voice Output by Nik]",
+          "Built server using WebSocket-based Node.js with RAG using German lesson documents",
+          "Developed client using Expo React Native app",
+          "Released multiple versions with progressive improvements from basic flow to payment integration"
+        ]
+      },
+      "impact": [
+        "Achieved 85% download to install conversion rate",
+        "Secured 35% trial to paid conversion",
+        "Maintained 40% 30-day retention rate",
+        "Optimized system performance with 2.5 sec overall latency",
+        "Established profitable economics with €10 monthly revenue per user vs €2 cost"
+      ],
+      "lessons": [
+        "Voice-first interfaces create more engaging language learning experiences",
+        "RAG significantly improves contextual accuracy in language tutoring",
+        "Latency optimization is critical for conversational applications",
+        "Free trial model works effectively for educational apps with clear value proposition"
+      ]
+    },
+    {
       "id": "zeta-change-management",
       "title": "Enterprise Banking Platform Transformation",
       "company": "Zeta Tech (Directi)",

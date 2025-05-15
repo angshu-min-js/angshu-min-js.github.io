@@ -1,0 +1,30 @@
+{
+  "api": {
+    "name": "Angshuman Gupta Portfolio API",
+    "version": "v1",
+    "description": "API for accessing Angshuman Gupta's portfolio information",
+    "endpoints": [
+      {
+        "path": "/api/search.json",
+        "description": "Search the portfolio for specific content",
+        "method": "GET"
+      },
+      {
+        "path": "/api/projects.json",
+        "description": "Get portfolio projects information",
+        "method": "GET"
+      },
+      {
+        "path": "/api/experience.json",
+        "description": "Get professional experience information",
+        "method": "GET"
+      },
+      {
+        "path": "/api/games.json",
+        "description": "Get interactive PM games information",
+        "method": "GET"
+      }
+    ],
+    "documentation": "See https://angshumangupta.com/openapi.json for full API specification"
+  }
+} 
