@@ -126,4 +126,4 @@ alwaysApply: false
 
 **For implementation details, see @projects.ts and @ProjectTemplate.tsx.**
 
-For more, see the [Cursor rules documentation](https://docs.cursor.com/context/rules#boilerplate-and-templates).
+For more, see the [Cursor rules documentation](mdc:https:/docs.cursor.com/context/rules#boilerplate-and-templates).

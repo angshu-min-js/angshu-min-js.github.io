@@ -22,11 +22,25 @@ export const projects: ProjectData[] = [
         '💰 **Monetization**: Free trial + Subscription (Monthly/Yearly).'
       ],
       development: [
-        '**Server**: WebSocket-based Node.js.',
+        '**Server**: Socket.io + Node.js.',
         '**Retrieval**: RAG using German lesson documents.',
         '**Client**: Expo React Native app.'
       ],
-      architecture: '[User Voice Input] → STT (OpenAI Whisper-1) → LLM Agent (Groq LLAMA + RAG) → TTS → [Voice Output by Nik]',
+      architecture: `
+[User Voice Input]
+    │
+    ▼
+[STT (Whisper)]
+    │
+    ▼
+[LLM Agent: Groq LLAMA + RAG (Knowledge Base, Search Action)]
+    │
+    ▼
+[TTS: OpenAI]
+    │
+    ▼
+[Voice Output by Nik]
+`,
       techStackTable: [
         ["Layer", "Technology"],
         ["Client", "Expo React Native"],
@@ -34,7 +48,7 @@ export const projects: ProjectData[] = [
         ["Server", "Node.js"],
         ["STT API", "Whisper-1 (OpenAI)"],
         ["LLM API", "Groq (LLAMA)"],
-        ["TTS API", "Whisper/ChatTTS"]
+        ["TTS API", "OpenAI"]
       ]
     },
     roadmapTable: [

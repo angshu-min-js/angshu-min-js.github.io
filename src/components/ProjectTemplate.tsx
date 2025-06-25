@@ -166,7 +166,7 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
 
   const renderArchitectureStep = (step: string) => (
     <pre className="bg-gray-100 rounded p-4 overflow-x-auto text-sm mb-4 whitespace-pre-wrap border border-gray-200">
-      {step.replace(/\\n/g, '\n')}
+      {step.replace(/\n/g, '\n')}
     </pre>
   );
 
@@ -343,11 +343,9 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
                   {project.journey.architecture && (
                     <div className="mb-8">
                       <h4 className="text-lg font-bold mb-2 flex items-center">
-                        <span className="mr-2">🏗️</span> System Architecture
+                        <span className="mr-2">🏗️</span> HL Architecture
                       </h4>
-                      <pre className="bg-gray-100 rounded p-4 overflow-x-auto text-sm mb-4 whitespace-pre-wrap border border-gray-200">
-                        {project.journey.architecture}
-                      </pre>
+                      {renderArchitectureStep(project.journey.architecture)}
                     </div>
                   )}
                   {project.journey.techStackTable && (

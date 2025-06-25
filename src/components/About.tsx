@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; // Import icons for the accordion
+import React, { useState, useEffect } from "react";
+import { ChevronDown, ChevronUp, ExternalLink, Calendar, Clock } from "lucide-react"; // Import icons for the accordion
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { projects } from '../lib/projects';
+import { fetchMediumArticles, Article } from '../lib/articles';
 
 // Define RoleType
 type RoleType = 'Individual Contributor' | 'Product People Manager' | 'General Manager' | 'Agent Manager';
@@ -9,15 +10,15 @@ type RoleType = 'Individual Contributor' | 'Product People Manager' | 'General M
 // Updated experience data based on resume
 const experience = [
   {
-    role: "Product Lead, Partner Onboarding and Shop Connectors",
+    role: "Product Lead, Partner Management and Shop Connectors",
     roleType: 'Individual Contributor' as RoleType, // Managing product areas/teams
     company: "Zalando SE",
     website: "https://www.zalando.de/",
     logoUrl: "https://logo.clearbit.com/zalando.de", // Keep existing or verify
     years: "Mar 2023 – Present", // Updated format
-    summary: "Spearheading B2B partner onboarding and e-commerce integrations, driving significant growth.",
+    summary: "Spearheading B2B partner management and e-commerce integrations, driving significant growth.",
     paragraphs: [
-      "Spearheading two core product areas for Zalando's B2B business (Zeos): Partner Onboarding and E-Commerce Shop Integrations (Shopify, Salesforce, Scayle, etc.).",
+      "Spearheading two core product areas for Zalando's B2B business (Zeos): Partner Management and E-Commerce Shop Integrations (Shopify, Salesforce, Scayle, etc.).",
       "Achieved outcomes including 99% faster onboarding, 10x market expansion, and 70% D2C market penetration, contributing to over €XXX Mn in revenue.",
       "Defined and executed a multi-year platform strategy, translating complex operational needs into scalable product roadmaps, securing endorsements from Senior Leadership.",
       "Driving cross-functional collaboration across Design, Engineering, Data, Commercial, Operations, Legal, Channel & Markets, Domain Teams, and Finance.",
@@ -131,6 +132,11 @@ export const About = () => {
   // Add state to track image loading errors
   const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
   
+  // State for articles
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [articlesLoading, setArticlesLoading] = useState(false);
+  const [articlesError, setArticlesError] = useState<string | null>(null);
+  
   const handleImageError = (company: string) => {
     setImageErrors(prev => ({...prev, [company]: true}));
   };
@@ -143,6 +149,25 @@ export const About = () => {
   // Placeholder URLs - Replace with actual URLs if found
   const isbLogoUrl = "https://logo.clearbit.com/isb.edu"; // Example, verify
   const kiitLogoUrl = "https://logo.clearbit.com/kiit.ac.in"; // Example, verify
+
+  // Fetch articles when articles tab is accessed
+  useEffect(() => {
+    if (activeSection === 'articles' && articles.length === 0 && !articlesLoading) {
+      setArticlesLoading(true);
+      setArticlesError(null);
+      fetchMediumArticles()
+        .then(fetchedArticles => {
+          setArticles(fetchedArticles);
+        })
+        .catch(error => {
+          setArticlesError('Failed to load articles');
+          console.error('Error fetching articles:', error);
+        })
+        .finally(() => {
+          setArticlesLoading(false);
+        });
+    }
+  }, [activeSection, articles.length, articlesLoading]);
 
   // Update URL when activeSection changes
   React.useEffect(() => {
@@ -431,6 +456,116 @@ export const About = () => {
             </div>
           </>
         );
+      case "articles":
+        return (
+          <>
+            <h3 className="font-playfair text-2xl font-bold mb-4 text-primary">📝 Latest Articles</h3>
+            <p className="text-gray-600 mb-6 italic">Thoughts and insights on product management, technology, and building great products</p>
+            
+            {articlesLoading && (
+              <div className="flex justify-center items-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                <span className="ml-2 text-gray-600">Loading articles...</span>
+              </div>
+            )}
+            
+            {articlesError && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                <p className="text-red-600">{articlesError}</p>
+                <button 
+                  onClick={() => {
+                    setArticlesError(null);
+                    setArticles([]);
+                    setActiveSection('articles'); // This will trigger the useEffect
+                  }}
+                  className="mt-2 text-sm text-red-700 hover:text-red-900 underline"
+                >
+                  Try again
+                </button>
+              </div>
+            )}
+            
+            {!articlesLoading && !articlesError && (
+              <div className="space-y-6">
+                {articles.map((article) => (
+                  <div key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                    <div className="flex flex-col md:flex-row">
+                      <div className="md:w-1/3 lg:w-1/4">
+                        <img
+                          src={article.thumbnail || '/placeholder.svg'}
+                          alt={article.title}
+                          className="w-full h-48 md:h-full object-cover bg-gray-100"
+                          onError={(e) => {
+                            e.currentTarget.src = '/placeholder.svg';
+                          }}
+                        />
+                      </div>
+                      <div className="flex-1 p-5">
+                        <div className="flex flex-wrap items-center gap-2 mb-2">
+                          {article.categories.slice(0, 3).map((category, index) => (
+                            <span 
+                              key={index}
+                              className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full"
+                            >
+                              {category}
+                            </span>
+                          ))}
+                        </div>
+                        <h4 className="font-bold text-lg text-primary mb-2 line-clamp-2">
+                          {article.title}
+                        </h4>
+                        <p className="text-gray-500 mb-3 line-clamp-3">
+                          {article.description}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-4 text-sm text-gray-500">
+                            <div className="flex items-center gap-1">
+                              <Calendar className="w-4 h-4" />
+                              <span>{new Date(article.pubDate).toLocaleDateString()}</span>
+                            </div>
+                            {article.readTime && (
+                              <div className="flex items-center gap-1">
+                                <Clock className="w-4 h-4" />
+                                <span>{article.readTime}</span>
+                              </div>
+                            )}
+                          </div>
+                          <a
+                            href={article.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-accent hover:text-accent-dark transition-colors font-medium"
+                          >
+                            Read Article
+                            <ExternalLink className="w-4 h-4 ml-1" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                
+                {articles.length === 0 && !articlesLoading && !articlesError && (
+                  <div className="text-center py-8">
+                    <p className="text-gray-500">No articles found. Check back soon for new content!</p>
+                  </div>
+                )}
+                
+                <div className="text-center mt-8">
+                  <a
+                    href={`https://medium.com/@angshumangupta`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    View All Articles on Medium
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                  </a>
+                </div>
+              </div>
+            )}
+          </>
+        );
       default:
         return (
           <>
@@ -475,6 +610,16 @@ export const About = () => {
           }`}
         >
           Portfolio
+        </button>
+        <button
+          onClick={() => setActiveSection("articles")}
+          className={`px-4 py-1 rounded-lg ${
+            activeSection === "articles"
+              ? "bg-primary text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+          }`}
+        >
+          Articles
         </button>
         <button
           onClick={() => setActiveSection("expertise")}

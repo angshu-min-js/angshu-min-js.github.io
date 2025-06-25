@@ -5,10 +5,15 @@ This repository contains the source code for Angshuman Gupta's personal portfoli
 ## Project Structure
 
 - `public/`: Static assets.
+  - `api/`: Static JSON endpoints for articles, projects, experience, and games.
+  - `placeholder.svg`: Default image for articles without thumbnails.
 - `src/`: Source code.
   - `components/`: Reusable React components (UI elements, games, sections).
   - `pages/`: Main page components (e.g., `Index.tsx`).
   - `lib/`: Utility functions or library configurations.
+    - `articles.ts`: Medium articles fetching and data management.
+    - `projects.ts`: Portfolio projects data.
+    - `utils.ts`: General utility functions.
   - `assets/`: Image assets.
   - `App.tsx`: Main application component, sets up routing.
   - `main.tsx`: Entry point of the React application.
@@ -80,6 +85,38 @@ Google Analytics 4 (GA4) is integrated to track website usage and user interacti
     - `resume_link_click`: Fired when the Resume PDF link or Audio Resume button is clicked (`src/components/ResumeLinks.tsx`). Includes parameter: `type` ('pdf' or 'audio').
     - `audio_resume_play`: Fired when the audio resume player is started (`src/components/ResumeLinks.tsx`).
     - `game_button_click`: Fired when any interactive game button is clicked (`src/pages/Index.tsx`). Includes parameters: `game_name`, `view` ('desktop' or 'mobile').
+
+## Medium Articles Integration
+
+The portfolio includes a dedicated Articles tab that dynamically fetches and displays articles from Medium.
+
+### Features
+
+- **Live Medium Feed**: Automatically fetches articles from the specified Medium profile via RSS
+- **Responsive Design**: Articles are displayed in a card-based layout similar to the portfolio section
+- **Rich Metadata**: Shows article thumbnails, publication dates, read time estimates, and category tags
+- **Placeholder Support**: Uses `/placeholder.svg` for articles without thumbnails
+- **Error Handling**: Graceful fallback when Medium RSS feed is unavailable
+- **External Links**: Direct links to read full articles on Medium
+
+### Configuration
+
+To configure the Medium integration, update the username in `src/lib/articles.ts`:
+
+```typescript
+const MEDIUM_USERNAME = "angshumangupta"; // Replace with your Medium username
+```
+
+### Technical Implementation
+
+- **RSS Integration**: Uses RSS2JSON service to bypass CORS restrictions and fetch Medium RSS feeds
+- **TypeScript Support**: Fully typed Article interface with all necessary metadata
+- **Performance Optimized**: Articles are only fetched when the Articles tab is accessed
+- **Tailwind Styling**: Consistent styling with the rest of the portfolio using Tailwind CSS classes
+
+### API Structure
+
+Articles are also available via static JSON at `/public/api/articles.json` for consistency with the existing API structure.
 
 ## Interactive PM Games
 
