@@ -1,0 +1,48 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Building Product-Led Growth: Lessons from Scaling B2B Platforms",
+      "link": "https://medium.com/@angshumangupta/building-product-led-growth-sample",
+      "pubDate": "2024-01-15",
+      "description": "How we transformed our B2B onboarding process and reduced time-to-value from weeks to days, driving 10x growth in our merchant acquisition funnel. Key insights from building scalable partner platforms at Zalando.",
+      "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
+      "author": "Angshuman Gupta",
+      "categories": ["Product Management", "B2B", "Growth", "Scaling"],
+      "readTime": "8 min read"
+    },
+    {
+      "id": "2",
+      "title": "The Future of AI in Product Management: From Tools to Strategic Partners",
+      "link": "https://medium.com/@angshumangupta/ai-product-management-sample",
+      "pubDate": "2024-02-20",
+      "description": "Exploring how AI is reshaping product management workflows, from automated insights to predictive roadmapping, and what this means for PMs in the next decade. Real examples from building AI-powered products.",
+      "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
+      "author": "Angshuman Gupta",
+      "categories": ["AI", "Product Management", "Strategy", "Future of Work"],
+      "readTime": "12 min read"
+    },
+    {
+      "id": "3",
+      "title": "Scaling Identity Platforms: Lessons from Managing 30M+ Identities at Zeta",
+      "link": "https://medium.com/@angshumangupta/scaling-identity-platforms-sample",
+      "pubDate": "2024-03-10",
+      "description": "Deep dive into the technical and product challenges of building identity management systems that can scale to millions of users while maintaining security and performance. Case study from Zeta's IAM platform.",
+      "thumbnail": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop",
+      "author": "Angshuman Gupta",
+      "categories": ["Identity Management", "Scaling", "Fintech", "Platform Engineering"],
+      "readTime": "15 min read"
+    },
+    {
+      "id": "4",
+      "title": "From Startup to Unicorn: Product Lessons from the Trenches",
+      "link": "https://medium.com/@angshumangupta/startup-to-unicorn-sample",
+      "pubDate": "2024-04-05",
+      "description": "Reflections on building products across different stages of company growth, from early-stage startup constraints to scaled operations. What changes, what stays the same, and lessons learned.",
+      "thumbnail": "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=400&h=200&fit=crop",
+      "author": "Angshuman Gupta",
+      "categories": ["Startup", "Product Strategy", "Growth", "Leadership"],
+      "readTime": "10 min read"
+    }
+  ]
+} 
