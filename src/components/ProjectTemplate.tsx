@@ -44,6 +44,7 @@ export interface ProjectData {
   resultsTable?: string[][];
   subscriptionFunnel?: string;
   conclusion?: string;
+  projectDocuments?: string; // Optional link to project artifacts/documents
 }
 
 interface ProjectTemplateProps {
@@ -469,6 +470,32 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.conclusion}</ReactMarkdown>
                 </section>
               )}
+              {/* Project Documents */}
+              {project.projectDocuments && (
+                <section className="bg-white rounded-xl shadow-sm p-8 mb-8">
+                  <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair flex items-center">
+                    <span className="text-2xl mr-2">📋</span>
+                    Project Documents & Artifacts
+                  </h2>
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+                    <p className="text-gray-700 mb-4">
+                      Comprehensive project documentation including PRDs, technical specifications, risk management plans, and implementation guides.
+                    </p>
+                    <a
+                      href={project.projectDocuments}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                    >
+                      <span className="mr-2">📁</span>
+                      View Project Documents
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                </section>
+              )}
             </>
           ) : (
             <>
@@ -624,6 +651,32 @@ export function ProjectTemplate({ getProject }: ProjectTemplateProps) {
                   ))}
                 </ul>
               </section>
+              {/* Project Documents */}
+              {project.projectDocuments && (
+                <section className="bg-white rounded-xl shadow-sm p-8">
+                  <h2 className="text-2xl font-bold mb-6 text-gray-900 font-playfair flex items-center">
+                    <span className="text-2xl mr-2">📋</span>
+                    Project Documents & Artifacts
+                  </h2>
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
+                    <p className="text-gray-700 mb-4">
+                      Comprehensive project documentation including PRDs, technical specifications, risk management plans, and implementation guides.
+                    </p>
+                    <a
+                      href={project.projectDocuments}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                    >
+                      <span className="mr-2">📁</span>
+                      View Project Documents
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                </section>
+              )}
             </>
           )}
         </div>

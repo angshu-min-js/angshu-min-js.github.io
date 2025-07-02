@@ -19,6 +19,8 @@ alwaysApply: false
 ### A. Legacy Format (Old)
 - Required fields:
   - `id`, `title`, `company`, `year`, `shortDescription`, `situation`, `steps`, `impact`, `lessons`
+- Optional fields:
+  - `projectDocuments` (string): Link to external project artifacts/documents (Google Drive, etc.)
 - `steps` is an object with arrays: `{ research: string[], strategy: string[], development: string[] }`
 - Example:
   ```js
@@ -35,7 +37,8 @@ alwaysApply: false
       development: ['step1', 'step2']
     },
     impact: ['impact1', 'impact2'],
-    lessons: ['lesson1', 'lesson2']
+    lessons: ['lesson1', 'lesson2'],
+    projectDocuments: 'https://drive.google.com/drive/folders/1234567890' // Optional
   }
   ```
 
@@ -43,6 +46,8 @@ alwaysApply: false
 - Required fields:
   - `id`, `title`, `company`, `year`, `shortDescription`,
   - `overview`, `background`, `journey`, `roadmapTable`, `metricsTables`, `resultsTable`, `subscriptionFunnel`, `conclusion`
+- Optional fields:
+  - `projectDocuments` (string): Link to external project artifacts/documents (Google Drive, etc.)
 - `journey` is an object with: `researchTable`, `strategy`, `development`, `architecture`, `techStackTable`
 - For type compatibility, add empty legacy fields:
   ```js
@@ -73,6 +78,7 @@ alwaysApply: false
     resultsTable: [['Step', 'Result'], ['A', 'B']],
     subscriptionFunnel: '* Trial to Paid Conversion: 35%\n* Retention (30-Day): 40%',
     conclusion: 'Markdown conclusion...',
+    projectDocuments: 'https://drive.google.com/drive/folders/1234567890', // Optional
     situation: '',
     steps: { research: [], strategy: [], development: [] },
     impact: [],
@@ -88,11 +94,16 @@ alwaysApply: false
   2. The Journey (steps.research, steps.strategy, steps.development)
   3. Impact & Results (impact)
   4. Key Learnings (lessons)
+  5. Project Documents & Artifacts (if projectDocuments exists)
 - Each step in steps arrays:
   - If it contains 'prototype' or 'proof of concept', rendered as a blue callout with 💡 and "Strategic Prototype" (markdown supported)
   - If it contains 'note:' or starts with 'note ', rendered as a yellow callout with 📝 and "Note" (markdown supported)
   - Otherwise, rendered as a bullet with markdown
   - Section header suppression: if a step matches the section header, it is not rendered
+- Project Documents section:
+  - Renders as a gradient blue card with 📋 icon and "Project Documents & Artifacts" heading
+  - Includes descriptive text about comprehensive documentation (PRDs, technical specs, etc.)
+  - Blue button linking to external documents (opens in new tab)
 - Markdown is rendered using ReactMarkdown with GFM
 
 ### B. Structured Format Rendering
@@ -110,12 +121,25 @@ alwaysApply: false
   6. Results Snapshot (resultsTable as HTML table)
   7. Subscription Funnel (markdown)
   8. Conclusion (markdown)
+  9. Project Documents & Artifacts (if projectDocuments exists)
 - For steps in strategy/development:
   - Uses the same callout logic as legacy (see above)
+- Project Documents section:
+  - Same rendering as legacy format (gradient blue card with external link button)
 - Markdown is rendered using ReactMarkdown with GFM
 - Fallback: If new-format fields are missing, falls back to legacy rendering
 
-## 5. Formatting User-Provided Content
+## 5. Project Documents Integration
+- The `projectDocuments` field accepts any external URL (Google Drive, Dropbox, GitHub, etc.)
+- Best practices:
+  - Use Google Drive folders for comprehensive project documentation
+  - Include PRDs, technical specifications, risk management plans, implementation guides
+  - Ensure shared access is properly configured (view permissions for public)
+  - Consider organizing documents in a clear folder structure
+- Renders as a prominent call-to-action section at the end of project details
+- Opens in new tab to preserve user's place in portfolio
+
+## 6. Formatting User-Provided Content
 - Parse and split content into the above fields.
 - Convert tables to 2D arrays, lists to arrays, code blocks to strings.
 - Preserve markdown.

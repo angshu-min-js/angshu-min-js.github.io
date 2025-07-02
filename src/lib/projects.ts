@@ -419,7 +419,8 @@ Traced user journeys:
       'Geographic document variations required market-specific model tuning and continuous improvement cycles',
       'Cross-functional collaboration across CVT, Operations, Supply, Data Science and Engineering teams was essential for navigating complex stakeholder requirements',
       'AI/ML solutions benefit from human-in-the-loop designs initially, allowing for progressive automation as confidence increases'
-    ]
+    ],
+    projectDocuments: 'https://drive.google.com/drive/folders/1Ji4X4JpqoJLutWntJK3wOaFe-gcGYaRD?usp=sharing'
   },
   {
     id: 'leagueadd-data-roadmap',
