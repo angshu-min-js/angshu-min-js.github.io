@@ -1,0 +1,136 @@
+# Angshuman Gupta - Product Leader Portfolio
+
+> Personal portfolio showcasing 12+ years of product management expertise across eCommerce, Fintech, AI/ML, and B2B platforms. Currently Product Lead at Zalando SE, with experience scaling products from 0-1 to millions of users.
+
+Platform Overview
+-----
+
+This is the personal portfolio website of Angshuman Gupta, a Senior Product Leader based in Berlin, Germany. The platform showcases comprehensive product management experience, including detailed case studies, interactive demonstrations, professional background, and thought leadership through articles.
+
+Angshuman has led product initiatives at major companies including Zalando SE, Zeta Tech, Ola Cabs, and founded multiple startups. His expertise spans B2B platforms, identity management systems, AI/ML implementations, and full-stack product development.
+
+## Core Features
+
+### Professional Portfolio
+- **Project Case Studies**: Detailed documentation of major product initiatives with quantified impact
+- **Experience Timeline**: Comprehensive career progression with role descriptions and achievements  
+- **Interactive Games**: Product management simulations and learning tools
+- **Skills & Expertise**: Technical and strategic competencies across product domains
+
+### Content & Insights
+- **Medium Articles**: Live integration with latest thought leadership content
+- **Project Documentation**: Links to comprehensive project artifacts and documentation
+- **Professional Resources**: Resume, audio introduction, and contact information
+
+### Learning & Engagement
+- **PM Games**: Interactive prioritization, feature-metric matching, tech stack challenges
+- **Real-world Simulations**: Burnout meter, sprint planning, and strategic decision games
+- **Case Study Deep-dives**: Detailed implementation stories with metrics and lessons learned
+
+## Navigation Structure
+
+### Main Navigation Links
+- `/` - Homepage with hero introduction, company logos, and navigation to all sections
+- `/?tab=about` - Personal story, entrepreneurial journey, and current focus areas
+- `/?tab=experiences` - Detailed professional experience with role breakdowns and achievements
+- `/?tab=portfolio` - Project case studies with comprehensive details and impact metrics
+- `/?tab=articles` - Latest Medium articles with live RSS integration
+- `/?tab=expertise` - Technical skills, tools, and domain competencies
+- `/?tab=education` - Academic background and professional development
+
+### Project Detail Pages
+- `/project/german-with-nik` - AI-powered German language learning app case study
+- `/project/zalando-merchant-onboarding` - B2B platform transformation at Zalando
+- `/project/zalando-partner-platform` - 0-to-1 partner platform development
+- `/project/zeta-iam-strategy` - Identity platform strategy and execution
+- `/project/zeta-identity` - Self-service identity platform launch
+- `/project/zeta-devex` - Developer experience optimization
+- `/project/ola-digitization` - AI-driven driver onboarding system
+- `/project/leagueadd-data-roadmap` - Data-driven product growth at LeagueAdda
+
+### Interactive Features
+- `/?game=prioritization` - Feature prioritization simulation
+- `/?game=feature-metric` - Feature-metric matching exercise  
+- `/?game=stack-challenge` - Technology stack decision game
+- `/?game=burnout-meter` - Sprint planning and team capacity simulation
+- `/?game=tictactoe` - PM vs Engineer strategic game
+
+## API & Integration
+
+### Public API Endpoints
+- `/api/projects.json` - Complete project portfolio data with case studies
+- `/api/articles.json` - Medium articles with metadata and categorization
+- `/api/experience.json` - Professional experience and role details
+- `/api/games.json` - Interactive game descriptions and mechanics
+- `/api/search.json` - Site-wide search capabilities and content discovery
+- `/api/index.json` - Platform overview and navigation structure
+
+### Data Structures
+All API endpoints return structured JSON with consistent schemas including:
+- Unique identifiers and URLs
+- Rich metadata (titles, descriptions, dates, categories)
+- Quantified impact metrics and business outcomes
+- Technical implementation details
+- Lessons learned and strategic insights
+
+### Medium RSS Integration
+- Live article fetching from Medium profile (@angshumangupta)
+- Automatic content updates and thumbnail handling
+- Category tagging and read-time estimation
+- Fallback handling for API availability
+
+## Content Categories
+
+### Product Management Domains
+- **B2B Platforms**: Partner onboarding, merchant management, API ecosystems
+- **Identity & Access Management**: Self-service platforms, developer experience, security
+- **AI/ML Products**: Document digitization, OCR systems, voice-based learning
+- **Growth & Scaling**: 0-to-1 product development, international expansion, platform transformation
+- **Data-Driven Product**: Analytics dashboards, metric alignment, business intelligence
+
+### Industry Experience
+- **E-commerce & Marketplaces**: Zalando, multi-marketplace integrations
+- **Fintech & Banking**: Zeta Tech, identity platforms, compliance systems
+- **Mobility & Transportation**: Ola Cabs, driver onboarding, global expansion
+- **Gaming & Entertainment**: LeagueAdda, fantasy sports, user engagement
+- **AI & Education**: German with Nik, voice interfaces, personalized learning
+
+### Technical Competencies
+- **Platform Engineering**: APIs, microservices, scalable architecture
+- **AI/ML Implementation**: OCR, NLP, voice processing, recommendation systems
+- **Developer Tools**: SDKs, documentation, self-service platforms
+- **Data Analytics**: SQL, Python, business intelligence, metric frameworks
+- **Product Operations**: Roadmapping, stakeholder alignment, cross-functional leadership
+
+## Professional Achievements
+
+### Scale & Impact
+- **30M+ Identities**: Managed identity platform serving millions of users
+- **10x Growth**: Achieved 10x merchant acquisition funnel expansion
+- **90% Efficiency**: Reduced onboarding time from 3 hours to 30 minutes
+- **Multi-Market**: Led international expansion across EU, US, SEA, SA, UK, Australia, New Zealand
+- **Platform Transformation**: 0-to-1 product development within listed companies
+
+### Leadership & Strategy
+- **Team Management**: Led teams of 3+ product managers with direct reports
+- **Stakeholder Alignment**: Secured C-level buy-in for multi-year platform strategies  
+- **Cross-functional Orchestration**: Coordinated across Engineering, Design, Data, Legal, Operations
+- **Strategic Planning**: Developed comprehensive roadmaps and OKR frameworks
+- **Change Management**: Transformed manual processes into scalable platforms
+
+## Contact & Platform Information
+
+**Angshuman Gupta** | Product Leader | 2025  
+**Email**: Contact via LinkedIn or portfolio contact methods  
+**Website**: https://angshumangupta.com  
+**Location**: Berlin, Germany  
+**LinkedIn**: Professional networking and direct communication  
+**Medium**: @angshumangupta for latest articles and insights  
+
+**Current Role**: Product Lead, Partner Management and Shop Connectors at Zalando SE  
+**Focus Areas**: B2B platforms, API ecosystems, merchant experience, international scaling  
+**Availability**: Open to product leadership opportunities and strategic consulting
+
+---
+
+*This portfolio demonstrates comprehensive product management expertise with quantified impact across multiple industries and technical domains. All case studies include detailed implementation strategies, measurable outcomes, and transferable insights for product professionals.* 
