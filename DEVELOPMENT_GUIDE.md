@@ -256,5 +256,5 @@ All files are properly organized and documented. You can confidently make change
 ---
 
 **Last Updated**: July 3, 2025
-**Created By**: Claude (AI Assistant)
-**Portfolio Owner**: Angshuman Gupta 
+**Created By**: Cursor (Claude-4)
+**Owner**: Angshuman Gupta 
