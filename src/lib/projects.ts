@@ -22,7 +22,7 @@ export const projects: ProjectData[] = [
         '💰 **Monetization**: Free trial + Subscription (Monthly/Yearly).'
       ],
       development: [
-        '**Server**: Socket.io + Node.js.',
+        '**Server**: Node.js + Cloudflare Worker',
         '**Retrieval**: RAG using German lesson documents.',
         '**Client**: Expo React Native app.'
       ],
