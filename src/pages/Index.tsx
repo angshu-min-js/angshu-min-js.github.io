@@ -159,32 +159,6 @@ const Index = () => {
               title="Product Leader | Berlin, Germany"
               tagline="En-route to Full Stack Product Person"
             />
-            {/* Company Logos Row - Redesigned */}
-            <div className="w-full flex flex-col items-center my-8">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-6">Companies I've Worked With</h2>
-              <div className="flex flex-wrap justify-center gap-8">
-                {[
-                  { company: "Zalando", logoUrl: "https://logo.clearbit.com/zalando.de" },
-                  { company: "Zeta Tech", logoUrl: "https://logo.clearbit.com/zeta.tech" },
-                  { company: "Ola Cabs", logoUrl: "https://logo.clearbit.com/olacabs.com" },
-                  { company: "Craftloom", logoUrl: "/CL_logo_TM.png" },
-                ].map(({ company, logoUrl }) => (
-                  <div
-                    key={company}
-                    className="flex flex-col items-center bg-white rounded-xl shadow-md p-4 transition-transform hover:scale-105"
-                    style={{ width: 110 }}
-                  >
-                    <img
-                      src={logoUrl}
-                      alt={`${company} logo`}
-                      className="h-12 w-12 object-contain mb-2"
-                      style={{ background: '#fff' }}
-                    />
-                    <span className="text-sm font-semibold text-gray-800 text-center">{company}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
             {/* Mobile-only social links */}
             <div className="flex lg:hidden mt-2 mb-2">
               <SocialLinks vertical={false} />
