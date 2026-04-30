@@ -7,118 +7,83 @@ export const projects: ProjectData[] = [
     company: 'Qloud AI',
     year: '2024 - 2025',
     shortDescription: 'A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.',
-    overview: `**German with Nik** is a mobile app that offers personalized, voice-based German language learning through a smart assistant named **Nik**. It focuses on making real-time conversational learning accessible and affordable. Nik dynamically adapts lessons to user proficiency, covering grammar, vocabulary, pronunciation, and cultural nuances.`,
-    background: `The idea for *German with Nik* came from my own struggle with learning German after moving to Germany in 2023. Traditional classes and native speaker conversations weren't effective. This challenge inspired the use of **generative AI** to build a truly interactive tutor.`,
-    journey: {
-      researchTable: [
-        ["Area", "Insights"],
-        ["Existing Apps", "Lacked real-time conversation learning."],
-        ["Market Analysis", "Coaching costs: €100–€200+ per month."],
-        ["Early Feedback", "Reddit responses confirmed strong interest."]
+    situation: `Personal product built over ~2 years. Motivation: First-hand immigrant experience in Germany. Goal: Learn GenAI by building real systems, not experiments.\n\nSituation / Problem: Language learning tools failed for conversational fluency because:\n• No real-time feedback\n• No safe space to practice speaking\n• Fixed schedules with teachers\n• High cognitive load switching between text and speech`,
+    steps: {
+      research: [
+        'Validated problem via Reddit threads, Immigrant communities, and Personal network\n',
+        'Found a clear pattern: people wanted low-pressure speaking practice on demand\n',
+        'Conducted market analysis showing coaching costs of €100–€200+ per month\n'
       ],
       strategy: [
-        '✅ Prototype using ChatGPT Custom GPT showed promising results.',
-        '🎯 **User Persona**: Highly motivated language learners seeking affordable, interactive experiences.',
-        '💰 **Monetization**: Free trial + Subscription (Monthly/Yearly).'
+        'Defined a clear wedge: Voice-first, conversational practice with immediate feedback\n',
+        'Established constraints: Low latency, Low cost, Grounded grammar (avoid hallucinations), Natural UX\n',
+        'Defined User Persona: Highly motivated language learners seeking affordable, interactive experiences\n',
+        'Established Monetization model: Free trial + Subscription (Monthly/Yearly)\n'
       ],
       development: [
-        '**Server**: Node.js + Cloudflare Worker',
-        '**Retrieval**: RAG using German lesson documents.',
-        '**Client**: Expo React Native app.'
-      ],
-      architecture: `
-[User Voice Input]
-    │
-    ▼
-[STT (Whisper)]
-    │
-    ▼
-[LLM Agent: Groq LLAMA + RAG (Knowledge Base, Search Action)]
-    │
-    ▼
-[TTS: OpenAI]
-    │
-    ▼
-[Voice Output by Nik]
-`,
-      techStackTable: [
-        ["Layer", "Technology"],
-        ["Client", "Expo React Native"],
-        ["Integrations", "RevenueCat, Firebase, Posthog"],
-        ["Server", "Node.js"],
-        ["STT API", "Whisper-1 (OpenAI)"],
-        ["LLM API", "Groq (LLAMA)"],
-        ["TTS API", "OpenAI"]
+        'Mapped the user journey to design the overall experience\n',
+        'Iteration 1: Built a full flow without AI to validate UX, then integrated ChatGPT for responses\n',
+        'Iteration 2: Introduced system persona (“Nik”), added conversational memory window, and tuned prompts for corrective feedback\n',
+        'Iteration 3: Tested multiple models to reduce cost while maintaining quality\n',
+        'Iteration 4: Moved to backend workflow: Voice → Text → LLM → Speech to reduce latency and cost significantly\n',
+        'Iteration 5: Introduced RAG to ground grammar rules, added analytics, and performed manual evals to assess response quality\n'
       ]
     },
-    roadmapTable: [
-      ["Release", "Date", "Version", "Highlights"],
-      ["R1", "10 Apr 2024", "1.0.4", "Basic flow, LLAMA LLM, onboarding, Play Store deployment."],
-      ["R2", "28 Apr 2024", "1.0.5", "History screen fix, file prompt improvements."],
-      ["R3", "12 May 2024", "1.0.6 - 1.0.7", "Nik V2, Whisper-1 STT, open testing."],
-      ["R4", "12 Jun 2024", "1.0.8", "Android/iOS prod, dark mode, toast messages."],
-      ["R5", "24 Jun 2024", "2.0.0", "Payment module, RevenueCat integration, Apple sign-in."],
-      ["R6", "15 Jul 2024", "2.0.3", "Weekly/monthly plans, OAuth screen, marketing."],
-      ["R7", "8 Sep 2024", "2.0.5", "Server-side integration, pricing update, performance fixes."]
+    impact: [
+      'Used by hundreds of users with strong qualitative feedback on confidence and ease of practice\n',
+      'Achieved 85% download to install conversion rate and 35% trial to paid conversion\n',
+      'Maintained 40% 30-day retention rate and established profitable economics (€10 monthly revenue per user vs €2 cost)\n',
+      'Optimized system performance with 2.5 sec overall latency\n',
+      'Deep hands-on learning across UX for GenAI, Context design, Model trade-offs, Cost vs quality decisions, and Evaluation challenges\n'
     ],
-    metricsTables: [
-      {
-        title: '📊 Business Metrics',
-        data: [
-          ["Metric", "Value"],
-          ["Download → Install", "85%"],
-          ["Install → Login/Sign-up", "70%"],
-          ["Login → First Interaction", "60%"],
-          ["Interaction → Subscription", "15%"],
-          ["Trial → Paid Conversion", "35%"],
-          ["30-Day Retention", "40%"],
-          ["WAU (Weekly Active Users)", "25%"]
-        ]
-      },
-      {
-        title: '⚙️ System Metrics',
-        data: [
-          ["Metric", "Avg. Value"],
-          ["Overall Latency", "2.5 sec"],
-          ["STT Latency", "0.5 sec"],
-          ["LLM Processing", "0.5 sec"],
-          ["TTS Latency", "1.5 sec"]
-        ]
-      },
-      {
-        title: '💸 Cost Metrics',
-        data: [
-          ["Metric", "Value"],
-          ["Avg. Cost per Query", "$0.005"],
-          ["Monthly Revenue/User", "€10"],
-          ["Monthly Cost/User", "€2"]
-        ]
-      },
-      {
-        title: '🔍 Feedback Accuracy',
-        data: [
-          ["Dimension", "Score"],
-          ["Context Precision", "90%"],
-          ["Context Recall", "85%"],
-          ["Relevance", "92%"],
-          ["Hallucination (beneficial)", "Controlled"]
-        ]
-      }
-    ],
-    resultsTable: [
-      ["Funnel Step", "Result"],
-      ["Download → Install", "85%"],
-      ["Install → Signup", "70%"],
-      ["Signup → First Interaction", "60%"],
-      ["First Interaction → Subscription", "15%"]
-    ],
-    subscriptionFunnel: '* Trial to Paid Conversion: 35%\n* Retention (30-Day): 40%',
-    conclusion: '💡 This project served as a strong product learning experience in building and scaling a real-world Generative AI application—from prototyping to monetization.\n\n🚀 **Check it out** on Android & iOS :🌐 [www.germanwithnik.com](https://www.germanwithnik.com)',
-    situation: '',
-    steps: { research: [], strategy: [], development: [] },
-    impact: [],
-    lessons: [],
+    lessons: [
+      'GenAI UX ≠ chat UI: Voice-first interfaces require different paradigms.\n',
+      'Context matters: Context and memory matter more than raw intelligence.\n',
+      'Evaluation: Evaluation is the hardest unsolved problem in GenAI.\n',
+      'Production GenAI: It is systems engineering + product judgment.\n',
+      'Latency optimization is critical for conversational applications\n',
+      'Free trial model works effectively for educational apps with clear value proposition\n'
+    ]
   },
+  {
+    id: 'zeos-genai-docs',
+    title: '🤖 Gen AI in Zeos | Documentation Automation / Dev CMS',
+    company: 'Zalando SE',
+    year: '2023 - Present',
+    shortDescription: 'Introduced a GenAI-powered documentation and support system that reduced engineering support load by 40% and improved team productivity by ~20%.',
+    situation: `Context: Zalando’s B2B Business → Zeos → Logistics as a Service → Partner Management. As Founder PM for Partner Management (strategy → roadmap → execution), we launched many platform capabilities for different user personas: Merchants, Internal teams (Ops, Commercial, marketing, support, etc.), and developers. As part of our domains strategy, one of the tenets was Intelligences with sub-goals: P&E Productivity, Platform Intelligence, and Experimentations.\n\nSituation / Problem: As the platform scaled:\n• Engineers were spending ~20% of their time answering internal support questions.\n• Support requests were low-value, repetitive, and growing linearly with platform adoption.\n• This created a hidden platform tax: slower delivery, frustrated engineers, poor developer experience.\n\nThis wasn’t a tooling issue — it was a scaling constraint.`,
+    steps: {
+      research: [
+        'Analyzed support data: "Which API / where is X documented?", "What’s the schema/table / config?", "How to use the tool?", "Is this possible?"\n',
+        'Found ~40% of tickets were preventable through better documentation and self-serve access\n',
+        'Key insight: If we don’t solve this structurally, support load will grow faster than the platform\n'
+      ],
+      strategy: [
+        'Instead of treating this as "better docs", framed it as a 3-layer intelligence system: Single source of truth, Automated knowledge generation, Conversational access\n',
+        'Aligned directly with our platform tenets and justified investment\n',
+        'Created an artifact which is a combination of PD, PRD, and SD → Product Strategy & Execution Brief\n'
+      ],
+      development: [
+        'Layer 1: Automated Documentation (Foundation) — Documented all platform capabilities in a standard format and published them in Zalando\'s existing CMS (markdown)\n',
+        'Automated for new documentations using GenAI prompts (Prompt 1 for creating content using PRDs/System designs; Prompt 2 to publish the content)\n',
+        'Layer 2: L0 Support Agent — Ingested Markdown docs into a RAG pipeline and used Claude as LLM\n',
+        'Integrated with Google Chat, where teams already ask questions, to handle common questions before they hit engineers\n'
+      ]
+    },
+    impact: [
+      'Layer 1 MVP: Improved product documentation; developer time spent writing docs reduced to 10 mins per feature instead of hours\n',
+      'Layer 2 MVP: ~7% improved productivity; the bot handled 20% of those L0 requests\n',
+      'Overall: Reduced engineering support load by 40%\n',
+      'Overall: Improved team productivity by ~20%\n'
+    ],
+    lessons: [
+      'Context Design: GenAI success depends more on context design than model choice.\n',
+      'Product Discipline: High-leverage GenAI requires product discipline, not hacks.\n',
+      'Culture: You need teams comfortable with experimentation and iteration.\n',
+      'Motto: Open to fail, fly high, dive deep.\n'
+    ]
+  },
+
   {
     id: 'zalando-merchant-onboarding',
     title: '📈 3-Year Roadmap: Unlocking 10x Growth in the B2B Merchant Funnel at Zalando Logistics',

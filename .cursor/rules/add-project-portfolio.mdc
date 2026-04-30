@@ -16,12 +16,14 @@ alwaysApply: false
 
 ## 3. Project Data Structures in `src/lib/projects.ts`
 
-### A. Legacy Format (Old)
+### A. Format Guidelines (Legacy Format)
+- **IMPORTANT**: You must use this format for all new projects to maintain consistent UX with existing portfolio entries.
 - Required fields:
   - `id`, `title`, `company`, `year`, `shortDescription`, `situation`, `steps`, `impact`, `lessons`
 - Optional fields:
   - `projectDocuments` (string): Link to external project artifacts/documents (Google Drive, etc.)
 - `steps` is an object with arrays: `{ research: string[], strategy: string[], development: string[] }`
+- **Markdown Warning**: The fields `situation`, `impact`, `lessons`, and normal items in `steps` DO NOT support markdown formatting (they render as raw strings). Do NOT use `**bold**`, `*italic*`, etc. Only plain text.
 - Example:
   ```js
   {
@@ -30,7 +32,7 @@ alwaysApply: false
     company: 'Company',
     year: '2023',
     shortDescription: 'Summary.',
-    situation: 'Context and background...',
+    situation: 'Context and background... (No markdown!)',
     steps: {
       research: ['step1', 'step2'],
       strategy: ['step1', 'step2'],
@@ -42,20 +44,8 @@ alwaysApply: false
   }
   ```
 
-### B. Structured Format (New)
-- Required fields:
-  - `id`, `title`, `company`, `year`, `shortDescription`,
-  - `overview`, `background`, `journey`, `roadmapTable`, `metricsTables`, `resultsTable`, `subscriptionFunnel`, `conclusion`
-- Optional fields:
-  - `projectDocuments` (string): Link to external project artifacts/documents (Google Drive, etc.)
-- `journey` is an object with: `researchTable`, `strategy`, `development`, `architecture`, `techStackTable`
-- For type compatibility, add empty legacy fields:
-  ```js
-  situation: '',
-  steps: { research: [], strategy: [], development: [] },
-  impact: [],
-  lessons: [],
-  ```
+### B. Structured Format (Deprecated)
+- **IMPORTANT**: Do not use this format unless explicitly requested. The user prefers the consistent UX of the Legacy format.
 - Example:
   ```js
   {
@@ -104,7 +94,7 @@ alwaysApply: false
   - Renders as a gradient blue card with 📋 icon and "Project Documents & Artifacts" heading
   - Includes descriptive text about comprehensive documentation (PRDs, technical specs, etc.)
   - Blue button linking to external documents (opens in new tab)
-- Markdown is rendered using ReactMarkdown with GFM
+- Markdown is ONLY supported inside the blue/yellow callouts (`prototype` and `note` steps). All other legacy fields (`situation`, `impact`, `lessons`, normal `steps`) render as raw strings. DO NOT use markdown (`**`, `*`) in those normal fields!
 
 ### B. Structured Format Rendering
 - Renders sections in this order:
@@ -140,11 +130,9 @@ alwaysApply: false
 - Opens in new tab to preserve user's place in portfolio
 
 ## 6. Formatting User-Provided Content
-- Parse and split content into the above fields.
-- Convert tables to 2D arrays, lists to arrays, code blocks to strings.
-- Preserve markdown.
-- Add empty legacy fields if required.
-- For steps, use special formatting for 'prototype' and 'note' as described above.
+- Parse and split content into the legacy fields (`situation`, `steps`, `impact`, `lessons`).
+- **CRITICAL**: Do NOT use markdown formatting (`**`, `*`) in the text content, as it will literally render asterisks on the page. Use plain text formatting.
+- For steps, you may use special formatting for 'prototype' and 'note' as described above (these specific callouts do support markdown).
 
 ---
 

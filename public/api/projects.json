@@ -1,42 +1,74 @@
 {
   "projects": [
     {
+      "id": "zeos-genai-docs",
+      "title": "Gen AI in Zeos | Documentation Automation / Dev CMS",
+      "company": "Zalando SE",
+      "year": "2023 - Present",
+      "shortDescription": "Introduced a GenAI-powered documentation and support system that reduced engineering support load by 40% and improved team productivity by ~20%.",
+      "situation": "As the platform scaled, engineers were spending ~20% of their time answering internal support questions. Support requests were low-value, repetitive, and growing linearly with platform adoption.",
+      "steps": {
+        "research": [
+          "Analyzed support data: “Which API / where is X documented?”, “What’s the schema/table / config?”, “How to use the tool?”",
+          "Found ~40% of tickets were preventable through better documentation and self-serve access",
+          "Key insight: If we don’t solve this structurally, support load will grow faster than the platform"
+        ],
+        "strategy": [
+          "Framed it as a 3-layer intelligence system: Single source of truth, Automated knowledge generation, Conversational access",
+          "Created an artifact which is a combination of PD, PRD, and SD"
+        ],
+        "development": [
+          "Layer 1: Documented all platform capabilities and automated generation using GenAI prompts",
+          "Layer 2: Ingested Markdown docs into a RAG pipeline using Claude and integrated with Google Chat"
+        ]
+      },
+      "impact": [
+        "Reduced engineering support load by 40%",
+        "Improved team productivity by ~20%",
+        "Reduced developer time spent writing docs to 10 mins per feature instead of hours",
+        "Bot handled 20% of L0 requests"
+      ],
+      "lessons": [
+        "GenAI success depends more on context design than model choice",
+        "High-leverage GenAI requires product discipline, not hacks",
+        "You need teams comfortable with experimentation and iteration"
+      ]
+    },
+    {
       "id": "german-with-nik",
       "title": "German with Nik: Voice-First German Learning AI App",
       "company": "Personal Project",
       "year": "2023 - 2024",
-      "shortDescription": "A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.",
-      "situation": "The idea came from my own struggle with learning German after moving to Germany in 2023. Traditional classes and native speaker conversations weren't effective, which inspired the use of generative AI to build a truly interactive tutor.",
+      "shortDescription": "Built and shipped a voice-based GenAI product to help immigrants practice spoken German, taking it from problem discovery to production, with hundreds of users and continuous optimizations.",
+      "situation": "Language learning tools failed for conversational fluency because of: No real-time feedback, No safe space to practice speaking, Fixed schedules with teachers, and High cognitive load switching between text and speech.",
       "steps": {
         "research": [
-          "Analyzed existing language learning apps and found they lacked real-time conversation learning",
-          "Conducted market analysis showing coaching costs of €100–€200+ per month",
-          "Gathered early feedback from Reddit that confirmed strong interest"
+          "Validated problem via Reddit threads, Immigrant communities, and Personal network",
+          "Found a clear pattern: people wanted low-pressure speaking practice on demand",
+          "Conducted market analysis showing coaching costs of €100–€200+ per month"
         ],
         "strategy": [
-          "Created a POC using ChatGPT that showed promising results",
-          "Defined user persona: Highly motivated language learners seeking affordable, interactive experiences",
-          "Established monetization model: Free trial + Subscription (Monthly/Yearly)"
+          "Defined a clear wedge: Voice-first, conversational practice with immediate feedback",
+          "Established constraints: Low latency, Low cost, Grounded grammar (avoid hallucinations), Natural UX"
         ],
         "development": [
-          "Designed system architecture: [User Voice Input] → STT (OpenAI Whisper-1) → LLM Agent (Groq LLAMA + RAG) → TTS → [Voice Output by Nik]",
-          "Built server using WebSocket-based Node.js with RAG using German lesson documents",
-          "Developed client using Expo React Native app",
-          "Released multiple versions with progressive improvements from basic flow to payment integration"
+          "Iteration 1: Built a full flow without AI to validate UX, then integrated ChatGPT for responses",
+          "Iteration 2: Introduced system persona (“Nik”), added conversational memory, and tuned prompts for corrective feedback",
+          "Iteration 3: Tested multiple models to reduce cost while maintaining quality",
+          "Iteration 4: Moved to backend workflow: Voice → Text → LLM → Speech to reduce latency and cost significantly",
+          "Iteration 5: Introduced RAG to ground grammar rules, added analytics, and performed manual evals to assess response quality"
         ]
       },
       "impact": [
-        "Achieved 85% download to install conversion rate",
-        "Secured 35% trial to paid conversion",
-        "Maintained 40% 30-day retention rate",
-        "Optimized system performance with 2.5 sec overall latency",
-        "Established profitable economics with €10 monthly revenue per user vs €2 cost"
+        "Used by hundreds of users",
+        "Strong qualitative feedback on confidence and ease of practice",
+        "Deep hands-on learning across UX for GenAI, Context design, Model trade-offs, Cost vs quality decisions, and Evaluation challenges"
       ],
       "lessons": [
-        "Voice-first interfaces create more engaging language learning experiences",
-        "RAG significantly improves contextual accuracy in language tutoring",
-        "Latency optimization is critical for conversational applications",
-        "Free trial model works effectively for educational apps with clear value proposition"
+        "GenAI UX ≠ chat UI",
+        "Context and memory matter more than raw intelligence",
+        "Evaluation is the hardest unsolved problem",
+        "Production GenAI is systems engineering + product judgment"
       ]
     },
     {
