@@ -28,20 +28,22 @@ const experience = [
     skills: ["B2B Product Strategy", "Platform Strategy", "Partner Experience", "API Ecosystems", "E-commerce Integrations", "Cross-functional Leadership", "Roadmapping", "Gen AI Application", "Self-Service Platforms"]
   },
   {
-    role: "Full Stack Product Manager, Agentic Systems",
+    role: "Forward Deployed Full Stack | Product Manager | Builder | Gen AI",
     roleType: 'Agent Manager' as RoleType, // Personal projects, building
-    company: "Qloud AI (Personal Projects)", // Changed company name for clarity
-    website: "https://qloudai.app", 
+    company: "Qloud AI",
+    website: "https://qloudai.app",
     logoUrl: "https://qloudai.app/assets/avatar.png", // Keeping Qloud AI avatar for now
-    years: "2024–Present",
-    summary: "Designing and orchestrating autonomous LLM-based systems to automate and scale digital workflows. Blending product, engineering, and AI agent ops.",
+    years: "Jul 2023 – Present",
+    summary: "Building and shipping AI-native products part-time alongside my full-time job, using agentic engineering tools — turning ideas into production-ready experiences.",
     paragraphs: [
-      "I am passionate about Gen AI - actively prototyping and shipping tools:",
-      '<a href="https://productbuilders.xyz" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Product Builders</a>: A community and knowledge hub for building and scaling digital products using AI agents.',
-      '<a href="https://germanwithnik.com/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">German with Nik</a>: A voice-based LLM tutor designed to help users practice and learn spoken German.', // Placeholder URL
-      '<a href="https://captionsgpt.site/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Captions GPT</a>: A multi-modal agent that helps social media users generate captions for videos and images.' // Placeholder URL
+      '<strong><a href="https://germanwithnik.com/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">German with Nik</a></strong> (voice agent | stt → llm → tts): Closed the accessibility gap in conversational German learning with a real-time voice agent shipped on iOS & Android. <em>Stack: React Native (Expo), Groq (Llama), OpenAI Whisper/TTS, RAG, Cloudflare Worker, Firebase, RevenueCat.</em> Result: 200+ active learners.',
+      '<strong><a href="https://captionsgpt.site/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Captions GPT</a></strong> (multimodal LLM | image + video → captions): Replaced manual captioning with a multimodal LLM app for creators — live on Android & iOS. <em>Stack: React Native, Replicate API (VLMs), PostHog, RevenueCat.</em> Result: 20,000+ captions generated.',
+      '<strong><a href="https://unautomated.xyz/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Unautomated</a></strong> (agentic full-stack | on-device + cloud inference): Built with agentic coding tools (Cursor & Claude Code) to assess career automation risk using on-device SLMs + Gemini agents. <em>Stack: React, Web LLM, Gemini (tool use), Netlify, Prompt Engineering.</em>',
+      '<strong>OpenClaw / Clawbot / Hermes</strong> (in progress): Experimenting with agentic CLI and orchestration patterns.',
+      '<strong>PM Harness</strong> (in progress): Experimenting with building a full product management stack to help PMs in their daily work.',
+      'Check out: <a href="https://github.com/qloud-ai" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">github.com/qloud-ai</a>'
     ],
-    skills: ["Gen AI", "LLMs", "Voice Interfaces", "Multi-modal Agents", "Rapid Prototyping", "Community Building", "Product Innovation"]
+    skills: ["Gen AI", "React Native", "Groq", "OpenAI", "Firebase", "RevenueCat", "Replicate API", "React", "Web LLM", "Gemini", "Agentic Engineering"]
   },
   {
     role: "Product Lead, Identity, Access, and Workflow Mgmt.",
@@ -128,17 +130,17 @@ export const About = () => {
   const [activeSection, setActiveSection] = useState<string>(initialTab);
   // State for tracking which portfolio project is expanded
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
-  
+
   // Add state to track image loading errors
-  const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
-  
+  const [imageErrors, setImageErrors] = useState<{ [key: string]: boolean }>({});
+
   // State for articles
   const [articles, setArticles] = useState<Article[]>([]);
   const [articlesLoading, setArticlesLoading] = useState(false);
   const [articlesError, setArticlesError] = useState<string | null>(null);
-  
+
   const handleImageError = (company: string) => {
-    setImageErrors(prev => ({...prev, [company]: true}));
+    setImageErrors(prev => ({ ...prev, [company]: true }));
   };
 
   // Function to toggle expanded project
@@ -189,7 +191,7 @@ export const About = () => {
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
                 I'm Angshuman Gupta — a product leader with a passion for building and scaling global products. My journey began not in a boardroom or a business school, but in a small room with a desktop PC and a deep curiosity for how things worked.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🚀 The Early Days</h4>
@@ -214,11 +216,11 @@ export const About = () => {
 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="font-playfair text-xl font-semibold mb-3 text-primary">🤖 Beyond Work</h4>
-                  <p 
+                  <p
                     className="text-gray-700 text-lg leading-relaxed"
                     dangerouslySetInnerHTML={{
-                      __html: 
-                        'Outside of work, I\'m deeply bullish on Generative AI. I spend my free time tinkering, building small apps, and writing about the future of product building on <a href="https://productbuilders.xyz" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">productbuilders.xyz</a>. It\'s where I share what I learn, open-source ideas, and connect with others who love building as much as I do.'
+                      __html:
+                        'Outside of work, I\'m deeply bullish on Generative AI. I spend my free time building Qloud AI (<a href="https://qloudai.app" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">qloudai.app</a>), where I\'ve launched multiple consumer and pro-consumer products: from AI voice agents to generative content tools, browser inference, pushing the edges of what AI-native experiences can do.'
                     }}
                   />
                 </div>
@@ -335,14 +337,14 @@ export const About = () => {
                 </div>
               </li>
               <li className="flex items-center">
-                 {kiitLogoUrl && !imageErrors['KIIT'] && (
-                   <img
-                     src={kiitLogoUrl}
-                     alt="KIIT logo"
-                     className="h-6 w-6 mr-3 object-contain"
-                     onError={() => handleImageError('KIIT')}
-                   />
-                 )}
+                {kiitLogoUrl && !imageErrors['KIIT'] && (
+                  <img
+                    src={kiitLogoUrl}
+                    alt="KIIT logo"
+                    className="h-6 w-6 mr-3 object-contain"
+                    onError={() => handleImageError('KIIT')}
+                  />
+                )}
                 <div>
                   <p className="font-semibold">Bachelor's in Engineering</p>
                   <p className="text-sm text-gray-500">Kalinga Institute of Industrial Technology (KIIT)</p>
@@ -362,7 +364,7 @@ export const About = () => {
                   <div className="flex justify-between items-start mb-2 flex-wrap">
                     <div className="flex items-center flex-wrap mb-1 md:mb-0">
                       <h4 className="font-bold text-lg text-primary mr-2">{exp.role}</h4>
-                      <span 
+                      <span
                         className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${getRoleTypeBadgeStyle(exp.roleType)}`}
                       >
                         {exp.roleType}
@@ -431,7 +433,7 @@ export const About = () => {
                 <div key={project.id} className="bg-white rounded-lg shadow-sm overflow-hidden">
                   <div className="p-5">
                     <div>
-                      <Link 
+                      <Link
                         to={`/project/${project.id}?tab=portfolio`}
                         className="block hover:opacity-75 transition-opacity"
                       >
@@ -461,18 +463,18 @@ export const About = () => {
           <>
             <h3 className="font-playfair text-2xl font-bold mb-4 text-primary">📝 Latest Articles</h3>
             <p className="text-gray-600 mb-6 italic">Thoughts and insights on product management, technology, and building great products</p>
-            
+
             {articlesLoading && (
               <div className="flex justify-center items-center py-8">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
                 <span className="ml-2 text-gray-600">Loading articles...</span>
               </div>
             )}
-            
+
             {articlesError && (
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
                 <p className="text-red-600">{articlesError}</p>
-                <button 
+                <button
                   onClick={() => {
                     setArticlesError(null);
                     setArticles([]);
@@ -484,7 +486,7 @@ export const About = () => {
                 </button>
               </div>
             )}
-            
+
             {!articlesLoading && !articlesError && (
               <div className="space-y-6">
                 {articles.map((article) => (
@@ -503,7 +505,7 @@ export const About = () => {
                       <div className="flex-1 p-5">
                         <div className="flex flex-wrap items-center gap-2 mb-2">
                           {article.categories.slice(0, 3).map((category, index) => (
-                            <span 
+                            <span
                               key={index}
                               className="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full"
                             >
@@ -544,13 +546,13 @@ export const About = () => {
                     </div>
                   </div>
                 ))}
-                
+
                 {articles.length === 0 && !articlesLoading && !articlesError && (
                   <div className="text-center py-8">
                     <p className="text-gray-500">No articles found. Check back soon for new content!</p>
                   </div>
                 )}
-                
+
                 <div className="text-center mt-8">
                   <a
                     href={`https://medium.com/@angshumangupta`}
@@ -583,61 +585,55 @@ export const About = () => {
       <div className="flex flex-wrap gap-2 mb-4">
         <button
           onClick={() => setActiveSection("about")}
-          className={`px-4 py-1 rounded-lg ${
-            activeSection === "about"
+          className={`px-4 py-1 rounded-lg ${activeSection === "about"
               ? "bg-primary text-white"
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
+            }`}
         >
           About Me
         </button>
         <button
           onClick={() => setActiveSection("experiences")}
-          className={`px-4 py-1 rounded-lg ${
-            activeSection === "experiences"
+          className={`px-4 py-1 rounded-lg ${activeSection === "experiences"
               ? "bg-primary text-white"
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
+            }`}
         >
           Experience
         </button>
         <button
           onClick={() => setActiveSection("portfolio")}
-          className={`px-4 py-1 rounded-lg ${
-            activeSection === "portfolio"
+          className={`px-4 py-1 rounded-lg ${activeSection === "portfolio"
               ? "bg-primary text-white"
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
+            }`}
         >
           Portfolio
         </button>
         <button
           onClick={() => setActiveSection("articles")}
-          className={`px-4 py-1 rounded-lg ${
-            activeSection === "articles"
+          className={`px-4 py-1 rounded-lg ${activeSection === "articles"
               ? "bg-primary text-white"
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
+            }`}
         >
           Articles
         </button>
         <button
           onClick={() => setActiveSection("expertise")}
-          className={`px-4 py-1 rounded-lg ${
-            activeSection === "expertise"
+          className={`px-4 py-1 rounded-lg ${activeSection === "expertise"
               ? "bg-primary text-white"
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
+            }`}
         >
           Expertise
         </button>
         <button
           onClick={() => setActiveSection("education")}
-          className={`px-4 py-1 rounded-lg ${
-            activeSection === "education"
+          className={`px-4 py-1 rounded-lg ${activeSection === "education"
               ? "bg-primary text-white"
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
+            }`}
         >
           Education
         </button>

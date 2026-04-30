@@ -4,7 +4,7 @@ export const projects: ProjectData[] = [
   {
     id: 'german-with-nik',
     title: '🎓 German with Nik: Real world application of Gen AI',
-    company: 'Qloud AI (Personal Project)',
+    company: 'Qloud AI',
     year: '2024 - 2025',
     shortDescription: 'A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.',
     overview: `**German with Nik** is a mobile app that offers personalized, voice-based German language learning through a smart assistant named **Nik**. It focuses on making real-time conversational learning accessible and affordable. Nik dynamically adapts lessons to user proficiency, covering grammar, vocabulary, pronunciation, and cultural nuances.`,
