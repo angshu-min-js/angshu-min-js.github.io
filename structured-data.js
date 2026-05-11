@@ -119,6 +119,30 @@ const projectSchema = {
       "position": 1,
       "item": {
         "@type": "CreativeWork",
+        "name": "GenAI Internal Support Automation",
+        "headline": "GenAI-powered documentation and support system",
+        "description": "Introduced a GenAI-powered documentation and support system that reduced engineering support load by 40% and improved team productivity by ~20%.",
+        "dateCreated": "2025",
+        "datePublished": "2025",
+        "creator": {
+          "@type": "Person",
+          "name": "Angshuman Gupta"
+        },
+        "url": "https://angshumangupta.com/#/?project=zeos-genai-docs",
+        "keywords": [
+          "Generative AI",
+          "Documentation",
+          "Developer Experience",
+          "Platform Strategy",
+          "Zeos"
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CreativeWork",
         "name": "German with Nik: Voice-First German Learning AI App",
         "headline": "Building a Voice-First German Learning AI App",
         "description": "A mobile app offering personalized, voice-based German language learning through an AI assistant named Nik, making real-time conversational learning accessible and affordable.",
@@ -140,7 +164,7 @@ const projectSchema = {
     },
     {
       "@type": "ListItem",
-      "position": 2,
+      "position": 3,
       "item": {
         "@type": "CreativeWork",
         "name": "Enterprise Banking Platform Transformation",
@@ -163,7 +187,7 @@ const projectSchema = {
     },
     {
       "@type": "ListItem",
-      "position": 3,
+      "position": 4,
       "item": {
         "@type": "CreativeWork",
         "name": "Self-Serve Identity Platform",
