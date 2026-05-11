@@ -47,32 +47,33 @@ export const projects: ProjectData[] = [
   },
   {
     id: 'zeos-genai-docs',
-    title: '🤖 Gen AI in Zeos | Documentation Automation / Dev CMS',
+    title: '🤖 GenAI Internal Support Automation',
     company: 'Zalando SE',
-    year: '2023 - Present',
+    year: '2025 - Present',
     shortDescription: 'Introduced a GenAI-powered documentation and support system that reduced engineering support load by 40% and improved team productivity by ~20%.',
-    situation: `Context: Zalando’s B2B Business → Zeos → Logistics as a Service → Partner Management. As Founder PM for Partner Management (strategy → roadmap → execution), we launched many platform capabilities for different user personas: Merchants, Internal teams (Ops, Commercial, marketing, support, etc.), and developers. As part of our domains strategy, one of the tenets was Intelligences with sub-goals: P&E Productivity, Platform Intelligence, and Experimentations.\n\nSituation / Problem: As the platform scaled:\n• Engineers were spending ~20% of their time answering internal support questions.\n• Support requests were low-value, repetitive, and growing linearly with platform adoption.\n• This created a hidden platform tax: slower delivery, frustrated engineers, poor developer experience.\n\nThis wasn’t a tooling issue — it was a scaling constraint.`,
+    situation: `Context: Zalando’s B2B Business → Zeos → Logistics as a Service → Partner Management. As Founder PM for Partner Management (strategy → roadmap → execution), we launched many platform capabilities for different user personas. As part of our domains strategy, one of the tenets was Intelligences with sub-goals: P&E Productivity, Platform Intelligence, and Experimentations.\n\nSituation / Problem: As the Zeos partner platform scaled, engineering faced a critical bottleneck where support load grew linearly with adoption, creating a "hidden tax" on productivity. Analysis revealed that ~40% of tickets were preventable if better documentation and easy access existed. This led to slower delivery speeds and developer frustration.`,
     steps: {
       research: [
         'Analyzed support data: "Which API / where is X documented?", "What’s the schema/table / config?", "How to use the tool?", "Is this possible?"\n',
         'Found ~40% of tickets were preventable through better documentation and self-serve access\n',
-        'Key insight: If we don’t solve this structurally, support load will grow faster than the platform\n'
+        'Validated problem using genesis public chat analysis and support data from Aug-Sep 2025\n'
       ],
       strategy: [
-        'Instead of treating this as "better docs", framed it as a 3-layer intelligence system: Single source of truth, Automated knowledge generation, Conversational access\n',
-        'Aligned directly with our platform tenets and justified investment\n',
-        'Created an artifact which is a combination of PD, PRD, and SD → Product Strategy & Execution Brief\n'
+        'Framed the solution as a 3-layer intelligence system: Single source of truth, Automated knowledge generation, and Conversational access\n',
+        'Aligned directly with platform tenets and justified investment via a Product Strategy & Execution Brief\n',
+        'Decided on VS Code with Copilot + Prompts for the MVP to balance low complexity and high immediate impact\n'
       ],
       development: [
-        'Layer 1: Automated Documentation (Foundation) — Documented all platform capabilities in a standard format and published them in Zalando\'s existing CMS (markdown)\n',
-        'Automated for new documentations using GenAI prompts (Prompt 1 for creating content using PRDs/System designs; Prompt 2 to publish the content)\n',
-        'Layer 2: L0 Support Agent — Ingested Markdown docs into a RAG pipeline and used Claude as LLM\n',
-        'Integrated with Google Chat, where teams already ask questions, to handle common questions before they hit engineers\n'
+        'Layer 1: Automated Documentation (Foundation) — Created a "Zero-to-Doc" pipeline using GenAI prompts to ingest PRDs and System Designs\n',
+        'Auto-generated standardized Markdown documentation for Zalando\'s tech CMS\n',
+        'Layer 2: L0 Support Agent (The Interface) — Built an "Always-on" Support Agent embedded in Google Chat\n',
+        'Implemented a RAG (Retrieval-Augmented Generation) pipeline powered by Claude to answer questions contextually\n',
+        'Next Step: Layer 3 Agentic Operations — Integrating MCP with Jira and Zeos APIs to enable the agent to act (Get-Read-Write) and fetch real-time data directly in the chat\n'
       ]
     },
     impact: [
-      'Layer 1 MVP: Improved product documentation; developer time spent writing docs reduced to 10 mins per feature instead of hours\n',
-      'Layer 2 MVP: ~7% improved productivity; the bot handled 20% of those L0 requests\n',
+      'Reduced engineering time spent writing docs from weeks to ~10 minutes per feature\n',
+      'The bot handled 20% of support requests autonomously, intercepting common queries\n',
       'Overall: Reduced engineering support load by 40%\n',
       'Overall: Improved team productivity by ~20%\n'
     ],

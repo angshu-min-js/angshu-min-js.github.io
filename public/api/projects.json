@@ -2,31 +2,33 @@
   "projects": [
     {
       "id": "zeos-genai-docs",
-      "title": "Gen AI in Zeos | Documentation Automation / Dev CMS",
+      "title": "GenAI Internal Support Automation",
       "company": "Zalando SE",
-      "year": "2023 - Present",
+      "year": "2025 - Present",
       "shortDescription": "Introduced a GenAI-powered documentation and support system that reduced engineering support load by 40% and improved team productivity by ~20%.",
-      "situation": "As the platform scaled, engineers were spending ~20% of their time answering internal support questions. Support requests were low-value, repetitive, and growing linearly with platform adoption.",
+      "situation": "As the Zeos partner platform scaled, engineering faced a critical bottleneck where support load grew linearly with adoption, creating a 'hidden tax' on productivity. Analysis revealed that ~40% of tickets were preventable if better documentation and easy access existed.",
       "steps": {
         "research": [
           "Analyzed support data: “Which API / where is X documented?”, “What’s the schema/table / config?”, “How to use the tool?”",
           "Found ~40% of tickets were preventable through better documentation and self-serve access",
-          "Key insight: If we don’t solve this structurally, support load will grow faster than the platform"
+          "Validated problem using genesis public chat analysis and support data from Aug-Sep 2025"
         ],
         "strategy": [
-          "Framed it as a 3-layer intelligence system: Single source of truth, Automated knowledge generation, Conversational access",
-          "Created an artifact which is a combination of PD, PRD, and SD"
+          "Framed the solution as a 3-layer intelligence system: Single source of truth, Automated knowledge generation, and Conversational access",
+          "Aligned directly with platform tenets and justified investment via a Product Strategy & Execution Brief",
+          "Decided on VS Code with Copilot + Prompts for the MVP"
         ],
         "development": [
-          "Layer 1: Documented all platform capabilities and automated generation using GenAI prompts",
-          "Layer 2: Ingested Markdown docs into a RAG pipeline using Claude and integrated with Google Chat"
+          "Layer 1: Automated Documentation (Foundation) — Created a 'Zero-to-Doc' pipeline using GenAI prompts to ingest PRDs and System Designs",
+          "Layer 2: L0 Support Agent (The Interface) — Built an 'Always-on' Support Agent embedded in Google Chat with a RAG pipeline powered by Claude",
+          "Next Step: Layer 3 Agentic Operations — Integrating MCP with Jira and Zeos APIs to enable the agent to act (Get-Read-Write) and fetch real-time data directly in the chat"
         ]
       },
       "impact": [
         "Reduced engineering support load by 40%",
         "Improved team productivity by ~20%",
-        "Reduced developer time spent writing docs to 10 mins per feature instead of hours",
-        "Bot handled 20% of L0 requests"
+        "Reduced engineering time spent writing docs to ~10 minutes per feature",
+        "The bot handled 20% of support requests autonomously"
       ],
       "lessons": [
         "GenAI success depends more on context design than model choice",
@@ -137,4 +139,4 @@
       ]
     }
   ]
-} 
+}

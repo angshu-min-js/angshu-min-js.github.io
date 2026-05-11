@@ -119,11 +119,11 @@ const projectSchema = {
       "position": 1,
       "item": {
         "@type": "CreativeWork",
-        "name": "Gen AI in Zeos | Documentation Automation / Dev CMS",
+        "name": "GenAI Internal Support Automation",
         "headline": "GenAI-powered documentation and support system",
         "description": "Introduced a GenAI-powered documentation and support system that reduced engineering support load by 40% and improved team productivity by ~20%.",
-        "dateCreated": "2023",
-        "datePublished": "2024",
+        "dateCreated": "2025",
+        "datePublished": "2025",
         "creator": {
           "@type": "Person",
           "name": "Angshuman Gupta"
